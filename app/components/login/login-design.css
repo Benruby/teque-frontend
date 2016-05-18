@@ -1,0 +1,65 @@
+.mainContent {
+	position: absolute;
+	height: 100%;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+.loginFormSection {
+	margin-top: 20%;
+}
+
+.logo {	
+	font-size: 40px;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	text-align: center;
+}
+
+.loginForm {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.loginButton {
+	direction: rtl;
+	width: 100%;
+}
+
+.loginButton button{
+	margin: 0;
+}
+
+#forgotPasswordLink {
+	direction: rtl;
+	padding-bottom: 4%;
+	color: gray;
+}
+
+.loginError {
+	direction: rtl;
+	color: gray;
+	font-size: 80%;
+}
+
+.loginTitle {
+	direction: rtl;
+	color: gray;	
+	font-weight: bold;
+}
+
+.signupLink {
+	text-decoration: none;
+	color: blue;
+}
+.signupCancelLink {
+	margin-top: 17%;
+	padding-right: 30%;
+	text-decoration: none;
+	color: blue;
+}
+
+.inputError {
+	direction: rtl;
+}

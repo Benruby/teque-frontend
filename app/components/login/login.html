@@ -1,0 +1,25 @@
+<div class="mainContent" flex="40" layout="column">
+
+	<div class="loginFormSection" layout="column" layout-align="center">
+		<div class="logo" layout="row" layout-align="center" layout-padding>
+			Teque
+		</div>
+
+		<md-card>
+		<div class="loginForm" layout="row" layout-align="center">
+
+			<div class="form_inputs" layout="column" layout-padding>
+				<tq-login-form ng-show="!signupChoice"></tq-login-form>
+				<tq-signup-form ng-show="signupChoice"></tq-signup-form>
+			</div>
+
+		</div>
+		<div id="forgotPasswordLink" ng-show="!signupChoice">
+			<a href="" ng-click="signup()" class="signupLink"> אין לך חשבון? לחץ\י להרשמה </a>
+		</div>
+	</md-card>
+
+
+</div>
+
+</div>
