@@ -63,3 +63,11 @@
 .inputError {
 	direction: rtl;
 }
+
+.md-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  left: 0; right: 0 !important;
+  width: 50% !important;
+  text-align: center;
+}

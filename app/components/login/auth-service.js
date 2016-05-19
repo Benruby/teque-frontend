@@ -9,10 +9,12 @@ angular.module('tequeFrontendApp').service('auth', function($http) {
 	};
 
 	this.signupUser = function (user) {
-		return $http.post('users/signup', {
-			full_name: user.full_name,
-			email: user.email,
-			password: user.password
+		return $http.post('api/users', {
+			user: {
+				full_name: user.full_name,
+				email: user.email,
+				password: user.password
+			}
 		});
 	}
 
