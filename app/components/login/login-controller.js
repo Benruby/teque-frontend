@@ -4,7 +4,7 @@
 angular.module('tequeFrontendApp')
 .controller('LoginCtrl', function ($scope, auth, $location, $mdToast) {
 
-	var showToast = function(message) {
+	$scope.showToast = function(message) {
 		$mdToast.show($mdToast.simple()
 			.textContent(message)
 			.position('center')
@@ -25,7 +25,7 @@ angular.module('tequeFrontendApp')
 
 	var loginError = function(response) {
 		$scope.loginError = response.data.error;
-		showToast($scope.loginError );
+		$scope.showToast($scope.loginError );
 	}
 
 	$scope.signupUser = function () {
@@ -37,16 +37,16 @@ angular.module('tequeFrontendApp')
 
 	var signupSuccess = function(response) {
 		localStorage.setItem('auth_token', response.data.auth_token);
-		showToast("ההשרמה בוצעה בהצלחה!")
+		$scope.showToast("ההשרמה בוצעה בהצלחה!")
 		$location.path('/');
 	}
 
 	var signupError = function(response) {
 		if (response.data.errors.email) {
-			showToast("כתובת האימייל כבר בשימוש, בחר/י אחרת");
+			$scope.showToast("כתובת האימייל כבר בשימוש, בחר/י אחרת");
 		} else {
 			if (response.data.errors.password) {
-				showToast("אורך הסיסמה נדרש להיות 8 תווים לפחות");
+				$scope.showToast("אורך הסיסמה נדרש להיות 8 תווים לפחות");
 			}
 		}
 	}
