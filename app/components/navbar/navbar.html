@@ -1,0 +1,24 @@
+<div class=navbar layout="row" layout-padding  layout-align="space-between center">
+	<div>
+        <md-menu>
+            <md-button md-menu-origin ng-click="$mdOpenMenu()">פרופיל</md-button>
+            <md-menu-content width="2">
+                <md-menu-item>
+                    <md-button>הגדרות</md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ui-sref="logout">התנתק</md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+        <md-button>התראות</md-button>
+        <md-button>ענה על שאלות</md-button>
+    </div>
+    <div class="askBar" flex>
+        <tq-ask></tq-ask>
+    </div>
+    <div class="nav-buttons">
+        <md-button class="md-raised md-accent">My profile</md-button>
+        <md-button class="md-raised md-warn">Log Out</md-button>
+    </div>
+</div>

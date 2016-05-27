@@ -13,7 +13,10 @@
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="components/login/login-design.css">
+  <link rel="stylesheet" href="states/main/main.css">
+  <link rel="stylesheet" href="states/user/login/login-design.css">
+  <link rel="stylesheet" href="components/navbar/navbar.css">
+  <link rel="stylesheet" href="components/askQuestion/ask.css">
   <!-- endbuild -->
 </head>
 <body ng-app="tequeFrontendApp">
@@ -23,7 +26,7 @@
 
       <!-- Add your site or application content here -->
 
-        <div ng-view=""></div>
+      <div ui-view ng-cloak></div>
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
       <script>
@@ -42,25 +45,35 @@
      <script src="bower_components/angular-animate/angular-animate.js"></script>
      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
      <script src="bower_components/angular-resource/angular-resource.js"></script>
-     <script src="bower_components/angular-route/angular-route.js"></script>
      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
      <script src="bower_components/angular-touch/angular-touch.js"></script>
      <script src="bower_components/angular-aria/angular-aria.js"></script>
      <script src="bower_components/angular-messages/angular-messages.js"></script>
      <script src="bower_components/angular-material/angular-material.js"></script>
+     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
      <!-- endbower -->
      <!-- endbuild -->
 
      <!-- build:js({.tmp,app}) scripts/scripts.js -->
      <script src="scripts/app.js"></script>
+     <script src="states/states.js"></script>
      <script src="scripts/auth_interceptor.js"></script>
      <script src="scripts/controllers/main.js"></script>
-     <script src="components/login/login-controller.js"></script>
-     <script src="components/login/auth-service.js"></script>
-     <script src="components/login/loginForm-directive.js"></script>
-     <script src="components/login/signupForm-directive.js"></script>
-     <script src="components/login/password_reset/reset-directive.js"></script>
-     <script src="components/login/password_reset/reset-service.js"></script>
+     <script src="states/user/authentication/authToken-service.js"></script>
+     <script src="states/user/login/login-service.js"></script>
+     <script src="states/user/login/login-controller.js"></script>
+     <script src="states/user/login/loginForm-directive.js"></script>
+     <script src="states/user/signup/signupForm-directive.js"></script>
+     <script src="states/user/signup/signup-controller.js"></script>
+     <script src="states/user/logout/logout-controller.js"></script>
+     <script src="states/user/logout/logout-service.js"></script>
+     <script src="states/user/password_reset/reset-directive.js"></script>
+     <script src="states/user/password_reset/reset-service.js"></script>
+     <script src="components/askQuestion/ask-directive.js"></script>
+     <script src="components/navbar/custom-input-focus.js"></script>
+     <script src="components/navbar/navbar-directive.js"></script>
+     <script src="components/toastMessage/toastMessage-service.js"></script>
+     <script src="states/main/main-controller.js"></script>
      <!-- endbuild -->
    </body>
    </html>

@@ -1,6 +1,6 @@
 angular.module('tequeFrontendApp').directive('tqLoginForm', function () {
 	return {
 		restrict: 'E',
-		templateUrl: "components/login/loginForm.html"
+		templateUrl: "states/user/login/loginForm.html"
 	}
 })

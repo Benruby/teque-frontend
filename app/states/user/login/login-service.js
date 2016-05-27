@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('tequeFrontendApp').service('auth', function($http) {
+
+angular.module('tequeFrontendApp').service('login', function($http, $rootScope) {
+
 	this.loginUser = function(user) {
 		return $http.post('/api/login', {
 			email: user.email,
@@ -18,11 +20,4 @@ angular.module('tequeFrontendApp').service('auth', function($http) {
 		});
 	}
 
-	this.logout - function () {
-		return $http.delete('/api/logout');
-	}
-
-	this.isLoggedIn = function () {
-		return (localStorage.getItem('auth_token')) ? true : false;
-	}
 });
