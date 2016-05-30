@@ -3,6 +3,7 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function () {
 
 	return {
 		templateUrl: 'components/questions/indexTemplate/questionTemplate.html',
+		restrict: 'E',
 		replace: true,
 		scope: {
 			data: '='
