@@ -1,6 +1,12 @@
 .navbar {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	direction: rtl;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width:100%;
+	background: white;
+	z-index: 1000;
 }
 
 .askBar {

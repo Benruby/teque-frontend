@@ -9,7 +9,7 @@ angular
     controller: 'MainCtrl'
   })
   .state('login', {
-    url: '/',
+    url: '/login',
     templateUrl: 'states/user/login/login.html',
     controller: 'LoginCtrl'
   })

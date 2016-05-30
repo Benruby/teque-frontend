@@ -1,28 +1,34 @@
 .darkBackground {
-	position: absolute;
 	background:rgba(0,0,0,0.5);
 	opacity: 1;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
-	position: absolute;
-	height: 100%;
-	margin: auto;
-	left: 0;
-	right: 0;
-	z-index: 12;
-	overflow: auto;
+	position: relative;
 
 }
+
 
 .normalBacgkround {
-	position: absolute;
-	height: 100%;
+	position: relative;
 	margin: auto;
-	left: 0;
-	right: 0;
 }
 
-#questionsMain {
-	z-index: 10;
+#content {
+	margin: auto;
+	padding-top: 5%;
 }
+
+
+#mainPageHeader {
+	position: relative;
+	direction: rtl;
+	border-bottom: 1px solid gray;
+}
+
+#questionsPage {
+	margin: auto;
+}
+
+
+

@@ -1,13 +1,20 @@
 <div id="askSection">
-	<form>
+	<form flex-gt-sm name="askForm" ng-submit="askQuestion()" novalidate>
 		<div id="askInputSection">
-			<div id="askInput">
-				<input id="ask" name="ask" type="text" ng-model="question.title" placeholder="שאל שאלה" tq-input-focus>
-			</div>
+			<input id="ask" name="ask" type="text" ng-model="question.title" placeholder="שאל שאלה" tq-input-focus flex-gt-sm required >
 		</div>
-		<div id="buttonSection">
-		<div id="askButton"><md-button class="md-raised">שאל</md-button>
-			</div>
-		</div>
+		<div id="askButtonSection">
+
+			<button type="submit" id="askButton" ng-if="$focused" ng-disabled="askForm.$invalid"> <div id="buttonText">שאל</div> </button>
+		    </div>
+		    <div>
+		    <textarea  
+		    ng-show="$focused"
+		    placeholder="פרטים" 
+		    rows="4"
+		    id="details"
+		    ng-model="question.body"
+		    ></textarea>
+		    </div>
 	</form>
 </div>

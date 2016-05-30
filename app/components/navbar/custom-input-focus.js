@@ -7,11 +7,6 @@ angular.module('tequeFrontendApp').directive('tqInputFocus', function () {
 				scope.$apply(function () {
 					scope.$focused = true;
 				}); 				
-			}).bind('blur', function (e) {
-				scope.$apply(function () {
-					scope.$focused = false;
-				});
-
 			})
 		}
 	}

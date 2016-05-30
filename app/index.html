@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="states/user/login/login-design.css">
   <link rel="stylesheet" href="components/navbar/navbar.css">
   <link rel="stylesheet" href="components/askQuestion/ask.css">
+  <link rel="stylesheet" href="components/questions/questions.css">
+  <link rel="stylesheet" href="components/questions/indexTemplate/questionTemplate.css">
+  <link rel="stylesheet" href="components/questions/indexTemplate/readmore.css">
   <!-- endbuild -->
 </head>
 <body ng-app="tequeFrontendApp">
@@ -26,7 +29,7 @@
 
       <!-- Add your site or application content here -->
 
-      <div ui-view ng-cloak></div>
+      <div ui-view></div>
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
       <script>
@@ -41,7 +44,9 @@
 
      <!-- build:js(.) scripts/vendor.js -->
      <!-- bower:js -->
+     <script data-require="jquery" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
      <script src="bower_components/angular/angular.js"></script>
+
      <script src="bower_components/angular-animate/angular-animate.js"></script>
      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
      <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -70,10 +75,16 @@
      <script src="states/user/password_reset/reset-directive.js"></script>
      <script src="states/user/password_reset/reset-service.js"></script>
      <script src="components/askQuestion/ask-directive.js"></script>
+     <script src="components/askQuestion/ask-controller.js"></script>
      <script src="components/navbar/custom-input-focus.js"></script>
      <script src="components/navbar/navbar-directive.js"></script>
      <script src="components/toastMessage/toastMessage-service.js"></script>
      <script src="states/main/main-controller.js"></script>
+     <script src="components/questions/questions-controller.js"></script>
+     <script src="components/questions/questions-directive.js"></script>
+     <script src="components/questions/questions-service.js"></script>
+     <script src="components/questions/indexTemplate/readmore-directive.js"></script>
+     <script src="components/questions/indexTemplate/questionTemplate-directive.js"></script>
      <!-- endbuild -->
    </body>
    </html>

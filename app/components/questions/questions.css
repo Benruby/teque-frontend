@@ -1,0 +1,18 @@
+#questionsPage {
+
+}
+
+#question {
+	border-bottom: 1px solid gray;
+	padding: 2% 2% 2% 2%;
+	direction: rtl;
+}
+
+#questionTitle {
+	font-size: 1.5vw;
+	font-weight: bold;
+}
+
+#questionBody {
+	font-size: 1.1vw;
+}

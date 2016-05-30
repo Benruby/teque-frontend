@@ -1,0 +1,24 @@
+#templateWrapper {
+	border: solid red 1px;
+	padding: 1%;
+	direction: rtl;
+
+}
+
+#templateTitle {
+	border: solid blue 1px;
+	padding: 1%;
+	font-weight: bold;
+	font-size: 1.5vw;
+}
+
+#templateDetails {
+	border: solid green 1px;
+	padding: 1%;
+}
+
+#templateFooter {
+	border: solid black 1px;
+	padding: 1%;
+
+}

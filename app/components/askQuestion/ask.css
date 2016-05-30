@@ -1,43 +1,77 @@
 #askSection {
 	position: relative;
 	width: 100%;
+	padding: 2px 2px 2px 2px;
+
 }
 #askInputSection {
 	position: relative;
 	display: inline-flex;
-	width: 85%;
-	margin:auto;
+	width: 83%;
+	height: 2.1vw;
+	padding: 2px 2px 2px 2px;
+	
 }
 
-#askInput{
-	position: relative;
-	display: inline-flex;
-	width: 100%;
-	margin:auto;
-}
 
 #ask {
-	height: 10vh;
-	border-radius: 5px;
-	border: solid gray 1px;
-	display: inline-flex;
-	width: 100%;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	
+	border-radius: 4px;
 	background-color: #f4f4f4;
+	height: 2vw;
+	width: 100%;
 }
 
 #ask:focus {
-    outline: none;
+	outline: none;
+	margin: auto;
 }
 
-#buttonSection {
+#askButtonSection {
 	position: relative;
-	float: left;
+	display: inline-flex;
 	width: 15%;
+	float: left;
+	height: 2.1vw;
+	padding: 2px 2px 2px 2px;
+
 }
 
 #askButton {
-	height: 10vh;
+	display: inline-flex;
+	height: 2.21vw;
 	position: relative;
-	margin:auto;
+	border: 1.5px gray solid;
+	border-radius: 5px;
+	width: 50%;
+	align-items: center;
+	float: right;
+	background-color: 
+}
+
+#askButton:hover {
+	cursor: pointer;
+}
+
+#buttonText {
+	margin: auto;
+}
+
+#detailsIcon {
+	margin: auto;
+	border: 1px solid #EDEDED;
+}
+
+#detailsIcon:hover {
+	cursor: pointer;
+}
+
+#detailsSection {
+	margin-top: 4%;
+}
+
+#details {
+	resize: none;
+	border-radius: 4px;
+	width: 83.1%;
 }
