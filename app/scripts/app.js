@@ -7,5 +7,6 @@ angular.module('tequeFrontendApp', [
 	'ngSanitize',
 	'ngMaterial',
 	'ngMessages',
-	'ui.router'
+	'ui.router',
+	'monospaced.elastic'
 	]);

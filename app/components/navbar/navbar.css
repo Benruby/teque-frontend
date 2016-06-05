@@ -9,8 +9,28 @@
 	z-index: 1000;
 }
 
+#mainBar {
+	margin: auto;
+	padding: 0;
+	display: block;
+	box-sizing: border-box;
+	position: relative;
+}
+
+#bar {
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+}
+#menuItems {
+	width: 30%;
+	display: table-cell;
+}
+
 .askBar {
 	position: relative;
-	width: 100%;
-
+	display: table-cell;
+	width: 70%;
+	margin: auto;
+	padding: 0;
 }

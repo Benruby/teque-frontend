@@ -1,20 +1,49 @@
-<div id="askSection">
-	<form flex-gt-sm name="askForm" ng-submit="askQuestion()" novalidate>
-		<div id="askInputSection">
-			<input id="ask" name="ask" type="text" ng-model="question.title" placeholder="שאל שאלה" tq-input-focus flex-gt-sm required >
-		</div>
-		<div id="askButtonSection">
+<div id="askSection" flex>
+	<div id="askFormSection" flex>
+		<form name="askForm" ng-submit="askQuestion()" novalidate id="askForm"  flex="70">
+			<div id="askInputSection">
 
-			<button type="submit" id="askButton" ng-if="$focused" ng-disabled="askForm.$invalid"> <div id="buttonText">שאל</div> </button>
-		    </div>
-		    <div>
-		    <textarea  
-		    ng-show="$focused"
-		    placeholder="פרטים" 
-		    rows="4"
-		    id="details"
-		    ng-model="question.body"
-		    ></textarea>
-		    </div>
-	</form>
+				<div id="AskCounter" ng-if="$focused && (150 - question.title.length) < 10" ng-class="{colorCounter: (150 - question.title.length) < 0 }">
+					{{150 - question.title.length}}
+				</div>
+				<textarea
+				msd-elastic
+				id="ask"
+				name="ask"
+				type="text"
+				ng-model="question.title" 
+				placeholder="שאל שאלה" 
+				tq-input-focus 
+				flex-gt-sm 
+				required 
+				rows="1"
+				>
+			</textarea>
+
+		</div>
+
+		<div id="detailsWrapper">
+			<div id="DetailsCounter" ng-if="$focused && (250 - question.body.length) < 10" ng-class="{colorCounter: (250 - question.body.length) < 0 }">
+				{{250 - question.body.length}}
+			</div>
+			<textarea  
+			msd-elastic
+			name="details"
+			ng-show="$focused"
+			placeholder="פרטים" 
+			rows="3"
+			id="details"
+			ng-model="question.body"
+			ng-trim="false"
+			>
+		</textarea>
+	</div>
+	<div id="askButtonSection" ng-show="$focused">
+
+		<button type="submit" id="askButton" ng-disabled="askForm.$invalid || ((250 - question.body.length) < 0) || ((150 - question.title.length) < 0)"> 
+			<div id="buttonText">שאל</div>
+		</button>
+	</div>
+</form>
+</div>
 </div>
