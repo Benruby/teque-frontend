@@ -15,11 +15,13 @@
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="states/main/main.css">
   <link rel="stylesheet" href="states/user/login/login-design.css">
+  <link rel="stylesheet" href="states/showQuestion/show.css">
   <link rel="stylesheet" href="components/navbar/navbar.css">
   <link rel="stylesheet" href="components/askQuestion/ask.css">
   <link rel="stylesheet" href="components/questions/questions.css">
   <link rel="stylesheet" href="components/questions/indexTemplate/questionTemplate.css">
   <link rel="stylesheet" href="components/questions/indexTemplate/readmore.css">
+  <link rel="stylesheet" href="components/answers/add_answer/answers.css">
   <!-- endbuild -->
 </head>
 <body ng-app="tequeFrontendApp">
@@ -44,9 +46,8 @@
 
      <!-- build:js(.) scripts/vendor.js -->
      <!-- bower:js -->
-     <script data-require="jquery" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script src="bower_components/jquery/dist/jquery.js"></script>
      <script src="bower_components/angular/angular.js"></script>
-
      <script src="bower_components/angular-animate/angular-animate.js"></script>
      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
      <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -82,9 +83,17 @@
      <script src="states/main/main-controller.js"></script>
      <script src="components/questions/questions-controller.js"></script>
      <script src="components/questions/questions-directive.js"></script>
-     <script src="components/questions/questions-service.js"></script>
+     <script src="services/questions.js"></script>
+     <script src="services/answers.js"></script>
+     <script src="services/question_upvotes.js"></script>
      <script src="components/questions/indexTemplate/readmore-directive.js"></script>
      <script src="components/questions/indexTemplate/questionTemplate-directive.js"></script>
+     <script src="states/showQuestion/show-controller.js"></script>
+     <script src="components/answers/add_answer/add_answer-directive.js"></script>
+     <script src="components/answers/add_answer/add_answer-controller.js"></script>
+     <script src="components/answers/show_answers/show_answer-directive.js"></script>
+     
+
      <!-- endbuild -->
    </body>
    </html>

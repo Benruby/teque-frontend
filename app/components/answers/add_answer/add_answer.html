@@ -1,0 +1,24 @@
+<div id="mainAnswer">
+
+	<div id="answerContent">
+		<form name="answerForm" ng-submit="sendAnswer()" novalidate>
+			<textarea
+			name="answer"
+			type="text"
+			ng-model="answer.answer_body"
+			rows="10"
+			required
+			>
+
+		</textarea>
+
+		<div>
+			<button type="submit" ng-disabled="answerForm.$invalid">
+				שלח
+			</button>
+		</div>
+	</form>
+
+</div>
+
+</div>

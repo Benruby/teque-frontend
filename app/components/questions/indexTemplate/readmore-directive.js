@@ -10,7 +10,7 @@ angular.module('tequeFrontendApp').directive('readMore', function () {
 
 		link: function (scope, element, attrs, ctrl, transclude) {
 			var limit = angular.isUndefined(scope.limit) ? 100 : scope.limit;
-			var moreText = '<a class="read-more">...קרא עוד</a>';
+			var moreText = '<a class="read-more">קרא עוד</a>';
 
 			attrs.$observe('content', function(str) {
 				readmore(str);
@@ -32,7 +32,7 @@ angular.module('tequeFrontendApp').directive('readMore', function () {
 				if (charCount > limit) {
 					text = orig.slice (0, limit);
 					more = orig.slice (limit, charCount);
-					markup = text + moreText + '<span class="more-text">' + more + '</span>';
+					markup = text + moreText + '...' + '<span class="more-text">' + more + '</span>';
 				}
 
 				element.append(markup);

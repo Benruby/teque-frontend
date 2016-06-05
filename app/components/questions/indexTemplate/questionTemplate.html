@@ -1,16 +1,39 @@
 <div id="templateWrapper" layout="column">
 	<div id="templateTitle" layout="row">
-		<p>{{question_title}}</p>
+		<p ui-sref="show_question({question_id: data.id})">{{question_title}}</p>
 	</div>
 
 	<div id="templateDetails" layout="row">
 		<p read-more id="read-more" body="question_body" content="{{question_body}}"></p>
 	</div>
 
+	<div id="votesSection">
+		<div id="voteButtons">
+			<div ng-class="{upvoteButtonSub: !voted, upvoteButtonSubVoted: voted }" ng-click="upvote(data.id)">
+				<a id="upvoteButton" href="">אהבתי</a>
+				<div>
+					{{data.upvotes}}
+				</div>
+			</div>
+			<div id="downvoteButtonSub">
+				<a id="downvoteButton" href="" ng-click="">לא אהבתי</a>
+			</div>
+			<div>
+			</div>
+		</div>
+		
+	</div>
+
 	<div id="templateFooter" layout="row">
 		<div id="answerButton">
-			<md-button class="md-raised" >ענה</md-button>
+			<md-button class="md-raised" ng-disabled="answerEnabled" ng-click='answer()'>ענה</md-button>
 		</div>
+
+
+	</div>
+
+	<div>
+		<tq-add-answer ng-if="answerEnabled" question-id="data.id" close-answer="answer()"></tq-add-answer>
 	</div>
 
 

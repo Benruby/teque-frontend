@@ -14,9 +14,14 @@
 	margin: auto;
 }
 
+#mainPage {
+	height: 100%;
+}
+
 #content {
 	margin: auto;
 	padding-top: 5%;
+	height: 100%;
 }
 
 

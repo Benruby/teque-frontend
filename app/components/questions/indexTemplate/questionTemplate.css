@@ -10,15 +10,66 @@
 	padding: 1%;
 	font-weight: bold;
 	font-size: 1.5vw;
+	word-wrap: break-word;
 }
 
 #templateDetails {
 	border: solid green 1px;
 	padding: 1%;
+	word-wrap: break-word;
 }
 
 #templateFooter {
 	border: solid black 1px;
 	padding: 1%;
 
+}
+
+#votesSection {
+	border: 1px solid blue;
+	height: 3vw;
+	width: 100%;
+}
+
+#voteButtons {
+	width: 35%;
+	height: 100%;
+	float: left;
+
+}
+
+.upvoteButtonSub {
+	float: left;
+	height: 100%;
+	width:50%;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid gray;
+}
+
+.upvoteButtonSubVoted {
+	float: left;
+	height: 100%;
+	width:50%;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid gray;
+	background-color: gray;
+}
+
+#upvoteButton  {
+	text-decoration: none;
+	height: 100%;
+}
+
+#downvoteButtonSub {
+	height: 100%;
+	float: right
+	width:50%;
+	text-align: center;
+}
+
+#downvoteButton  {
+	text-decoration: none;
+	height: 100%;
 }

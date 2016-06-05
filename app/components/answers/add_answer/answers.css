@@ -1,0 +1,20 @@
+#mainAnswer {
+	padding: 1%;
+	margin: auto;
+}
+
+
+#answerContent textarea {
+	 resize: none;
+	 width: 100%;
+	 margin: auto;
+
+}
+
+#singleAnswer {
+	padding: 1%;
+	margin: auto;
+	border-bottom: 1px solid gray;
+}
+
+	

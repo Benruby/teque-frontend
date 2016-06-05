@@ -42,6 +42,7 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q) {
 			storage.removeItem(token);
 		}
 
+
 	}
 
 	return authToken;

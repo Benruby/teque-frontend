@@ -17,6 +17,11 @@ angular
     url: '/',
     controller: 'LogoutCtrl'
   })
+  .state('show_question', {
+    url: '/question/:question_id',
+    templateUrl: "states/showQuestion/show.html",
+    controller: 'ShowQuestionCtrl'
+  })
   .state('404', {
     url: '*path',
     templateUrl: 'states/404/404.html'
@@ -29,29 +34,24 @@ angular
 
     authToken.isAuthenticated()
     .then(function(data){
-      console.log(data);
     if (toState.name === 'login' && !data) { //user is NOT authenticated
-      console.log("redirected to Login, user isn't auth.")
     } 
       else if (toState.name !== 'login' && !data) { //user is NOT authenticated and want's to view pages.
-        console.log('unauth user trying to see different pages');
       event.preventDefault();
       $state.go('login');
     } 
     else if (toState.name === 'login' && data) {
       event.preventDefault();
       $state.go('main');
-      console.log('user already signed in, cant go to login');
     } else {
-      console.log("state change is legit");
     }
   });
   })
-}])
-
-
-.run(['$rootScope', '$state', function ($rootScope, $state){
-  $rootScope.$on('$stateNotFound', function() {
-    $state.go('404');
-  });
 }]);
+
+
+// .run(['$rootScope', '$state', function ($rootScope, $state){
+//   $rootScope.$on('$stateNotFound', function() {
+//     $state.go('404');
+//   });
+// }]);
