@@ -1,0 +1,43 @@
+#commentMain {
+	position: relative;
+	display: table;
+	width:100%;
+	padding: 2%;
+	margin-top: 4%;
+	border-radius: 3px;
+	background-color: #f4f4f4;
+}
+
+#commentInput {
+	position: relative;
+	display: table-cell;
+}
+
+#commentInput input {
+	position: relative;
+	width: 100%;
+	border-radius: 3px;
+	border: 1px gray solid;
+	outline: none;
+	padding-left: 3%;
+}
+
+#commentButton {
+	position: relative;
+	display: table-cell;
+}
+
+#commentButton button {
+	position: relative;
+	float: left;
+}
+
+#commentsIndex {
+	display: table-row;
+}
+
+#comment {
+	border-bottom: 1px gray solid;
+	padding-top: 2%;
+	margin: auto;
+}

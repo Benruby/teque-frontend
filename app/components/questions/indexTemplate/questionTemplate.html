@@ -24,9 +24,18 @@
 		
 	</div>
 
+	<div id="answerCounter" ng-if="data.answers.length !== 0">
+		<a ui-sref="show_question({question_id: data.id})">תשובות: {{data.answers.length}}</a>
+	</div>
 	<div id="templateFooter" layout="row">
+
 		<div id="answerButton">
 			<md-button class="md-raised" ng-disabled="answerEnabled" ng-click='answer()'>ענה</md-button>
+		</div>
+		<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a></div>
+
+		<div id="commentSection" ng-if="commentEnabled">
+			<tq-question-comment question-id="data.id" close-comment="comment()"></tq-question-comment>
 		</div>
 
 

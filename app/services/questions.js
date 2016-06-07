@@ -1,12 +1,7 @@
 'use strict';
 
 
-angular.module('tequeFrontendApp').factory('Questions', function($resource) {
+angular.module('tequeFrontendApp').factory('Questions', function($resource, $http) {
 	
-	return $resource('/api/questions/:question_id', {question_id: '@question_id'}, 
-
-		{
-			'update': {method: 'PUT'}
-		});
-
+	return $resource('/api/questions/:id')
 });

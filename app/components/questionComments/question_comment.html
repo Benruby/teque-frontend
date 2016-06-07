@@ -1,0 +1,15 @@
+<div id="commentMain">
+	<div id="commentInput">
+		<input type="text" name="question_comment" ng-model="comment.comment_body">
+	</div>
+
+	<div id="commentButton">
+		<button ng-click="sendComment()" ng-disabled="!comment.comment_body">שלח</button>
+	</div>
+
+	<div id="commentsIndex">
+		<div id="comment" ng-repeat="c in comments">
+			{{c.comment_body}}
+		</div>
+	</div>
+</div>

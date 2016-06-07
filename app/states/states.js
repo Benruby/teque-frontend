@@ -37,7 +37,7 @@ angular
     if (toState.name === 'login' && !data) { //user is NOT authenticated
     } 
       else if (toState.name !== 'login' && !data) { //user is NOT authenticated and want's to view pages.
-      event.preventDefault();
+        event.preventDefault();
       $state.go('login');
     } 
     else if (toState.name === 'login' && data) {
