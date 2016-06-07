@@ -1,0 +1,14 @@
+#showAnswerMain {
+	padding-top: 3%;
+	direction: rtl;
+}
+
+#answerSection {
+
+}
+
+#singleAnswer {
+	padding-top: 2%;
+	padding-bottom: 2%;
+	border-top: 1px solid gray;
+}

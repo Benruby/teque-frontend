@@ -1,3 +1,12 @@
 #questionsPage {
 	direction: rtl;
+	display: table;
 }
+
+#answersSection {
+	display: table;
+	margin: auto;
+	border: 1px solid purple;
+	width: 100%;
+}
+

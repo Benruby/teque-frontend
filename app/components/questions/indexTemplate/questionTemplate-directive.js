@@ -9,21 +9,24 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 			data: '='
 		},
 		controller: function ($scope) {
+
 			$scope.question_title = $scope.data.title;
 			$scope.question_body = $scope.data.body;
 			$scope.answerEnabled = false;
 			$scope.voted = false;
+			$scope.commentEnabled = false;
 			var current_user_id = localStorage.getItem('u_id');
 			$scope.votes_ids = [];
+
 
 			for (var i = 0; i < $scope.data.question_upvotes.length; i++){
 				$scope.votes_ids.push($scope.data.question_upvotes[i].user_id);
 			}
 
 			if ($scope.votes_ids.indexOf(parseInt(current_user_id)) === -1) {
-				console.log($scope.voted = false);
+				$scope.voted = false;
 			} else {
-				console.log($scope.voted = true);
+				$scope.voted = true;
 			}
 
 
@@ -42,6 +45,10 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 					$scope.voted = false;
 				}
 
+			}
+			
+			$scope.comment = function () {
+				$scope.commentEnabled = !$scope.commentEnabled;
 			}
 		}
 	}

@@ -3,9 +3,13 @@
 
 angular.module('tequeFrontendApp')
 .controller('ShowQuestionCtrl', function ($log, $scope, Questions, $stateParams){
-      $stateParams.contactId  //*** ) {
 
-      	$scope.showQuestion = Questions.get({question_id: $stateParams.question_id});
 
-      }); 
+	$scope.question = Questions.get({id: $stateParams.question_id}).$promise.then(function(response) {
+		$scope.question = response;
+	}, function () {
+		console.log("resource ERROR!!!");
+	});
+
+}); 
 

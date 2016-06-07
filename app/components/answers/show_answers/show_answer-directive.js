@@ -1,4 +1,4 @@
-angular.module('tequeFrontendApp').directive('tqShowAnswer', function (Answers, $timeout) {
+angular.module('tequeFrontendApp').directive('tqShowAnswers', function ($timeout) {
 	
 
 	return {
