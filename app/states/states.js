@@ -14,8 +14,13 @@ angular
     controller: 'LoginCtrl'
   })
   .state('logout', {
-    url: '/',
+    url: '/logout',
     controller: 'LogoutCtrl'
+  })
+  .state('settings', {
+    url: '/settings',
+    templateUrl: "states/user/settings/settings.html",
+    controller: 'SettingsCtrl'
   })
   .state('show_question', {
     url: '/question/:question_id',

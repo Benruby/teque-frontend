@@ -1,0 +1,39 @@
+#mainSettings {
+	margin-top: 5%;
+	direction: rtl;
+	display: flex;
+}
+
+#optionsList {
+
+	position: fixed;
+	display: block;
+	float: right;
+	width: 10%;
+	margin: auto;
+}
+
+#settingsView {
+	position: relative;
+	width: 60%;
+	margin: auto;
+}
+
+#settingsContent {
+	
+}
+
+#list {
+	border: 1px solid gray;
+}
+
+#list ul {
+	list-style-type: none;
+	padding:0;
+}
+
+#listItem {
+	font-size: 1vw;
+	padding: 5% 5% 5% 0;
+
+}

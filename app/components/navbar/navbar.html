@@ -2,19 +2,9 @@
     <div id="mainBar" flex="75">
     <div id="bar">
             <div id="menuItems">
-                <md-menu  ng-show="!$focused">
-                    <md-button md-menu-origin ng-click="$mdOpenMenu()">פרופיל</md-button>
-                    <md-menu-content width="2">
-                        <md-menu-item>
-                            <md-button>הגדרות</md-button>
-                        </md-menu-item>
-                        <md-menu-item>
-                            <md-button ui-sref="logout">התנתק</md-button>
-                        </md-menu-item>
-                    </md-menu-content>
-                </md-menu>
+                <md-button ng-show="!$focused" ui-sref="logout">התנתק</md-button>
                 <md-button  ng-show="!$focused">התראות</md-button>
-                <md-button  ng-show="!$focused">ענה על שאלות</md-button>
+                <md-button  ui-sref="settings({sub_state: 'profile'})" ng-show="!$focused">פרופיל</md-button>
             </div>
 
             <div class="askBar">

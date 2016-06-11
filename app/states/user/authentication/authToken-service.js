@@ -40,6 +40,10 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q) {
 
 		removeToken: function() {
 			storage.removeItem(token);
+		},
+
+		checkPassword: function(password) {
+			return $http.post('/api/check_password', {password: password});
 		}
 
 

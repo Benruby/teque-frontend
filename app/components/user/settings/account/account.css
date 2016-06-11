@@ -1,0 +1,58 @@
+#contentTitle {
+	border-bottom: 1px solid gray;
+	height: 3vw;
+}
+
+#accountEmailSection {
+	border-bottom: 1px solid gray;
+	height: 4vw;
+}
+
+#accountEmailTitle {
+	width: 40%;
+	display: inline-block;
+}
+
+#accountEmail {
+	width: 40%;
+	display: inline-block;
+}
+
+#accountPasswordSection {
+	border-bottom: 1px solid gray;
+	min-height: 4vw;
+}
+
+#accountPasswordTitle {
+	width: 40%;
+	display: inline-block;
+}
+#accountPasswordLink {
+	width: 40%;
+	display: inline-block;
+}
+
+#editPasswordSection {
+	width: 40%;
+	display: inline-block;
+}
+
+
+#editPasswordSection {
+	font-size: 1vw
+}
+
+#logoutSection {
+	border-bottom: 1px solid gray;
+	height: 4vw;
+}
+
+#logoutTitle {
+	width: 40%;
+	display: inline-block;
+}
+
+#logoutLink {
+	width: 40%;
+	display: inline-block;
+}

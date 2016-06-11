@@ -1,0 +1,75 @@
+#profileTitle {
+	border: solid 1px gray;
+}
+
+#profileContent {
+	border: solid 1px blue; 
+	height: 100%;
+}
+
+#profileHeader {
+	position: relative;
+	padding-right: 30%;
+	box-sizing: border-box;
+	border-bottom: 2px solid gray;
+	min-height: 13vw;
+}
+
+#pictureWrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#profilePicture {
+	border: solid 1px red; 
+	position: relative;
+	overflow: hidden;
+}
+
+#profilePicture img {
+	height: 90%;
+	width: 90%;
+	position: relative;
+}
+
+#profileName {
+	min-height: 3vw;
+	vertical-align: middle;
+	position: relative;
+}
+
+#profileName span {
+	font-size: 2vw;
+	position: relative;
+}
+
+#editLink {
+	text-decoration: none;
+	color: gray;
+	font-size: 1vw;
+}
+
+#editName {
+	height: 2vw;
+	vertical-align: middle;
+	position: relative;
+}
+
+#profileDetails {
+	border: solid 1px blue; 
+	position: relative;
+}
+
+
+#editClickable {
+	color: gray;
+}
+#editClickable:hover {
+	text-decoration: underline;
+	color: gray;
+}
+
+#temp {
+	height: 500px;
+}

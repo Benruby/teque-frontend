@@ -12,5 +12,11 @@ angular.module('tequeFrontendApp').service('PasswordReset', function($http) {
 		return $http.post('/api/users/password', {
 			email: email
 		});
+	};
+
+	this.updatePassword = function(data) {
+		return $http.put('/api/users/update_password',{
+			user: {password: data.new_password}
+		});
 	}
 });

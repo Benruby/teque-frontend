@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="states/main/main.css">
   <link rel="stylesheet" href="states/user/login/login-design.css">
+  <link rel="stylesheet" href="states/user/settings/settings.css">
   <link rel="stylesheet" href="states/showQuestion/show.css">
   <link rel="stylesheet" href="components/navbar/navbar.css">
   <link rel="stylesheet" href="components/askQuestion/ask.css">
@@ -24,6 +25,10 @@
   <link rel="stylesheet" href="components/answers/add_answer/answers.css">
   <link rel="stylesheet" href="components/answers/show_answers/show_answers.css">
   <link rel="stylesheet" href="components/questionComments/question_comment.css">
+  <link rel="stylesheet" href="components/user/settings/account/account.css">
+  <link rel="stylesheet" href="components/user/settings/profile/profile.css">
+  <link rel="stylesheet" href="components/user/settings/account/passwordDialog/dialog.css">
+  
   <!-- endbuild -->
 </head>
 <body ng-app="tequeFrontendApp">
@@ -78,6 +83,10 @@
      <script src="states/user/logout/logout-service.js"></script>
      <script src="states/user/password_reset/reset-directive.js"></script>
      <script src="states/user/password_reset/reset-service.js"></script>
+     <script src="states/user/settings/settings-controller.js"></script>
+     <script src="components/user/settings/account/account-directive.js"></script>
+     <script src="components/user/settings/account/passwordDialog/dialog-controller.js"></script>
+     <script src="components/user/settings/profile/profile-directive.js"></script>
      <script src="components/askQuestion/ask-directive.js"></script>
      <script src="components/askQuestion/ask-controller.js"></script>
      <script src="components/navbar/custom-input-focus.js"></script>
@@ -90,6 +99,7 @@
      <script src="services/answers.js"></script>
      <script src="services/question_upvotes.js"></script>
      <script src="services/question_comments.js"></script>
+     <script src="services/settings.js"></script>
      <script src="components/questions/indexTemplate/readmore-directive.js"></script>
      <script src="components/questions/indexTemplate/questionTemplate-directive.js"></script>
      <script src="states/showQuestion/show-controller.js"></script>
