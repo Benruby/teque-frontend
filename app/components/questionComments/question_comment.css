@@ -8,28 +8,35 @@
 	background-color: #f4f4f4;
 }
 
+#commentSection {
+	border- bottom: 1px solid black;
+}
+
 #commentInput {
 	position: relative;
 	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 20px;
 }
 
 #commentInput input {
-	position: relative;
-	width: 100%;
 	border-radius: 3px;
 	border: 1px gray solid;
 	outline: none;
 	padding-left: 3%;
+	width: 100%;
 }
 
 #commentButton {
-	position: relative;
-	display: table-cell;
+    display: table-cell;
+    vertical-align: top;
+    white-space: nowrap;
 }
 
 #commentButton button {
-	position: relative;
-	float: left;
+	display: inline-block;
 }
 
 #commentsIndex {

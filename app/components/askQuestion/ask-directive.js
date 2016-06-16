@@ -2,7 +2,8 @@ angular.module('tequeFrontendApp').directive('tqAsk', function () {
 	return {
 		restrict: 'E',
 		templateUrl: "components/askQuestion/ask.html",
-		controller: 'AskCtrl'
+		controller: 'AskCtrl',
+		replace: true
 
 	}
 });

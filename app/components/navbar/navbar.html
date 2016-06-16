@@ -1,17 +1,27 @@
-<div class=navbar layout="row" layout-padding  >
-    <div id="mainBar" flex="75">
-    <div id="bar">
-            <div id="menuItems">
-                <md-button ng-show="!$focused" ui-sref="logout">התנתק</md-button>
-                <md-button  ng-show="!$focused">התראות</md-button>
-                <md-button  ui-sref="settings({sub_state: 'profile'})" ng-show="!$focused">פרופיל</md-button>
+<div class=navbar>
+    <div id="mainBar" flex="70">
+        <div id="logo">
+            <a ui-sref="main">
+            Teque
+            </a>
+        </div>
+        <div id="bar">
+            <div id="menuItems" ng-class="{noItems: $focused, menuItems: !$focused}">
+                <div id="menuLinksWrapper">
+                    <div id="menuItem">
+                        <a ui-sref="logout">התנתק</a>
+                    </div>
+                    <div id="menuItem">
+                        <a>התראות</a>
+                    </div>
+                    <div id="menuItem">
+                        <a  ui-sref="settings({sub_state: 'profile'})">פרופיל</a>
+                    </div>
+                </div>
             </div>
 
             <div class="askBar">
                 <tq-ask></tq-ask>
-            </div>
-            <div class="nav-buttons">
-
             </div>
         </div>
     </div>

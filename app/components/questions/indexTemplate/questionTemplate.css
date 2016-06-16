@@ -1,12 +1,8 @@
 #templateWrapper {
-	border: solid red 1px;
 	padding: 1%;
-	direction: rtl;
-
 }
 
 #templateTitle {
-	border: solid blue 1px;
 	padding: 1%;
 	font-weight: bold;
 	font-size: 1.5vw;
@@ -14,85 +10,131 @@
 }
 
 #templateDetails {
-	border: solid green 1px;
-	padding: 1%;
 	word-wrap: break-word;
 }
 
 #templateFooter {
-	border: solid black 1px;
-	padding: 1%;
-	display: table;
 	width: 100%;
 
 }
 
 #votesSection {
-	border: 1px solid blue;
-	height: 3vw;
-	width: 100%;
+
+
 }
 
 #voteButtons {
-	width: 35%;
-	height: 100%;
-	float: left;
-
+	float: right;
 }
 
+#voteLink {
+	margin-right: 5px;
+	padding-right: 5px;
+	border-right: 1px solid  #5f9ea0;
+	display: inline-block;
+}
+
+#voteCount {
+	display: inline-block;
+}
+
+
 .upvoteButtonSub {
-	float: left;
-	height: 100%;
-	width:50%;
 	text-align: center;
 	cursor: pointer;
-	border: 1px solid gray;
+	border: solid 1px #5f9ea0;
+	background-color: #add8e6;
+	border-radius: 5px;
+	outline: 0;
+	outline: none;
+	color: blue;
+
+}
+.upvoteButtonSub a{
+	color: #4169e1;	
+	font-size: 1vw;
 }
 
 .upvoteButtonSubVoted {
 	float: left;
-	height: 100%;
-	width:50%;
 	text-align: center;
 	cursor: pointer;
-	border: 1px solid gray;
-	background-color: gray;
+	background-color: #d3d3d3;
+	border: solid 1px #5f9ea0;
+	border-radius: 5px;
+	outline: 0;
+	outline: none;
+
+}
+.upvoteButtonSubVoted a {
+	color: 	#a9a9a9;
+	font-size: 1vw;
 }
 
 #upvoteButton  {
 	text-decoration: none;
-	height: 100%;
-}
-
-#downvoteButtonSub {
-	height: 100%;
-	float: right
-	width:50%;
+	display: inline-block;
 	text-align: center;
+	cursor: pointer;
+	padding: 5px;
 }
 
-#downvoteButton  {
-	text-decoration: none;
-	height: 100%;
+
+.answerButton {
+	text-align: center;
+	cursor: pointer;
+	border: solid 1px #5f9ea0;
+	background-color: #add8e6;
+	border-radius: 5px;
+	outline: 0;
+	outline: none;
+	color: blue;
+	display: inline-block;
+	margin-left: 20px;
 }
 
-#answerButton {
-	display: table-cell;
+.answerButton a {
+	padding: 5px 5px 5px 5px;
+	display: inline-block;
+}
+.answerButtonClicked {
+	text-align: center;
+	cursor: pointer;
+	background-color: #d3d3d3;
+	border: solid 1px #5f9ea0;
+	border-radius: 5px;
+	outline: 0;
+	outline: none;
+	color: blue;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.answerButtonClicked a {
+	padding: 5px 5px 5px 5px;
+	display: inline-block;
+	color: 	#a9a9a9;
 }
 
 #addCommentLink {
-	display: table-cell;
+	display: inline-block;
+	position: relative;
+}
+
+#addCommentLink a {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	color: #808080;
 }
 
 #commentSection {
-	display: table-row;
 	width: 100%;
 
 }
 
 #answerCounter {
 	position: relative;
-	border: 1px solid gray;
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
@@ -100,5 +142,7 @@
 #answerCounter a {
 	position: relative;
 	text-decoration: none;
+	color: #808080;
 
 }
+
