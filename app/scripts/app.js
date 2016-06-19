@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('tequeFrontendApp', [
+	'config',
 	'ngAnimate',
 	'ngCookies',
 	'ngResource',

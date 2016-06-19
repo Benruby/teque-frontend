@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('tequeFrontendApp').factory('authToken', function($http, $q) {
+angular.module('tequeFrontendApp').factory('authToken', function($http, $q, ENV) {
 
 	var storage = localStorage;
 	var token = 'auth_token';
@@ -35,7 +35,7 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q) {
 		},
 
 		checkServerToken: function() {
-			return $http.get('/api/token');
+			return $http.get(ENV.apiEndpoint + '/api/token');
 		},
 
 		removeToken: function() {
@@ -43,7 +43,7 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q) {
 		},
 
 		checkPassword: function(password) {
-			return $http.post('/api/check_password', {password: password});
+			return $http.post(ENV.apiEndpoint + '/api/check_password', {password: password});
 		}
 
 

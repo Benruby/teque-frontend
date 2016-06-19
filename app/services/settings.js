@@ -1,9 +1,9 @@
 'use strict';
 
 
-angular.module('tequeFrontendApp').factory('Settings', function($resource, $http) {
+angular.module('tequeFrontendApp').factory('Settings', function($resource, $http, ENV) {
 	
-	return $resource ('/api/users/:id', null, {
+	return $resource (ENV.apiEndpoint + '/api/users/:id', null, {
 		'update': {method: 'PATCH'}
 	});
 });

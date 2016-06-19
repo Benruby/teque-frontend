@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('tequeFrontendApp').factory('Questions', function($resource, $http) {
+angular.module('tequeFrontendApp').factory('Questions', function($resource, $http, ENV) {
 	
-	return $resource('/api/questions/:id')
+	return $resource(ENV.apiEndpoint + '/api/questions/:id')
 });
