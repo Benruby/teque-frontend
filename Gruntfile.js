@@ -66,10 +66,10 @@ module.exports = function (grunt) {
       files: [
     '<%= yeoman.app %>/{,*/}*.html',
   '<%= yeoman.app %>/{,*/*/}*.html',
-  '<%= yeoman.app %>/{,*/*/*/}*.html',
-    '<%= yeoman.app %>/{,*/*/}*.js',
-    '<%= yeoman.app %>/{,*/*/*/}*.js',
-    '<%= yeoman.app %>/{,*/*/*/*/}*.js',
+'<%= yeoman.app %>/{,*/*/*/}*.html',
+'<%= yeoman.app %>/{,*/*/}*.js',
+'<%= yeoman.app %>/{,*/*/*/}*.js',
+'<%= yeoman.app %>/{,*/*/*/*/}*.js',
 '<%= yeoman.app %>/{,*/*/*/*/}*.html',
 '<%= yeoman.app %>/{,*/*/*/}*.js',
 '.tmp/styles/{,*/}*.css',
@@ -121,32 +121,32 @@ module.exports = function (grunt) {
 
             return middlewares;
           }
-                      
-                    }
-                  },
-                  test: {
-                    options: {
-                      port: 9001,
-                      middleware: function (connect) {
-                        return [
-                        connect.static('.tmp'),
-                        connect.static('test'),
-                        connect().use(
-                          '/bower_components',
-                          connect.static('./bower_components')
-                          ),
-                        connect.static(appConfig.app)
-                        ];
-                      }
-                    }
-                  },
-                  dist: {
-                    options: {
-                      open: true,
-                      base: '<%= yeoman.dist %>'
-                    }
-                  }
-                },
+
+        }
+      },
+      test: {
+        options: {
+          port: 9001,
+          middleware: function (connect) {
+            return [
+            connect.static('.tmp'),
+            connect.static('test'),
+            connect().use(
+              '/bower_components',
+              connect.static('./bower_components')
+              ),
+            connect.static(appConfig.app)
+            ];
+          }
+        }
+      },
+      dist: {
+        options: {
+          open: true,
+          base: '<%= yeoman.dist %>'
+        }
+      }
+    },
 
     // Make sure there are no obvious mistakes
     jshint: {
@@ -304,15 +304,15 @@ options: {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+            '.tmp/styles/{,*/}*.css'
+          ]
+        }
+      }
+    },
     // uglify: {
     //   dist: {
     //     files: {
@@ -359,10 +359,21 @@ htmlmin: {
     files: [{
       expand: true,
       cwd: '<%= yeoman.dist %>',
-      src: ['*.html'],
-      dest: '<%= yeoman.dist %>'
-    }]
-  }
+      src: ['*.html',
+    'states/{,*/}*.html',
+  'states/{,*/*/}*.html',
+'states/{,*/*/*/}*.html',
+'states/{,*/*/*/*/}*.html',
+'states/{,*/*/*/*/*/}*.html',
+'components/{,*/}*.html',
+'components/{,*/*/}*.html',
+'components/{,*/*/*/}*.html',
+'components/{,*/*/*/*/}*.html',
+'components/{,*/*/*/*/*/}*.html'
+],
+dest: '<%= yeoman.dist %>'
+}]
+}
 },
 
 ngtemplates: {
@@ -409,21 +420,43 @@ ngtemplates: {
           src: [
           '*.{ico,png,txt}',
           '*.html',
-        'images/{,*/}*.{webp}',
-      'styles/fonts/{,*/}*.*'
-      ]
-    }, {
-      expand: true,
-      cwd: '.tmp/images',
-      dest: '<%= yeoman.dist %>/images',
-      src: ['generated/*']
-    }]
-  },
-  styles: {
-    expand: true,
-    cwd: '<%= yeoman.app %>/styles',
-    dest: '.tmp/styles/',
-  src: '{,*/}*.css'
+        'states/{,*/}*.html',
+      'states/{,*/*/}*.html',
+    'states/{,*/*/*/}*.html',
+  'states/{,*/*/*/*/}*.html',
+'states/{,*/*/*/*/*/}*.html',
+'components/{,*/}*.html',
+'components/{,*/*/}*.html',
+'components/{,*/*/*/}*.html',
+'components/{,*/*/*/*/}*.html',
+'components/{,*/*/*/*/*/}*.html',
+'images/{,*/}*.{webp}',
+'styles/fonts/{,*/}*.*'
+]
+}, {
+  expand: true,
+  cwd: '.tmp/images',
+  dest: '<%= yeoman.dist %>/images',
+  src: ['generated/*']
+}]
+},
+styles: {
+  expand: true,
+  cwd: '<%= yeoman.app %>/styles',
+  dest: '.tmp/styles/',
+  src: [
+'{,*/}*.css',
+'states/{,*/}*.css',
+'states/{,*/*/}*.css',
+'states/{,*/*/*/}*.css',
+'states/{,*/*/*/*/}*.css',
+'states/{,*/*/*/*/*/}*.css',
+'components/{,*/}*.css',
+'components/{,*/*/}*.css',
+'components/{,*/*/*/}*.css',
+'components/{,*/*/*/*/}*.css',
+'components/{,*/*/*/*/*/}*.css'
+]
 }
 },
 
