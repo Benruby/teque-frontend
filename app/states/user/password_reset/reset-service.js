@@ -10,7 +10,7 @@ angular.module('tequeFrontendApp').service('PasswordReset', function($http) {
 
 	this.sendEmail = function(email) {
 		return $http.post('/api/users/password', {
-			email: email
+			user: email
 		});
 	};
 
