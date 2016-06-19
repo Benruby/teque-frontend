@@ -5,9 +5,9 @@ var app = express();
 
 app.set('port', (process.env.PORT || 9000));
 
-//app.use(express.static(__dirname + '/'));
-//app.use(express.static(__dirname + '/app'));
-//app.use(express.static(__dirname + '/app/scripts'));
+// app.use(express.static(__dirname + '/'));
+// app.use(express.static(__dirname + '/app'));
+// app.use(express.static(__dirname + '/app/scripts'));
 app.use(express.static(__dirname + '/dist'));
 
 // views is directory for all template files
