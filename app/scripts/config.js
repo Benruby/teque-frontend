@@ -4,5 +4,5 @@ angular.module('config', [])
 
 .constant('ENV', {
   // apiEndpoint: ''
-  apiEndpoint: 'https://teque.herokuapp.com'
+  apiEndpoint: 'https://teque.herokuapp.com/'
 });
