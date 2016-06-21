@@ -31,7 +31,7 @@ angular
     url: '*path',
     templateUrl: 'states/404/404.html'
   });
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/login');
 })
 
 .run(['$rootScope', '$state', 'authToken', function ($rootScope, $state, authToken){

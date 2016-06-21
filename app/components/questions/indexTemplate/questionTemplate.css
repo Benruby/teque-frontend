@@ -1,5 +1,15 @@
 #templateWrapper {
 	padding: 1%;
+	
+}
+
+#questionContent {
+	cursor: pointer;
+}
+
+#questionContent:hover {
+	cursor: pointer;
+	background-color: #f8f8ff;
 }
 
 #templateTitle {

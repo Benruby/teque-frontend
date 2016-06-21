@@ -1,9 +1,7 @@
 #profileTitle {
-	border: solid 1px gray;
 }
 
 #profileContent {
-	border: solid 1px blue; 
 	height: 100%;
 }
 
@@ -11,7 +9,6 @@
 	position: relative;
 	padding-right: 30%;
 	box-sizing: border-box;
-	border-bottom: 2px solid gray;
 	min-height: 13vw;
 }
 
@@ -22,7 +19,6 @@
 }
 
 #profilePicture {
-	border: solid 1px red; 
 	position: relative;
 	overflow: hidden;
 }
@@ -57,16 +53,11 @@
 }
 
 #profileDetails {
-	border: solid 1px blue; 
 	position: relative;
 }
 
 
 #editClickable {
-	color: gray;
-}
-#editClickable:hover {
-	text-decoration: underline;
 	color: gray;
 }
 

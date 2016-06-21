@@ -1,10 +1,12 @@
 <div id="templateWrapper" layout="column">
-	<div id="templateTitle" layout="row">
-		<span ui-sref="show_question({question_id: data.id})">{{question_title}}</span>
-	</div>
+	<div id="questionContent" ui-sref="show_question({question_id: data.id})">
+		<div id="templateTitle" layout="row">
+			<span>{{question_title}}</span>
+		</div>
 
-	<div id="templateDetails" layout="row">
-		<span read-more id="read-more" body="question_body" content="{{question_body}}"></span>
+		<div id="templateDetails" layout="row">
+			<span read-more id="read-more" body="question_body" content="{{question_body}}"></span>
+		</div>
 	</div>
 
 	<div id="votesSection">
@@ -23,14 +25,16 @@
 		
 	</div>
 
-	<div id="answerCounter" ng-if="data.answers.length !== 0">
-		<a ui-sref="show_question({question_id: data.id})">תשובות: {{data.answers.length}}</a>
+	<div id="answerCounter">
+		<a ui-sref="show_question({question_id: data.id})" ng-show="data.answers.length !== 0">
+			תשובות: {{data.answers.length}}
+		</a>
 	</div>
 	<div id="templateFooter">
 
 		<div id="answerButton" ng-class="{answerButton: !answerEnabled, answerButtonClicked: answerEnabled}" ng-click='answer()'>
 			<span>
-			<a ng-disabled="answerEnabled">
+				<a ng-disabled="answerEnabled">
 					ענה
 				</a>
 			</span>

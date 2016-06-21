@@ -13,7 +13,7 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q, ENV)
 		},
 
 		getToken: function () {
-			  
+			
 			return storage.getItem(token);
 		},
 
@@ -43,7 +43,11 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q, ENV)
 		},
 
 		checkPassword: function(password) {
-			return $http.post(ENV.apiEndpoint + '/api/check_password', {password: password});
+			return $http.post(ENV.apiEndpoint + '/api/check_password', {
+				user: {
+					password: password
+				}
+			});
 		}
 
 

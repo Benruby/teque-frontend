@@ -9,7 +9,7 @@
 		</div>
 	</div>
 	<div id="commentsIndex">
-		<div id="comment" ng-repeat="c in comments">
+		<div id="comment" ng-repeat="c in comments | orderBy:'id':true">
 			<div>
 				<a>User name,</a>
 				<a>IMG</a>

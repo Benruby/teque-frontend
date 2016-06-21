@@ -7,17 +7,18 @@ angular.module('tequeFrontendApp').directive('tqQuestionComment', function (Ques
 			questionId: '=',
 			closeComment: '&'
 		},
-		controller: function ($scope) {
+		controller: function ($scope, $state, toastMessage) {
 			$scope.comment = {};
 			$scope.comments = QuestionComments.query({question_id: $scope.questionId})
 
 			$scope.sendComment = function () {
 				$scope.comment.question_id = $scope.questionId;
 				QuestionComments.save($scope.comment);
-				$scope.closeComment();
+				$scope.comments = QuestionComments.query({question_id: $scope.questionId});
+				$scope.comment = {};
+				toastMessage.showToast("תגובה נוספה בהצלחה");
+
 			}
-
-
 		}
 
 	}

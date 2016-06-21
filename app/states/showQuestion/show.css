@@ -1,12 +1,12 @@
 #questionsPage {
 	direction: rtl;
 	display: table;
+	width: 100%;
 }
 
 #answersSection {
 	display: table;
 	margin: auto;
-	border: 1px solid purple;
 	width: 100%;
 }
 

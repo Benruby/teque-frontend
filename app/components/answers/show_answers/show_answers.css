@@ -3,6 +3,12 @@
 	direction: rtl;
 }
 
+#answersHeader {
+	border-top: 2px solid #dcdcdc;
+	text-align: center;
+}
+
+
 #answerSection {
 
 }

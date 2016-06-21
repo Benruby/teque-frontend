@@ -8,7 +8,7 @@ angular.module('tequeFrontendApp').factory('toastMessage', function($mdToast) {
 		showToast: function(message) {
 			$mdToast.show($mdToast.simple()
 				.textContent(message)
-				.position('center')
+				.position('bottom')
 				.hideDelay(4000));
 		}
 	}
