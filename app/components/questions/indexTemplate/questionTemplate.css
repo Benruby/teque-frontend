@@ -3,11 +3,7 @@
 	
 }
 
-#questionContent {
-	cursor: pointer;
-}
-
-#questionContent:hover {
+#templateTitle:hover {
 	cursor: pointer;
 	background-color: #f8f8ff;
 }
@@ -17,6 +13,7 @@
 	font-weight: bold;
 	font-size: 1.5vw;
 	word-wrap: break-word;
+	width: 100%;
 }
 
 #templateDetails {

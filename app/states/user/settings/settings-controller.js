@@ -14,6 +14,7 @@ angular.module('tequeFrontendApp').controller('SettingsCtrl', function ($scope, 
 
 	Settings.get().$promise.then(function(response) {
 		$scope.user = response;
+		$scope.user.description = $scope.user.description || "הוסף תיאור";
 		$scope.userData = $scope.user;
 		$scope.user.new_name = $scope.user.full_name;
 		$scope.user.new_description = $scope.user.description;

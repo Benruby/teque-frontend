@@ -3,6 +3,7 @@
 a.read-more {
 	cursor: pointer;
 	color: blue;
+	z-index: 1500;
 }
 span.more-text {
 	display: none;

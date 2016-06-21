@@ -6,7 +6,6 @@ angular.module('tequeFrontendApp').directive('tqUserProfile', function () {
 			$scope.image = [{
 				src: 'images/profile.jpeg'
 			}];
-
 		}
 
 	}
