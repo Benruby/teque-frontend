@@ -17,10 +17,7 @@
 
 #mainBar {
 	margin: auto;
-	box-sizing: border-box;
 	position: relative;
-	padding: 0;
-	overflow: hidden;
 }
 
 #logo {
@@ -72,9 +69,9 @@
 }
 
 #menuItem {
-	display: table-cell;
+	display: inline;
 	padding-left: 5%;
-
+	margin-left: 20%;
 }
 
 #menuItem a {

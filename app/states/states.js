@@ -22,6 +22,11 @@ angular
     templateUrl: "states/user/settings/settings.html",
     controller: 'SettingsCtrl'
   })
+  .state('content', {
+    url: '/content',
+    templateUrl: "states/user/content/content.html",
+    controller: 'ContentCtrl'
+  })
   .state('show_question', {
     url: '/question/:question_id',
     templateUrl: "states/showQuestion/show.html",
@@ -31,7 +36,7 @@ angular
     url: '*path',
     templateUrl: 'states/404/404.html'
   });
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/');
 })
 
 .run(['$rootScope', '$state', 'authToken', function ($rootScope, $state, authToken){

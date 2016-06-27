@@ -1,4 +1,4 @@
-<div id="mainPage" ng-class="{darkBackground: $focused, normalBacgkround: !$focused}"  ng-focus="$focused=false" tabindex="1">
+<div id="mainPage" ng-class="{normalBacgkround: $focused, normalBacgkround: !$focused}"  ng-focus="$focused=false" tabindex="1">
 	<div id="navbarSection">
 		<tq-navbar></tq-navbar>
 	</div>
@@ -17,7 +17,7 @@
 							<a href="" ng-click="changeState('account')"><li>חשבון</li></a>
 						</div>
 						<div id="listItem">
-							<a><li>התראות</li></a>
+							<a ui-sref="content"><li>התוכן שלי</li></a>
 						</div>
 					</ul>
 				</div>

@@ -1,7 +1,7 @@
 #mainSettings {
-	margin-top: 5%;
+	margin: 0 auto;
 	direction: rtl;
-	display: flex;
+	width: 100%
 }
 
 #optionsList {
@@ -19,9 +19,6 @@
 	margin: auto;
 }
 
-#settingsContent {
-	
-}
 
 #list {
 	border: 1px solid gray;

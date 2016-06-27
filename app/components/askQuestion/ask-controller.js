@@ -7,7 +7,7 @@ angular.module('tequeFrontendApp')
 
 	$scope.askQuestion = function () {
 		if ($scope.askForm.$valid) {
-			var promise = Questions.save({question: $scope.question_data}).$promise.then(function (response) {
+			var promise = Questions.allQuestions.save({question: $scope.question_data}).$promise.then(function (response) {
 				$scope.question_data = {}
 				$scope.$focused = false;
 				$state.reload();

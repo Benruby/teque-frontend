@@ -3,5 +3,9 @@
 
 angular.module('tequeFrontendApp').factory('Questions', function($resource, $http, ENV) {
 	
-	return $resource(ENV.apiEndpoint + '/api/questions/:id')
+	return {
+		allQuestions: $resource(ENV.apiEndpoint + '/api/questions/:id'),
+
+		userQuestions: $http.get('/api/user_questions')
+	} 
 });

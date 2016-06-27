@@ -1,0 +1,17 @@
+#mainContent {
+	margin: auto;
+	width: 100%;
+	min-height: 100%;
+	margin-top: 5%;
+	direction: rtl;
+	display: flex;
+}
+#contentView {
+	position: relative;
+	width: 60%;
+	margin: auto;
+}
+
+#userQuestion {
+	border-bottom: 1px solid gray;
+}
