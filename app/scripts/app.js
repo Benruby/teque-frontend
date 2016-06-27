@@ -9,5 +9,6 @@ angular.module('tequeFrontendApp', [
 	'ngMaterial',
 	'ngMessages',
 	'ui.router',
-	'monospaced.elastic'
+	'monospaced.elastic',
+	'infinite-scroll'
 	]);

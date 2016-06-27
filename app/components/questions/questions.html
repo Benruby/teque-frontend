@@ -2,10 +2,10 @@
 
 
 
-<div id="questionsPage" flex>
+<div id="questionsPage" infinite-scroll="scrollDown()">
 	
 
-	<div ng-repeat= "q in questions | orderBy: 'id' : true" id="question" flex>
+	<div ng-repeat= "q in questions" id="question">
 
 		<tq-question-template data="q"></tq-question-template>
 

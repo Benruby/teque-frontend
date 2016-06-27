@@ -3,7 +3,7 @@
 angular.module('tequeFrontendApp')
 .controller('ContentCtrl', function ($scope, Questions) {
 
-	$scope.userQuestions = Questions.getUserQuestions
+	$scope.userQuestions = Questions.userQuestions
 	.then(
 		function(response){
 			$scope.userQuestions = response.data;

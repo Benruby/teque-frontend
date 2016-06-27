@@ -18,3 +18,39 @@
 	padding-bottom: 2%;
 	border-top: 1px solid gray;
 }
+
+#answerUserInfo {
+	min-height: 2.5vw;
+	margin: auto;
+	position: relative;
+}
+
+
+#answerUserImage {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#userImage {
+	position: relative;
+}
+
+#userInfoWrapper {
+	padding-right: 10%;
+	display: table;
+}
+
+#userInfo{
+	display: table-cell;
+	vertical-align: middle;
+	height: 40px;
+}
+
+#answerUserName{
+	font-size: 1.2vw;
+	font-weight: bold;
+}
+
+#answerUserDetails {
+}

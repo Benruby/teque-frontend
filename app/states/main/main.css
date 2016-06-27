@@ -1,5 +1,5 @@
 html {
-  overflow-y: scroll;
+	overflow-y: scroll;
 }
 
 .darkBackground {
@@ -19,14 +19,9 @@ html {
 	margin: auto;
 }
 
-#mainPage {
-	height: 100%;
-}
-
 #content {
 	margin: auto;
 	padding-top: 5%;
-	height: 100%;
 }
 
 
@@ -41,9 +36,9 @@ html {
 }
 
 
-  md-toast {
-    color: red !important;
-  }
+md-toast {
+	color: red !important;
+}
 
 
 
