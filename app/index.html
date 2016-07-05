@@ -9,6 +9,7 @@
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="bower_components/ng-img-crop-full-extended/compile/minified/ng-img-crop.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css({.tmp,app}) styles/main.css -->
@@ -29,6 +30,7 @@
   <link rel="stylesheet" href="components/user/settings/account/account.css"/>
   <link rel="stylesheet" href="components/user/settings/profile/profile.css"/>
   <link rel="stylesheet" href="components/user/settings/account/passwordDialog/dialog.css"/>
+  <link rel="stylesheet" href="components/user/settings/profile/imageDialog/imageDialog.css"/>
   <!-- endbuild -->
 
 </head>
@@ -67,6 +69,7 @@
      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
      <script src="bower_components/angular-elastic/elastic.js"></script>
      <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+     <script src="bower_components/ng-img-crop-full-extended/compile/minified/ng-img-crop.js"></script>
      <!-- endbower -->
      <!-- endbuild -->
 
@@ -89,6 +92,8 @@
      <script src="states/user/content/content-controller.js"></script>
      <script src="components/user/settings/account/account-directive.js"></script>
      <script src="components/user/settings/account/passwordDialog/dialog-controller.js"></script>
+     <script src="components/user/settings/profile/imageDialog/imageDialog-directive.js"></script>
+     <script src="components/user/settings/profile/imageDialog/imageDialog-controller.js"></script>
      <script src="components/user/settings/profile/profile-directive.js"></script>
      <script src="components/askQuestion/ask-directive.js"></script>
      <script src="components/askQuestion/ask-controller.js"></script>
@@ -104,6 +109,7 @@
      <script src="services/question_upvotes.js"></script>
      <script src="services/question_comments.js"></script>
      <script src="services/settings.js"></script>
+     <script src="services/images.js"></script>
      <script src="components/questions/indexTemplate/readmore-directive.js"></script>
      <script src="components/questions/indexTemplate/questionTemplate-directive.js"></script>
      <script src="states/showQuestion/show-controller.js"></script>

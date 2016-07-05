@@ -10,5 +10,6 @@ angular.module('tequeFrontendApp', [
 	'ngMessages',
 	'ui.router',
 	'monospaced.elastic',
-	'infinite-scroll'
+	'infinite-scroll',
+	'ngImgCrop'
 	]);

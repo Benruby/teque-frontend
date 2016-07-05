@@ -86,13 +86,12 @@ angular.module('tequeFrontendApp').controller('SettingsCtrl', function ($scope, 
 			console.log("reject of the setting controller")
 			console.log(error);
 		});
-		// $scope.$watch(function() {
-		// 	return $mdMedia('xs') || $mdMedia('sm');
-		// }, function(wantsFullScreen) {
-		// 	$scope.customFullscreen = (wantsFullScreen === true);
-		// });
 	};
 
+	$scope.modalShown = false;
+	$scope.showImageDialog = function() {
+		$scope.modalShown = !$scope.modalShown;
+	}
 }); 
 
 

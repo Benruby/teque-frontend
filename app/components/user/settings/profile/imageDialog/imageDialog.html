@@ -1,0 +1,29 @@
+<div>
+	<div class='ng-modal' ng-show='show'>
+		<div class='ng-modal-overlay' ng-click='hideModal()'></div>
+		<div class='ng-modal-dialog' ng-style='dialogStyle'>
+			<div class='ng-modal-close' ng-click='hideModal()'><p>X<p></div>
+			<div class='ng-modal-dialog-content' ng-transclude>
+
+				<div id="imageFileSelect">
+					<div id="dialogHeader">בחר תמונה:<input type="file" id="fileInput" /></div>
+					<div class="cropArea">
+						<img-crop image="myImage" area-type="circle" chargement="'Loading'" result-image="myCroppedImage"></img-crop>
+					</div>
+
+					<div id="imageActions">
+						<button ng-click="sendImage()">שלח</button>
+						<a href="" ng-click="hideModal()">ביטול</a>	
+					</div>
+					<div id="croppedImage">
+						<div id="croppedHeader"><span>תצוגה מקדימה:</span></div>
+						<div><img ng-src="{{myCroppedImage}}" /></div>
+					</div>
+
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+</div>
