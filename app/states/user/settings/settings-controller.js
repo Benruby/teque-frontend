@@ -10,6 +10,7 @@ angular.module('tequeFrontendApp').controller('SettingsCtrl', function ($scope, 
 	$scope.checkedPassword;
 	$scope.passwordError = false;
 	$scope.password_confirmation = true;
+	$scope.modalShown = false;
 
 
 	Settings.get().$promise.then(function(response) {
@@ -88,7 +89,6 @@ angular.module('tequeFrontendApp').controller('SettingsCtrl', function ($scope, 
 		});
 	};
 
-	$scope.modalShown = false;
 	$scope.showImageDialog = function() {
 		$scope.modalShown = !$scope.modalShown;
 	}

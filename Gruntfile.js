@@ -73,6 +73,7 @@ module.exports = function (grunt) {
 '<%= yeoman.app %>/{,*/*/*/*/}*.html',
 '<%= yeoman.app %>/{,*/*/*/}*.js',
 '.tmp/styles/{,*/}*.css',
+'<%= yeoman.app %>/{,*/}*.css',
 '<%= yeoman.app %>/{,*/*/}*.css',
 '<%= yeoman.app %>/{,*/*/*/}*.css',
 '<%= yeoman.app %>/{,*/*/*/*/}*.css',

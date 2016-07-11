@@ -1,4 +1,6 @@
+
 <div id="templateWrapper" layout="column">
+
 	<div id="questionContent">
 		<div id="templateTitle" layout="row" ui-sref="show_question({question_id: data.id})">
 			<span>{{question_title}}</span>
@@ -41,16 +43,25 @@
 		</div>
 		<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a></div>
 
-		<div id="commentSection" ng-if="commentEnabled">
-			<tq-question-comment question-id="data.id" close-comment="comment()"></tq-question-comment>
+
+		<div id="reportLink" ><a href="" ng-click="showReportDialog()" ng-class="{disabled: reported}" ng-attr-id="{{'title'+ data.id}}">{{reportText}}</a></div>
+
+		<div id="customToast" ng-if="showReportMessage">
+		<b>הדווח נשלח</b>
 		</div>
 
 
+	</div>
+	<div id="commentSection" ng-if="commentEnabled">
+		<tq-question-comment question-id="data.id" close-comment="comment()"></tq-question-comment>
 	</div>
 
 	<div>
 		<tq-add-answer ng-if="answerEnabled" question-id="data.id" close-answer="answer()"></tq-add-answer>
 	</div>
 
+	<report show='reportShown' item-id="data.id" reported="reported" report-text="reportText" method="reportMessage()">
+
+	</report>
 
 </div>
