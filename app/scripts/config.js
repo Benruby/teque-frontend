@@ -3,6 +3,6 @@
 angular.module('config', [])
 
 .constant('ENV', {
-  apiEndpoint: ''
-  // apiEndpoint: 'https://teque.herokuapp.com/'
+  // apiEndpoint: ''
+  apiEndpoint: 'https://teque.herokuapp.com/'
 });
