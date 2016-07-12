@@ -1,3 +1,7 @@
+<div>
+
+
+
 
 <div id="templateWrapper" layout="column">
 
@@ -26,6 +30,11 @@
 		</div>
 		
 	</div>
+	<div>
+
+		<button ng-click="share()">שתף</button>
+
+	</div>
 
 	<div id="answerCounter">
 		<a ui-sref="show_question({question_id: data.id})" ng-show="data.answers.length !== 0">
@@ -47,7 +56,7 @@
 		<div id="reportLink" ><a href="" ng-click="showReportDialog()" ng-class="{disabled: reported}" ng-attr-id="{{'title'+ data.id}}">{{reportText}}</a></div>
 
 		<div id="customToast" ng-if="showReportMessage">
-		<b>הדווח נשלח</b>
+			<b>הדווח נשלח</b>
 		</div>
 
 
@@ -64,4 +73,5 @@
 
 	</report>
 
+</div>
 </div>

@@ -85,6 +85,18 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 				$scope.reportShown = !$scope.reportShown
 				$scope.item_id = item_id;
 			}
+
+			$scope.share = function () {
+				FB.ui({
+					method: 'feed',
+					name: 'this is the content? name',
+					link: 'https://localhost:9000/',
+					caption: 'An example caption',
+					description: 'This is the content',
+				}, function(response){
+					console.log(response);
+				});
+			}
 		}
 	}
 });

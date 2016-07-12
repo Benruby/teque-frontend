@@ -36,6 +36,33 @@
 
 </head>
 <body ng-app="tequeFrontendApp">
+
+
+
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '251458878572893',
+        xfbml      : true,
+        version    : 'v2.6'
+      });
+    };
+
+    (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+ </script>
+
+
+
+
+
+
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
@@ -46,82 +73,83 @@
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
       <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-         (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-         r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-     </script>
+        ga('create', 'UA-80638743-1', 'auto');
+        ga('send', 'pageview');
 
-     <!-- build:js(.) scripts/vendor.js -->
-     <!-- bower:js -->
-     <script src="bower_components/jquery/dist/jquery.js"></script>
-     <script src="bower_components/angular/angular.js"></script>
-     <script src="bower_components/angular-animate/angular-animate.js"></script>
-     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-     <script src="bower_components/angular-resource/angular-resource.js"></script>
-     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-     <script src="bower_components/angular-touch/angular-touch.js"></script>
-     <script src="bower_components/angular-aria/angular-aria.js"></script>
-     <script src="bower_components/angular-messages/angular-messages.js"></script>
-     <script src="bower_components/angular-material/angular-material.js"></script>
-     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-     <script src="bower_components/angular-elastic/elastic.js"></script>
-     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
-     <script src="bower_components/ng-img-crop-full-extended/compile/minified/ng-img-crop.js"></script>
-     <!-- endbower -->
-     <!-- endbuild -->
+      </script>
 
-     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-     <script src="scripts/app.js"></script>
-     <script src="scripts/config.js"></script>
-     <script src="states/states.js"></script>
-     <script src="scripts/auth_interceptor.js"></script>
-     <script src="scripts/controllers/main.js"></script>
-     <script src="states/user/login/login-service.js"></script>
-     <script src="states/user/login/login-controller.js"></script>
-     <script src="states/user/login/loginForm-directive.js"></script>
-     <script src="states/user/signup/signupForm-directive.js"></script>
-     <script src="states/user/signup/signup-controller.js"></script>
-     <script src="states/user/logout/logout-controller.js"></script>
-     <script src="states/user/logout/logout-service.js"></script>
-     <script src="states/user/password_reset/reset-directive.js"></script>
-     <script src="states/user/password_reset/reset-service.js"></script>
-     <script src="states/user/settings/settings-controller.js"></script>
-     <script src="states/user/content/content-controller.js"></script>
-     <script src="components/user/settings/account/account-directive.js"></script>
-     <script src="components/user/settings/account/passwordDialog/dialog-controller.js"></script>
-     <script src="components/user/settings/profile/imageDialog/imageDialog-directive.js"></script>
-     <script src="components/user/settings/profile/imageDialog/imageDialog-controller.js"></script>
-     <script src="components/user/settings/profile/profile-directive.js"></script>
-     <script src="components/askQuestion/ask-directive.js"></script>
-     <script src="components/askQuestion/ask-controller.js"></script>
-     <script src="components/navbar/custom-input-focus.js"></script>
-     <script src="components/navbar/navbar-directive.js"></script>
-     <script src="components/toastMessage/toastMessage-service.js"></script>
-     <script src="states/main/main-controller.js"></script>
-     <script src="components/questions/questions-controller.js"></script>
-     <script src="components/questions/questions-directive.js"></script>
-     <script src="services/authToken-service.js"></script>
-     <script src="services/questions.js"></script>
-     <script src="services/answers.js"></script>
-     <script src="services/question_upvotes.js"></script>
-     <script src="services/question_comments.js"></script>
-     <script src="services/settings.js"></script>
-     <script src="services/images.js"></script>
-     <script src="services/reports.js"></script>
-     <script src="components/questions/indexTemplate/readmore-directive.js"></script>
-     <script src="components/questions/indexTemplate/questionTemplate-directive.js"></script>
-     <script src="states/showQuestion/show-controller.js"></script>
-     <script src="components/answers/add_answer/add_answer-directive.js"></script>
-     <script src="components/answers/add_answer/add_answer-controller.js"></script>
-     <script src="components/answers/show_answers/show_answer-directive.js"></script>
-     <script src="components/questionComments/question_comments-directive.js"></script>
-     <script src="components/report/report-directive.js"></script>
-     
+      <!-- build:js(.) scripts/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/angular-touch/angular-touch.js"></script>
+      <script src="bower_components/angular-aria/angular-aria.js"></script>
+      <script src="bower_components/angular-messages/angular-messages.js"></script>
+      <script src="bower_components/angular-material/angular-material.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-elastic/elastic.js"></script>
+      <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+      <script src="bower_components/ng-img-crop-full-extended/compile/minified/ng-img-crop.js"></script>
+      <!-- endbower -->
+      <!-- endbuild -->
 
-     <!-- endbuild -->
-   </body>
-   </html>
+      <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <script src="scripts/app.js"></script>
+      <script src="scripts/config.js"></script>
+      <script src="states/states.js"></script>
+      <script src="scripts/auth_interceptor.js"></script>
+      <script src="scripts/controllers/main.js"></script>
+      <script src="states/user/login/login-service.js"></script>
+      <script src="states/user/login/login-controller.js"></script>
+      <script src="states/user/login/loginForm-directive.js"></script>
+      <script src="states/user/signup/signupForm-directive.js"></script>
+      <script src="states/user/signup/signup-controller.js"></script>
+      <script src="states/user/logout/logout-controller.js"></script>
+      <script src="states/user/logout/logout-service.js"></script>
+      <script src="states/user/password_reset/reset-directive.js"></script>
+      <script src="states/user/password_reset/reset-service.js"></script>
+      <script src="states/user/settings/settings-controller.js"></script>
+      <script src="states/user/content/content-controller.js"></script>
+      <script src="components/user/settings/account/account-directive.js"></script>
+      <script src="components/user/settings/account/passwordDialog/dialog-controller.js"></script>
+      <script src="components/user/settings/profile/imageDialog/imageDialog-directive.js"></script>
+      <script src="components/user/settings/profile/imageDialog/imageDialog-controller.js"></script>
+      <script src="components/user/settings/profile/profile-directive.js"></script>
+      <script src="components/askQuestion/ask-directive.js"></script>
+      <script src="components/askQuestion/ask-controller.js"></script>
+      <script src="components/navbar/custom-input-focus.js"></script>
+      <script src="components/navbar/navbar-directive.js"></script>
+      <script src="components/toastMessage/toastMessage-service.js"></script>
+      <script src="states/main/main-controller.js"></script>
+      <script src="components/questions/questions-controller.js"></script>
+      <script src="components/questions/questions-directive.js"></script>
+      <script src="services/authToken-service.js"></script>
+      <script src="services/questions.js"></script>
+      <script src="services/answers.js"></script>
+      <script src="services/question_upvotes.js"></script>
+      <script src="services/question_comments.js"></script>
+      <script src="services/settings.js"></script>
+      <script src="services/images.js"></script>
+      <script src="services/reports.js"></script>
+      <script src="components/questions/indexTemplate/readmore-directive.js"></script>
+      <script src="components/questions/indexTemplate/questionTemplate-directive.js"></script>
+      <script src="states/showQuestion/show-controller.js"></script>
+      <script src="components/answers/add_answer/add_answer-directive.js"></script>
+      <script src="components/answers/add_answer/add_answer-controller.js"></script>
+      <script src="components/answers/show_answers/show_answer-directive.js"></script>
+      <script src="components/questionComments/question_comments-directive.js"></script>
+      <script src="components/report/report-directive.js"></script>
+      
+
+      <!-- endbuild -->
+    </body>
+    </html>
