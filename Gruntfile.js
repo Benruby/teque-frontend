@@ -431,6 +431,11 @@ ngtemplates: {
 'components/{,*/*/*/}*.html',
 'components/{,*/*/*/*/}*.html',
 'components/{,*/*/*/*/*/}*.html',
+'features/{,*/}*.html',
+'features/{,*/*/}*.html',
+'features/{,*/*/*/}*.html',
+'features/{,*/*/*/*/}*.html',
+'features/{,*/*/*/*/*/}*.html',
 'images/{,*/}*.{webp}',
 'styles/fonts/{,*/}*.*'
 ]
@@ -456,7 +461,12 @@ styles: {
 'components/{,*/*/}*.css',
 'components/{,*/*/*/}*.css',
 'components/{,*/*/*/*/}*.css',
-'components/{,*/*/*/*/*/}*.css'
+'components/{,*/*/*/*/*/}*.css',
+'features/{,*/}*.css',
+'features/{,*/*/}*.css',
+'features/{,*/*/*/}*.css',
+'features/{,*/*/*/*/}*.css',
+'features/{,*/*/*/*/*/}*.css'
 ]
 }
 },
