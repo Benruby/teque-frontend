@@ -13,7 +13,7 @@ angular.module('tequeFrontendApp').service('login', function($http, ENV) {
 	};
 
 	this.signupUser = function (user) {
-		return $http.post(ENV.apiEndpoint + 'api/users', {
+		return $http.post(ENV.apiEndpoint + '/api/users', {
 			user: {
 				full_name: user.full_name,
 				email: user.email,

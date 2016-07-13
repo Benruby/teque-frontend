@@ -5,10 +5,10 @@ angular.module('tequeFrontendApp').factory('Images', function($resource, $http, 
 	
 	return {
 		PostUserImage: function(img) {
-			$http.patch(ENV.apiEndpoint + '/api/users', 
+			return $http.patch(ENV.apiEndpoint + '/api/users', 
 			{
 				user: {
-					image: img
+					avatar: img
 				}
 			}
 			)

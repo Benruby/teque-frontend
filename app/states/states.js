@@ -59,17 +59,17 @@ angular
   })
 }])
 
-.config(["$locationProvider", function($locationProvider) {
-  $locationProvider.html5Mode(
-    {
-      enabled: true,
-      requireBase: false
-    });
+// .config(["$locationProvider", function($locationProvider) {
+//   $locationProvider.html5Mode(
+//     {
+//       enabled: true,
+//       requireBase: false
+//     });
+// }])
+
+
+.run(['$rootScope', '$state', function ($rootScope, $state){
+  $rootScope.$on('$stateNotFound', function() {
+    $state.go('404');
+  });
 }]);
-
-
-// .run(['$rootScope', '$state', function ($rootScope, $state){
-//   $rootScope.$on('$stateNotFound', function() {
-//     $state.go('404');
-//   });
-// }]);

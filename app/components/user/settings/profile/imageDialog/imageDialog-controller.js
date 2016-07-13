@@ -20,6 +20,10 @@ angular.module('tequeFrontendApp').controller('ImageDialogCtrl', function ($scop
 
 	$scope.sendImage = function () {
 		console.log("sending image");
-		Images.PostUserImage($scope.myCroppedImage);
+		Images.PostUserImage($scope.myCroppedImage).then(function(){
+			console.log("successful image send");
+		},function(){
+			console.log("ERROR image send!");
+		})
 	}
 }); 
