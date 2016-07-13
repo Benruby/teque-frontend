@@ -17,11 +17,13 @@ html {
 .normalBacgkround {
 	position: relative;
 	margin: auto;
+	height: 100%;
 }
 
 #content {
 	margin: auto;
-	padding-top: 5%;
+	padding-top: 100px;
+	height: 100%;
 }
 
 

@@ -10,7 +10,7 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 			show: '='
 			// reportQuestion: '&method'
 		},
-		controller: function ($scope, Reports, $timeout) {
+		controller: function ($scope, Reports, $timeout, ENV) {
 
 			$scope.question_title = $scope.data.title;
 			$scope.question_body = $scope.data.body;
@@ -86,13 +86,13 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 				$scope.item_id = item_id;
 			}
 
-			$scope.share = function () {
+			$scope.shareFb = function (question) {
 				FB.ui({
 					method: 'feed',
-					name: 'this is the content? name',
-					link: 'https://localhost:9000/',
-					caption: 'An example caption',
-					description: 'This is the content',
+					name: question.title,
+					link: ENV.apiEndpoint + '/question/25',
+					caption: 'WWW.TEQUE.CO.IL',
+					description: question.body
 				}, function(response){
 					console.log(response);
 				});

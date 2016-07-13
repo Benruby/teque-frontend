@@ -6,13 +6,9 @@
 	right: 0;
 	width:100%;
 	background: white;
-	backface-visibility: hidden;
 	min-height: 3.5vw;
-	box-sizing: border-box;
 	z-index: 800;
 	-webkit-perspective: 1000;
-	word-wrap: break-word;
-	overflow: hidden;
 }
 
 #mainBar {
@@ -43,9 +39,9 @@
 	width: 100%;
 	padding-left: 10%;
 }
+
 .menuItems {
 	display: table-cell;
-	box-sizing: border-box;
 	vertical-align: middle;
 	width: 25%;
 
@@ -58,7 +54,6 @@
 .askBar {
 	display: table-cell;
 	width: 100%;
-	box-sizing: border-box;
 	padding-top: 1%;
 	padding-bottom: 1%;
 }

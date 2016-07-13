@@ -152,6 +152,11 @@
 	float: left;
 }
 
+#shareLink {
+	display: inline-block;
+	float: left;
+}
+
 #reportLink a {
 	display: inline-block;
 	position: relative;
