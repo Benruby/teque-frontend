@@ -8,7 +8,7 @@
 				<form name="reportForm" novalidate >		
 					<div id="reportOptions">
 
-						<div id="singleOption" ng-repeat="o in options">
+						<div id="singleOption" ng-repeat="o in reportOptions">
 							<input type="radio" name="option" value="{{o.option}}" ng-model="reportForm.chosenOption" required>
 							{{o.option}}
 						</div>

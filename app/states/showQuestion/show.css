@@ -1,11 +1,14 @@
+#questionMain {
+	width: 620px;
+	margin: auto;
+}
+
 #questionsPage {
 	direction: rtl;
-	width: 100%;
 }
 
 #answersSection {
+	word-wrap: break-word;
 	display: table;
 	margin: auto;
-	width: 100%;
 }
-

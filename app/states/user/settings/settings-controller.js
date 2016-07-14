@@ -23,6 +23,8 @@ angular.module('tequeFrontendApp').controller('SettingsCtrl', function ($scope, 
 
 	})
 
+
+
 	$scope.changeState = function(state) {
 		$scope.state = state;
 	}

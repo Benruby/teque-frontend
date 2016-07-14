@@ -46,14 +46,6 @@
 	display:none;
 }
 
-
-
-#profilePicture img {
-	height: 90%;
-	width: 90%;
-	position: relative;
-}
-
 #profileName {
 	min-height: 3vw;
 	vertical-align: middle;
@@ -89,4 +81,5 @@
 
 #image {
 	border-radius: 50%;
+	height: 170px;
 }

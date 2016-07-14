@@ -1,6 +1,7 @@
 #showAnswerMain {
 	padding-top: 3%;
 	direction: rtl;
+	width: 620px;
 }
 
 #answersHeader {
@@ -9,10 +10,6 @@
 }
 
 
-#answerSection {
-
-}
-
 #singleAnswer {
 	padding-top: 2%;
 	padding-bottom: 2%;
@@ -20,7 +17,7 @@
 }
 
 #answerUserInfo {
-	min-height: 2.5vw;
+	min-height: 60px;
 	margin: auto;
 	position: relative;
 }
@@ -34,6 +31,11 @@
 
 #userImage {
 	position: relative;
+}
+
+#answerImage {
+	height: 50px;
+	border-radius: 50%;
 }
 
 #userInfoWrapper {

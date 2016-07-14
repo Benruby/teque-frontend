@@ -14,7 +14,7 @@ angular.module('tequeFrontendApp').directive('share', function () {
 				FB.ui({
 					method: 'feed',
 					name: $scope.data.title,
-					link: ENV.apiEndpoint + '/question/' + $scope.data.id,
+					link: 'http://www.teque.co.il/question/' + $scope.data.id,
 					caption: 'WWW.TEQUE.CO.IL',
 					description: $scope.data.body
 				}, function(response){

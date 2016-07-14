@@ -6,7 +6,8 @@ angular.module('tequeFrontendApp').directive('report', function() {
       itemId: '=',
       reported: '=',
       reportText: '=',
-      showReportMessage: '&method'
+      showReportMessage: '&method',
+      reportOptions: '='
     },
     replace: true,
     link: function(scope, element, attrs) {
@@ -20,13 +21,13 @@ angular.module('tequeFrontendApp').directive('report', function() {
 
       $scope.reportFormError = false;
 
-      Reports.getReportOptions().then(function(response) {
+      // Reports.getReportOptions().then(function(response) {
 
-        $scope.options = response.data;
+      //   $scope.options = response.data;
 
-      },function(response){
-        console.log("ERROR getting options for report mopdal")
-      })
+      // },function(response){
+      //   console.log("ERROR getting options for report mopdal")
+      // })
 
       $scope.report = function (type, reason, validity) {
         if (validity) {

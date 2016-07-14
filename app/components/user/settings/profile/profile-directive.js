@@ -1,9 +1,6 @@
 angular.module('tequeFrontendApp').directive('tqUserProfile', function () {
 	return {
 		restrict: 'E',
-		templateUrl: "components/user/settings/profile/profile.html",
-		controller: function ($scope) {
-		}
-
+		templateUrl: "components/user/settings/profile/profile.html"
 	}
 })

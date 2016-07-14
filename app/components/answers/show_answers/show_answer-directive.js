@@ -10,7 +10,6 @@ angular.module('tequeFrontendApp').directive('tqShowAnswers', function ($timeout
 
 		},
 		controller: function ($scope) {		
-			
 		}
 	};
 });

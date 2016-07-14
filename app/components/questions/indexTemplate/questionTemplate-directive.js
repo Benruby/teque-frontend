@@ -7,13 +7,11 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 		replace: true,
 		scope: {
 			data: '=',
-			show: '='
-			// reportQuestion: '&method'
+			show: '=',
+			reportOptions: '='
 		},
-		controller: function ($scope, Reports, $timeout, ENV) {
+		controller: function ($scope, $timeout, ENV) {
 
-			$scope.question_title = $scope.data.title;
-			$scope.question_body = $scope.data.body;
 			$scope.answerEnabled = false;
 			$scope.voted = false;
 			$scope.commentEnabled = false;
@@ -32,7 +30,7 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 				},5000)
 			}
 
-
+//to be refactored to a function
 			for (var i = 0; i < $scope.data.question_upvotes.length; i++){
 				$scope.votes_ids.push($scope.data.question_upvotes[i].user_id);
 			}

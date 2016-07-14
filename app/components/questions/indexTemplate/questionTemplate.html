@@ -1,12 +1,12 @@
 <div>
 	<div id="templateWrapper" layout="column">
 		<div id="questionContent">
-			<div id="templateTitle" layout="row" ui-sref="show_question({question_id: data.id})">
-				<span>{{question_title}}</span>
+			<div id="templateTitle" ui-sref="show_question({question_id: data.id})">
+				<span>{{data.title}}</span>
 			</div>
 
-			<div id="templateDetails" layout="row">
-				<span read-more id="read-more" body="question_body" content="{{question_body}}"></span>
+			<div id="templateDetails">
+				<span read-more id="read-more" body="question_body" content="{{data.body}}"></span>
 			</div>
 		</div>
 		<div id="votesSection">
@@ -55,9 +55,7 @@
 			<tq-add-answer ng-if="answerEnabled" question-id="data.id" close-answer="answer()"></tq-add-answer>
 		</div>
 
-		<report show='reportShown' item-id="data.id" reported="reported" report-text="reportText" method="reportMessage()">
-
-		</report>
+		<report show='reportShown' item-id="data.id" reported="reported" report-text="reportText" method="reportMessage()" report-options='reportOptions'></report>
 
 	</div>
 </div>

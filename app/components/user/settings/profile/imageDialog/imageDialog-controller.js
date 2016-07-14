@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('tequeFrontendApp').controller('ImageDialogCtrl', function ($scope, Images) {
+angular.module('tequeFrontendApp').controller('ImageDialogCtrl', function ($state, $scope, Images, toastMessage) {
 
 	$scope.myImage='';
 	$scope.myCroppedImage='';
@@ -22,8 +22,17 @@ angular.module('tequeFrontendApp').controller('ImageDialogCtrl', function ($scop
 		console.log("sending image");
 		Images.PostUserImage($scope.myCroppedImage).then(function(){
 			console.log("successful image send");
+			$scope.hideModal();
+			$state.reload();
+			toastMessage.showToast('התמונה עודכנה בהצלחה');
 		},function(){
 			console.log("ERROR image send!");
 		})
+	}
+
+	$scope.cancelImage = function () {
+		$scope.hideModal();
+		$scope.myImage = '';
+		$scope.myCroppedImage = '';
 	}
 }); 

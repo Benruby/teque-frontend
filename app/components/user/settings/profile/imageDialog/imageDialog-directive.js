@@ -6,7 +6,6 @@ angular.module('tequeFrontendApp').directive('modalDialog', function() {
     },
     controller: 'ImageDialogCtrl',
     replace: true,
-    transclude: true,
     link: function(scope, element, attrs) {
       scope.dialogStyle = {};
       if (attrs.width)
