@@ -56,3 +56,18 @@
 
 #answerUserDetails {
 }
+
+#answerFooter {
+	padding-top: 10px;
+}
+
+#answerActions {
+	
+}
+#answerUpvote {
+	display: inline-block;
+}
+
+#answerComment {
+	display: inline-block;
+}

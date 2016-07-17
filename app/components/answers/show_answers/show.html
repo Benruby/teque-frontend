@@ -7,7 +7,7 @@
 			<div id="answerUserInfo">
 				<div id="answerUserImage">
 					<div id="userImage">
-						<img id="answerImage" src='{{a.user.avatar}}'>
+						<img id="answerImage" ng-src='{{a.user.avatar}}'>
 					</div>
 				</div>
 				<div id="userInfoWrapper">
@@ -17,9 +17,9 @@
 								{{a.user.full_name}}
 							</span>
 							<span>,
-							<span id="answerUserDetails">
-								{{a.user.description}}
-							</span>
+								<span id="answerUserDetails">
+									{{a.user.description}}
+								</span>
 							</span>
 						</span>
 					</div>
@@ -28,10 +28,16 @@
 			<div id="answerBody">
 				<div>{{a.answer_body}}</div>
 			</div>
+			<div id="answerFooter">
+				<div id="answerActions">
+					
+					<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a></div>
+					<div id="answerUpvote">upvote</div>
+				</div>
+			</div>
+			<div id="commentSection" ng-if="commentEnabled">
+				<tq-comment item-id="a.id" close-comment="comment()" comments="a.item_comments" item-type="answer"></tq-comment>
+			</div>
 		</div>
-	</div>
-
-	<div id="answerFooter">
-		
 	</div>
 </div>

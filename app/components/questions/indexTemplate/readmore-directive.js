@@ -1,6 +1,6 @@
 angular.module('tequeFrontendApp').directive('readMore', function () {
 	return {
-		template: '<p></p>',
+		template: '<text></text>',
 		transclude: true,
 		replace: true,
 		scope: {

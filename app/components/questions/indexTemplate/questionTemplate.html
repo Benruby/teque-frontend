@@ -48,7 +48,7 @@
 
 		</div>
 		<div id="commentSection" ng-if="commentEnabled">
-			<tq-question-comment question-id="data.id" close-comment="comment()"></tq-question-comment>
+			<tq-comment item-id="data.id" close-comment="comment()" comments="data.item_comments" item-type="question"></tq-comment>
 		</div>
 
 		<div>

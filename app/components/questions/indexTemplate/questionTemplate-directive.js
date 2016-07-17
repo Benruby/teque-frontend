@@ -31,70 +31,71 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 			}
 
 //to be refactored to a function
-			for (var i = 0; i < $scope.data.question_upvotes.length; i++){
-				$scope.votes_ids.push($scope.data.question_upvotes[i].user_id);
-			}
+for (var i = 0; i < $scope.data.question_upvotes.length; i++){
+	$scope.votes_ids.push($scope.data.question_upvotes[i].user_id);
+}
 
-			for (var i = 0; i < $scope.data.reports.length; i++){
-				$scope.reports_user_ids.push($scope.data.reports[i].user_id);
-			}
+for (var i = 0; i < $scope.data.reports.length; i++){
+	$scope.reports_user_ids.push($scope.data.reports[i].user_id);
+}
 
-			if ($scope.votes_ids.indexOf(parseInt(current_user_id)) === -1) {
-				$scope.voted = false;
-				$scope.voteText = "אוהב?";
-			} else {
-				$scope.voted = true;
-				$scope.voteText = "אהבתי";
-			}
+if ($scope.votes_ids.indexOf(parseInt(current_user_id)) === -1) {
+	$scope.voted = false;
+	$scope.voteText = "אוהב?";
+} else {
+	$scope.voted = true;
+	$scope.voteText = "אהבתי";
+}
 
-			if ($scope.reports_user_ids.indexOf(parseInt(current_user_id)) === -1) {
-				$scope.reported = false;
-				$scope.reportText = "דווח";
-			} else {
-				$scope.reported = true;
-				$scope.reportText = "מדווח";
-			}
+if ($scope.reports_user_ids.indexOf(parseInt(current_user_id)) === -1) {
+	$scope.reported = false;
+	$scope.reportText = "דווח";
+} else {
+	$scope.reported = true;
+	$scope.reportText = "מדווח";
+}
 
 
-			$scope.answer = function () {
-				$scope.answerEnabled = !$scope.answerEnabled;
-			}
+$scope.answer = function () {
+	$scope.commentEnabled = false;
+	$scope.answerEnabled = !$scope.answerEnabled;
+}
+$scope.comment = function () {
+	$scope.answerEnabled = false;
+	$scope.commentEnabled = !$scope.commentEnabled;
+}
 
-			$scope.upvote = function (question_id) {
-				if (!$scope.voted) {
-					QuestionUpvotes.votes.save({question_id: question_id});
-					$scope.data.upvotes ++;
-					$scope.voted = true;
-					$scope.voteText = "אהבתי";
-				} else {
-					QuestionUpvotes.votes.delete({question_id: question_id});
-					$scope.data.upvotes --;
-					$scope.voted = false;
-					$scope.voteText = "אוהב?";
-				}
-
-			}
-			
-			$scope.comment = function () {
-				$scope.commentEnabled = !$scope.commentEnabled;
-			}
-
-			$scope.showReportDialog = function (item_id) {
-				$scope.reportShown = !$scope.reportShown
-				$scope.item_id = item_id;
-			}
-
-			$scope.shareFb = function (question) {
-				FB.ui({
-					method: 'feed',
-					name: question.title,
-					link: ENV.apiEndpoint + '/question/25',
-					caption: 'WWW.TEQUE.CO.IL',
-					description: question.body
-				}, function(response){
-					console.log(response);
-				});
-			}
-		}
+$scope.upvote = function (question_id) {
+	if (!$scope.voted) {
+		QuestionUpvotes.votes.save({question_id: question_id});
+		$scope.data.upvotes ++;
+		$scope.voted = true;
+		$scope.voteText = "אהבתי";
+	} else {
+		QuestionUpvotes.votes.delete({question_id: question_id});
+		$scope.data.upvotes --;
+		$scope.voted = false;
+		$scope.voteText = "אוהב?";
 	}
+
+}
+
+$scope.showReportDialog = function (item_id) {
+	$scope.reportShown = !$scope.reportShown
+	$scope.item_id = item_id;
+}
+
+$scope.shareFb = function (question) {
+	FB.ui({
+		method: 'feed',
+		name: question.title,
+		link: ENV.apiEndpoint + '/question/25',
+		caption: 'WWW.TEQUE.CO.IL',
+		description: question.body
+	}, function(response){
+		console.log(response);
+	});
+}
+}
+}
 });

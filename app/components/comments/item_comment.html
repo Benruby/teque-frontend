@@ -1,0 +1,38 @@
+<div id="commentMain">
+	<div id="commentSection">
+		<div id="commentInput">
+			<textarea 
+			msd-elastic
+			id="inputField"
+			type="text"
+			name="item_comment"
+			placeholder="הוסף תגובה" 
+			ng-model="comment.body">
+		</textarea>
+	</div>
+
+	<div id="commentButton">
+		<button ng-click="sendComment('question')" ng-disabled="!comment.body">שלח</button>
+	</div>
+</div>
+<div id="commentsIndex" ng-if="comments">
+	<div id="comment" ng-repeat="c in comments | orderBy:'id':true">
+		<div id="imageSection">
+			<div id="userImage">
+				<img ng-src='{{c.user.avatar}}'>
+			</div>
+			<div id="userName">
+				<a>{{c.user.full_name}}</a>
+			</div>
+		</div>
+		<div id="commentBody">
+			<text read-more content="'{{c.body}}'"></text>
+		</div>
+
+		<div ng-if="c.item_comments">
+		<tq-child-comment comment="c"></tq-child-comment>
+		</div>
+
+	</div>
+</div>
+</div>
