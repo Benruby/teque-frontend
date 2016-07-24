@@ -6,7 +6,7 @@ angular.module('tequeFrontendApp').factory('Follow', function($resource, $http, 
 	return {
 		getUser: function(id) {
 
-			return $http.get('/api/users', { params:
+			return $http.get(ENV.apiEndpoint + '/api/users', { params:
 				{
 					id: id
 				}
@@ -14,7 +14,7 @@ angular.module('tequeFrontendApp').factory('Follow', function($resource, $http, 
 		},
 
 		follow: function(type, id) {
-			return $http.post('/api/followers', {
+			return $http.post(ENV.apiEndpoint + '/api/followers', {
 				follow:
 				{
 					followable_type: type,
@@ -24,7 +24,7 @@ angular.module('tequeFrontendApp').factory('Follow', function($resource, $http, 
 		},
 
 		unfollow: function (type, id) {
-			return $http.delete('/api/followers/:id', {
+			return $http.delete(ENV.apiEndpoint + '/api/followers/:id', {
 				params: {
 					follow:
 					{
