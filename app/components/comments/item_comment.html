@@ -19,9 +19,9 @@
 	<div id="comment" ng-repeat="c in comments | orderBy:'id':true">
 		<div id="imageSection">
 			<div id="userImage">
-				<img ng-src='{{c.user.avatar}}'>
+				<img ng-src='{{c.user.avatar}}' class="clickable" ui-sref="profile({id: c.user.id})">
 			</div>
-			<div id="userName">
+			<div id="userName" class="clickable" ui-sref="profile({id: c.user.id})">
 				<a>{{c.user.full_name}}</a>
 			</div>
 		</div>

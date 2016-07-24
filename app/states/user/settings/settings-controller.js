@@ -11,9 +11,10 @@ angular.module('tequeFrontendApp').controller('SettingsCtrl', function ($scope, 
 	$scope.passwordError = false;
 	$scope.password_confirmation = true;
 	$scope.modalShown = false;
+	$scope.user_id = localStorage.getItem('u_id');
 
 
-	Settings.get().$promise.then(function(response) {
+	Settings.get({id: $scope.user_id}).$promise.then(function(response) {
 		$scope.user = response;
 		$scope.user.description = $scope.user.description || "הוסף תיאור";
 		$scope.userData = $scope.user;

@@ -33,8 +33,14 @@
 					</a>
 				</span>
 			</div>
-			<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a></div>
+			<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a>
+			</div>
 
+			<div id="followLink" >
+			<a href="" ng-click="follow('question', data.id)" ng-if="!data.current_user_following">עקוב</a>
+			<a href="" ng-click="follow('question', data.id)" ng-if="data.current_user_following">עוקב</a>
+			<span id="voteCount" ng-if="data.follower_count > 0">({{data.follower_count}})</span>
+			</div>
 
 			<div id="reportLink" ><a href="" ng-click="showReportDialog()" ng-class="{disabled: reported}" ng-attr-id="{{'title'+ data.id}}">{{reportText}}</a></div>
 

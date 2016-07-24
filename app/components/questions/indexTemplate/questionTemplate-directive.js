@@ -1,4 +1,4 @@
-angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (QuestionUpvotes, login) {
+angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (QuestionUpvotes, login, ENV, Follow) {
 	
 
 	return {
@@ -10,7 +10,7 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 			show: '=',
 			reportOptions: '='
 		},
-		controller: function ($scope, $timeout, ENV) {
+		controller: function ($scope, $timeout) {
 
 			$scope.answerEnabled = false;
 			$scope.voted = false;
@@ -95,6 +95,31 @@ $scope.shareFb = function (question) {
 	}, function(response){
 		console.log(response);
 	});
+}
+
+$scope.follow = function (type, id) {
+	if (!$scope.data.current_user_following) {
+		Follow.follow(type, id).then(
+			function(response){
+				$scope.data.current_user_following = true;
+				$scope.data.follower_count ++;
+				console.log("success following")
+			},
+			function(response){
+				console.log("error following")
+			})
+	}
+	else {
+		Follow.unfollow(type, id).then(
+			function(response){
+				$scope.data.current_user_following = false;
+				$scope.data.follower_count --;
+				console.log("success unfollowing")
+			},
+			function(response){
+				console.log("error unfollowing")
+			})
+	}
 }
 }
 }

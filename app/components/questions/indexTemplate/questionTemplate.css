@@ -111,7 +111,7 @@
 }
 
 .answerButton a {
-	padding: 5px 5px 5px 5px;
+	padding: 5px;
 	display: inline-block;
 }
 .answerButtonClicked {
@@ -144,6 +144,20 @@
 	position: relative;
 	text-decoration: none;
 	color: #808080;
+}
+
+#followLink {
+	display: inline-block;
+	padding-right: 10px;
+	color: #808080;
+}
+
+#followLink a {
+	color: #808080;
+	text-decoration: none;
+}
+#followLink span {
+	font-size: 15px;
 }
 
 #reportLink {

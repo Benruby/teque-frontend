@@ -32,6 +32,11 @@ angular
     templateUrl: "states/showQuestion/show.html",
     controller: 'ShowQuestionCtrl'
   })
+  .state('profile', {
+    url: '/profile/:id',
+    templateUrl: "states/user/show/show_user.html",
+    controller: 'ShowUserCtrl'
+  })
   .state('404', {
     url: '*path',
     templateUrl: 'states/404/404.html'

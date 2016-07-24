@@ -1,0 +1,49 @@
+#profileWrapper {
+	direction: rtl;
+	position: relative;
+	width: 60%;
+	margin: auto;
+}
+
+#ShowprofileExtras {
+	border-bottom: gray 2px solid;
+}
+
+#followButton {
+	position: relative;
+	float: right;
+	margin-top: 10px;
+}
+
+.following {
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	background-color: #d3d3d3;
+	border: solid 1px #5f9ea0;
+	border-radius: 5px;
+	outline: 0;
+	outline: none;
+}
+
+.following a {
+	color: 	#a9a9a9;
+	font-size: 1vw;
+}
+
+.notFollowing {
+	text-align: center;
+	cursor: pointer;
+	border: solid 1px #5f9ea0;
+	background-color: #add8e6;
+	border-radius: 5px;
+	outline: 0;
+	outline: none;
+	color: blue;
+}
+
+
+.notFollowing a{
+	color: #4169e1;	
+	font-size: 1vw;
+}

@@ -82,6 +82,10 @@
 	display: inline-block;
 }
 
+#userName a:hover {
+	text-decoration: underline;
+}
+
 #commentBody {
 	margin-bottom: 5px;
 }
