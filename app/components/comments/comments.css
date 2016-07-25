@@ -89,3 +89,8 @@
 #commentBody {
 	margin-bottom: 5px;
 }
+
+#CommentReportLink {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}

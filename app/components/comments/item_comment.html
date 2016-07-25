@@ -28,11 +28,17 @@
 		<div id="commentBody">
 			<text read-more content="'{{c.body}}'"></text>
 		</div>
-
+<!-- 		<div>
+			<div id="CommentReportLink"><a href="" ng-click="showReportDialog()" ng-class="{disabled: reported}" ng-attr-id="{{'title'+ data.id}}">דווח</a>
+			</div>
+		</div> -->
 		<div ng-if="c.item_comments">
-		<tq-child-comment comment="c"></tq-child-comment>
-		</div>
 
+			<tq-child-comment comment="c"></tq-child-comment>
+		</div>
 	</div>
 </div>
+
+<!-- <report show='reportShown' item-id="c.id" reported="reported" report-text="reportText" method="reportMessage()" report-options='reportOptions'  report-type='comment'></report> -->
+
 </div>

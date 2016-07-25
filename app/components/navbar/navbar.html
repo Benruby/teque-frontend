@@ -1,5 +1,9 @@
 <div class=navbar>
-    <div id="mainBar" flex-gt-sm="70">
+    <div id="LoggedinUser">
+        <img src='{{user_avatar}}'>
+        <span>{{user_name}}</span>
+    </div>
+    <div id="mainBar" flex-gt-sm="80">
         <div id="logo">
             <a ui-sref="main">
                 Teque
@@ -7,19 +11,40 @@
         </div>
         <div id="bar">
             <div id="menuItems" ng-class="{noItems: $focused, menuItems: !$focused}">
-                <div id="menuLinksWrapper">
-                    <div id="menuItem">
-                        <a ui-sref="logout">התנתק</a>
-                    </div>
-                    <div id="menuItem">
-                        <a  ui-sref="settings({sub_state: 'profile'})">פרופיל</a>
-                    </div>
+                <span id="menuItem">
+                    <div id="itemWrap">          
+                      <a ui-sref="logout">
+                        <span>התנתק</span>
+                    </a>
                 </div>
+            </span>
+            <span id="menuItem">
+                <div id="itemWrap">          
+                    <a  ui-sref="settings({sub_state: 'profile'})">
+                    <span>פרופיל</span>
+                    </a>
             </div>
-
-            <div class="askBar">
-                <tq-ask></tq-ask>
-            </div>
+        </span>
+        <span id="menuItem">             
+            <div id="itemWrap">       
+                <a>
+                    <span>התראות</span>
+                </a>
         </div>
+    </span>
+    <span id="notificationCount" ng-if="notifications">
+        <div id="notificationIcon">     
+          <a>
+            <text>12</text>
+        </a>
     </div>
+</span>
+
+</div>
+
+<div class="askBar">
+    <tq-ask></tq-ask>
+</div>
+</div>
+</div>
 </div>

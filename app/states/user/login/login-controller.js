@@ -2,7 +2,7 @@
 
 
 angular.module('tequeFrontendApp')
-.controller('LoginCtrl', function ($scope, login, authToken, $state, toastMessage) {
+.controller('LoginCtrl', function ($rootScope, $scope, login, authToken, $state, toastMessage) {
 
 
 	$scope.loginUser = function () {

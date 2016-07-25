@@ -1,4 +1,4 @@
-angular.module('tequeFrontendApp').directive('tqComment', function ($state, Comments) {
+angular.module('tequeFrontendApp').directive('tqComment', function ($state, Comments, Reports) {
 	return {
 		restrict: 'E',
 		templateUrl: "components/comments/item_comment.html",
@@ -11,6 +11,10 @@ angular.module('tequeFrontendApp').directive('tqComment', function ($state, Comm
 		},
 		controller: function ($scope, $state) {
 
+			Reports.getReportOptions().then(function(response){
+				$scope.reportOptions = response.data;
+			});
+
 			$scope.sendComment = function () {
 				var comment = Comments.comment($scope.itemType, $scope.itemId, $scope.comment.body).then(function(response){
 					console.log(response.data);
@@ -19,6 +23,10 @@ angular.module('tequeFrontendApp').directive('tqComment', function ($state, Comm
 					console.log('error posting comment.')
 				})
 				$scope.comment = {};
+			}
+
+			$scope.showReportDialog = function () {
+				$scope.reportShown = true;
 			}
 		}
 	}
