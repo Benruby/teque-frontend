@@ -43,6 +43,7 @@ angular.module('tequeFrontendApp').controller('SettingsCtrl', function ($scope, 
 	$scope.sendUserName = function () {
 		$scope.userData.full_name = $scope.user.new_name;
 		Settings.update($scope.userData);
+		localStorage.setItem('u_name', $scope.user.new_name);
 		$scope.editUserName();
 	}
 

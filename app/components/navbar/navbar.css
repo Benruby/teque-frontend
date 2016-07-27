@@ -87,6 +87,7 @@
 
 #menuItem:hover {
 	background-color: #D3D3D3;
+	cursor: pointer;
 }
 
 #menuItem span {
@@ -111,7 +112,9 @@
 }
 
 #LoggedinUser span {
+	display: inline-block;
 	color: gray;
+	word-wrap: break-word;
 }
 
 #notificationCount {
@@ -126,6 +129,10 @@
 #notificationIcon {
 	background-color: #ff6347;
 	border-radius: 50%;
+}
+
+#notificationCount:hover {
+	cursor: pointer;
 }
 
 #notificationCount text {

@@ -1,7 +1,9 @@
 <div class=navbar>
     <div id="LoggedinUser">
         <img src='{{user_avatar}}'>
+
         <span>{{user_name}}</span>
+        
     </div>
     <div id="mainBar" flex-gt-sm="80">
         <div id="logo">
@@ -27,21 +29,21 @@
         </span>
         <span id="menuItem">             
             <div id="itemWrap">       
-                <a>
+                <a ng-click="showNotifs()">
                     <span>התראות</span>
                 </a>
         </div>
     </span>
-    <span id="notificationCount" ng-if="notifications">
+    <span id="notificationCount" ng-if="notifications > 0" ng-click="showNotifs()">
         <div id="notificationIcon">     
           <a>
-            <text>12</text>
+            <text>{{notifications.length}}</text>
         </a>
     </div>
 </span>
 
 </div>
-
+<notifications ng-if="showNotifications" notifications="notifications"></notifications>
 <div class="askBar">
     <tq-ask></tq-ask>
 </div>

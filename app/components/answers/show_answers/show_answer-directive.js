@@ -1,4 +1,4 @@
-angular.module('tequeFrontendApp').directive('tqShowAnswers', function ($timeout) {
+angular.module('tequeFrontendApp').directive('tqShowAnswers', function ($stateParams) {
 	
 
 	return {
@@ -10,6 +10,8 @@ angular.module('tequeFrontendApp').directive('tqShowAnswers', function ($timeout
 
 		},
 		controller: function ($scope) {		
+
+			$scope.answer_id = $stateParams.answer_id;
 
 			$scope.comment = function () {
 				$scope.commentEnabled = !$scope.commentEnabled;

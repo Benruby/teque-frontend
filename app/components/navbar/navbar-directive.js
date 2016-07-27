@@ -5,9 +5,10 @@ angular.module('tequeFrontendApp').directive('tqNavbar', function (Notifications
 		replace: true,
 		controller: function ($scope) {
 			$scope.user_avatar = localStorage.getItem('u_avatar');
-			$scope.user_name = localStorage.getItem('u_name');
+			$scope.user_name = localStorage.getItem('u_name').split(' ')[0];
 
 			$scope.notifications = {};
+			$scope.showNotifications = false;
 
 			Notifications.getNotifications().then(
 				function(response){
@@ -17,6 +18,10 @@ angular.module('tequeFrontendApp').directive('tqNavbar', function (Notifications
 				function(response){
 					console.log("error getting noifs");
 				})
+
+			$scope.showNotifs = function() {
+				$scope.showNotifications = !$scope.showNotifications;
+			}
 		}
 	}
 });

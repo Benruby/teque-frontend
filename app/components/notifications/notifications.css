@@ -1,0 +1,91 @@
+#notifMain {
+	direction: rtl;
+	position: absolute;
+	background: #fff;
+	min-height: 80px;
+	top: 70px;
+	width: 450px;
+	box-shadow: 1px 1px 1px 1px gray;
+	border-radius: 5px;
+	z-index: 1500;
+}
+
+#notifHeader {
+	position: relative;
+	height: 40px;
+	background-color: #dcdcdc;
+	border: 1px solid #c0c0c0;
+}
+
+
+#notifBody {
+	position: relative;
+	max-height: 350px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#notifBody ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#notifBody li {
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+#notifBody li:hover {
+	background-color: #f4f4f4;
+}
+
+#notif_item {
+	display: table;
+	min-height: 30px;
+	box-sizing: border-box;
+}
+
+#notifImageWrapper {
+	position: absolute;
+	display: table-cell;
+	height: 30px;
+	width:30px;
+}
+
+#notifUserImage {
+	height: 30px;
+	width:30px;
+	border-radius: 50%;
+}
+
+#notifContent {
+	display: table-cell;
+	vertical-align: top;
+	padding-right: 40px;
+}
+
+#notifUserName {
+	font-weight: bold;
+}
+#notifUserName:hover {
+	text-decoration: underline;
+}
+
+#notifText {
+	font-size: 14px;
+	word-break: break-all;
+	white-space: normal;
+}
+
+#notifTextLink {
+	text-decoration: none;
+	color: #2b6dad;
+	cursor: pointer;
+}
+
+#notifTextLink:hover {
+	text-decoration: underline;
+}

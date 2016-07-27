@@ -7,9 +7,6 @@
 	font-size: 15px;
 }
 
-#templateWrapper {
-
-}
 
 #templateTitle:hover {
 	cursor: pointer;
@@ -24,7 +21,6 @@
 	width: 620px;
 }
 
-#templateTitle span {}
 
 #templateDetails {
 	word-wrap: break-word;

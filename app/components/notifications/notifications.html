@@ -1,0 +1,43 @@
+<div id="notifMain">
+	<div id="notifHeader">
+		<span>התראות</span>
+	</div>
+
+	<div id="notifBody">
+		<ul>
+			<li ng-repeat="n in notifications">
+				<div id="notif_item">
+					<div id="notifImageWrapper">
+						<img id="notifUserImage" src="{{n.user.avatar}}">
+					</div>
+					<div id="notifContent">
+						<div ng-if="n.question">
+							<span>
+								<span id="notifUserName">{{n.question.user.full_name}}
+								</span>
+								<span id="notifText">
+									ענה לשאלה:
+									<a id="notifTextLink" ui-sref="show_question({question_id: n.question_id, answer_id: n.notifiable.id})" ng-click="seen(n.id)"> 
+										{{n.question.title}}
+									</a>
+								</span>
+							</span>
+						</div>
+						<div ng-if="!n.question">
+							<span>
+								<span id="notifUserName">{{n.user.full_name}}
+								</span>
+								<span id="notifText">
+									שאל: 
+									<a id="notifTextLink" ui-sref="show_question({question_id: n.question_id})" ng-click="seen(n.id)">
+										{{n.notifiable.title}}
+									</a>
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

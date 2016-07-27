@@ -28,7 +28,7 @@ angular
     controller: 'ContentCtrl'
   })
   .state('show_question', {
-    url: '/question/:question_id',
+    url: '/question/:question_id?answer_id',
     templateUrl: "states/showQuestion/show.html",
     controller: 'ShowQuestionCtrl'
   })

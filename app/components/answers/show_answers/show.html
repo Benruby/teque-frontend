@@ -3,7 +3,9 @@
 		<div id="answersHeader">
 			<p>תשובות</p>
 		</div>
-		<div id="singleAnswer" ng-repeat="a in answers | orderBy: 'id' : true">
+		<div id="singleAnswer" ng-repeat="a in answers | orderBy: 'id' : true | filter: {'id': answer_id}">
+		{{$stateParams.answer_id}}
+		{{$stateParams.question_id}}
 			<div id="answerUserInfo">
 				<div id="answerUserImage">
 						<div id="userImage" class="clickable" ui-sref="profile({id: a.user.id})">
