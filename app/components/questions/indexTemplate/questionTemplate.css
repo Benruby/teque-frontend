@@ -31,13 +31,9 @@
 
 }
 
-#votesSection {
-
-
-}
-
 #voteButtons {
 	float: right;
+	padding-top: 5px;
 }
 
 #voteLink {

@@ -15,6 +15,16 @@
 	padding-top: 3%;
 	padding-bottom: 3%;
 	text-align: center;
+	color: blue;
+	font-weight: bold;
+}
+
+#slogan {
+	text-align: center;
+}
+
+#slogan p {
+	color: gray;
 }
 
 .loginForm {

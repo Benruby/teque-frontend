@@ -1,6 +1,8 @@
 #question {
 	border-bottom: 1px solid gray;
 	direction: rtl;
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 
 #questionTitle {

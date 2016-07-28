@@ -20,6 +20,11 @@ app.use(express.static(__dirname + '/dist'));
 //  response.render('index');
 //});
 
+app.all('/*', function(req, res, next) {
+    // Just send the index.html for other files to support HTML5Mode
+    res.sendFile('index.html', { root: __dirname + '/dist' });
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });

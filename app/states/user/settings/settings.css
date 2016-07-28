@@ -18,10 +18,12 @@
 	width: 60%;
 	margin: auto;
 }
+#listTitle span {
+	padding-right: 3px;
+}
 
 
 #list {
-	border: 1px solid gray;
 }
 
 #list ul {
@@ -29,8 +31,21 @@
 	padding:0;
 }
 
+#list a{
+	top: 7px;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	padding-right: 3px;
+	color: 	#696969;
+}
+
 #listItem {
 	font-size: 1vw;
-	padding: 5% 5% 5% 0;
+	padding-bottom: 15px;
+}
 
+.currentState {
+	background-color: #ececec;
+	border-radius: 3px;
 }

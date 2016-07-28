@@ -2,7 +2,6 @@
 	margin: auto;
 	width: 100%;
 	min-height: 100%;
-	margin-top: 5%;
 	direction: rtl;
 	display: flex;
 }
@@ -14,4 +13,22 @@
 
 #userQuestion {
 	border-bottom: 1px solid gray;
+	padding: 10px 0 15px 0;
+}
+
+#listTitle {
+	color: #696969;
+}
+
+#listItem {
+
+}
+
+#listItem:hover {
+	cursor: pointer;
+}
+
+#profileTitle {
+	height: 40px;
+	border-bottom: 2px solid gray;
 }

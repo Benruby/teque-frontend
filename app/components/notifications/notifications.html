@@ -4,7 +4,7 @@
 	</div>
 
 	<div id="notifBody">
-		<ul>
+		<ul ng-if="notifications.length != 0">
 			<li ng-repeat="n in notifications">
 				<div id="notif_item">
 					<div id="notifImageWrapper">
@@ -39,5 +39,8 @@
 				</div>
 			</li>
 		</ul>
+		<div id="noNotifMessage" ng-if="notifications.length == 0">
+			<span>אין התראות חדשות</span>
+		</div>
 	</div>
 </div>

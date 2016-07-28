@@ -1,4 +1,4 @@
-<div id="mainPage" ng-class="{normalBacgkround: $focused, normalBacgkround: !$focused}"  ng-focus="$focused=false" tabindex="1">
+<div id="mainPage" ng-class="{normalBacgkround: $focused, normalBacgkround: !$focused}"  ng-focus="$focused=false" tabindex="1" ng-cloak>
 	<div id="navbarSection">
 		<tq-navbar></tq-navbar>
 	</div>
@@ -6,12 +6,19 @@
 		<div id="mainContent">
 			<div id="optionsList">
 				<div id="listTitle">
-					<p>התוכן שלי</p>
+					<span>התוכן שלי</span>
 				</div>
 				<div id="list">
 					<ul>
-						<div id="listItem">
-							<li>שאלות ששאלתי</li>
+						<div id="listItem" ng-class="{currentState: state == 'questions_asked'}">
+							<a ng-click="changeState('questions_asked')">
+								<li>שאלות</li>
+							</a>
+						</div>
+						<div id="listItem" ng-class="{currentState: state == 'answers'}">
+							<a ng-click="changeState('answers')">
+								<li>תשובות</li>
+							</a>
 						</div>
 					</ul>
 				</div>
@@ -19,14 +26,29 @@
 			<div id="contentView">
 				<div id="contentData">
 					<div id="profileTitle">
-					<p>שאלות ששאלתי</p>
+						<span ng-show="state == 'questions_asked'">
+							שאלות ששאלתי
+						</span>
+						<span ng-show="state == 'answers'">
+							תשובות
+						</span>
 					</div>
-					<div id="userQuestion" ng-repeat="q in userQuestions">
-						<div id="templateTitle">
-						{{q.title}}
+					<!-- questions asked -->
+					<div id="userQuestion" ng-repeat="q in userQuestions" ng-show="state == 'questions_asked'">
+						<div id="templateTitle" ui-sref="show_question({question_id: q.id})">
+							{{q.title}}
 						</div>
 						<div id="templateDetails">
 							{{q.body}}
+						</div>
+					</div>
+					<!-- answers -->
+					<div id="userQuestion" ng-repeat="a in userAnswers" ng-show="state == 'answers'">
+						<div id="templateTitle" ui-sref="show_question({question_id: a.question.id})">
+							{{a.question.title}}
+						</div>
+						<div id="templateDetails">
+							{{a.answer_body}}
 						</div>
 					</div>
 

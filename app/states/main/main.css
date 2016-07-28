@@ -1,5 +1,6 @@
 html {
 	overflow-y: scroll;
+	font-family: 'David Libre', serif;
 }
 
 .darkBackground {
@@ -17,7 +18,7 @@ html {
 .normalBacgkround {
 	position: relative;
 	margin: auto;
-	height: 100%;
+	min-height: 100%;
 }
 
 #content {

@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-.module('tequeFrontendApp').config(function ($stateProvider, $urlRouterProvider) {
+.module('tequeFrontendApp').config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
   .state('main', {
     url: '/',
@@ -42,6 +42,10 @@ angular
     templateUrl: 'states/404/404.html'
   });
   $urlRouterProvider.otherwise('/');
+
+
+  $locationProvider.html5Mode(true);
+
 })
 
 .run(['$rootScope', '$state', 'authToken', function ($rootScope, $state, authToken){
@@ -71,7 +75,6 @@ angular
 //       requireBase: false
 //     });
 // }])
-
 
 .run(['$rootScope', '$state', function ($rootScope, $state){
   $rootScope.$on('$stateNotFound', function() {

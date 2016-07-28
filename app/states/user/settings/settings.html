@@ -1,18 +1,18 @@
-<modal-dialog show='modalShown'></modal-dialog>
+<modal-dialog show='modalShown' ng-cloak></modal-dialog>
 <div id="mainPage" ng-class="{normalBacgkround: $focused, normalBacgkround: !$focused}"  ng-focus="$focused=false" tabindex="1" ng-cloak>
 		<tq-navbar></tq-navbar>
 	<div id="content" flex-gt-xs="75">
 		<div id="mainSettings">
 			<div id="optionsList">
 				<div id="listTitle">
-					<p>הגדרות</p>
+					<span>הגדרות</span>
 				</div>
 				<div id="list">
 					<ul>
-						<div id="listItem">
+						<div id="listItem" ng-class="{currentState: state == 'profile'}">
 							<a href="" ng-click="changeState('profile')"><li>פרופיל</li></a>
 						</div>
-						<div id="listItem">
+						<div id="listItem" ng-class="{currentState: state == 'account'}">
 							<a href="" ng-click="changeState('account')"><li>חשבון</li></a>
 						</div>
 						<div id="listItem">
@@ -22,9 +22,9 @@
 				</div>
 			</div>
 			<div id="settingsView">
-				<div id="settingsContent">
-				<tq-user-profile ng-if="state === 'profile'"></tq-user-profile>
-				<tq-user-account ng-if="state === 'account'"></tq-user-account>
+				<div id="settingsContent" ng-cloak>
+				<tq-user-profile ng-show="state === 'profile'"></tq-user-profile>
+				<tq-user-account ng-show="state === 'account'"></tq-user-account>
 				</div>
 			</div>
 

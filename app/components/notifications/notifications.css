@@ -16,7 +16,13 @@
 	background-color: #dcdcdc;
 	border: 1px solid #c0c0c0;
 }
-
+#notifHeader span {
+	padding-right: 5px;
+	top: 12px;
+	display: inline-block;
+	color: gray;
+	position: relative;
+}
 
 #notifBody {
 	position: relative;
@@ -88,4 +94,15 @@
 
 #notifTextLink:hover {
 	text-decoration: underline;
+}
+#noNotifMessage {
+	min-height: 150px;
+	background-color: #fafafa;
+	text-align: center;
+
+}
+#noNotifMessage span {
+	position: relative;
+	color: gray;
+	top: 55px;
 }

@@ -1,5 +1,5 @@
 <div infinite-scroll="scrollDown()">
-	<div ng-repeat= "q in questions" id="question">
+	<div ng-repeat= "q in questions" id="question" ng-cloak>
 		<tq-question-template data="q" method="showReportDialog(q.id)" report-options="reportOptions"></tq-question-template>
 	</div>
 </div>

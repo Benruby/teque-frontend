@@ -1,4 +1,4 @@
-<div id="askSection">
+<div id="askSection"  ng-cloak>
 	<div id="askFormSection">
 		<form name="askForm" ng-submit="askQuestion()" novalidate id="askForm">
 			<div id="askInputSection">
@@ -29,7 +29,7 @@
 			<textarea  
 			msd-elastic
 			name="details"
-			ng-show="$focused"
+			ng-if="$focused"
 			placeholder="פרטים" 
 			rows="3"
 			id="details"
