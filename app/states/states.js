@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-.module('tequeFrontendApp').config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+.module('tequeFrontendApp').config(function ($stateProvider, $urlRouterProvider, $locationProvider, ENV) {
   $stateProvider
   .state('main', {
     url: '/',
@@ -43,8 +43,9 @@ angular
   });
   $urlRouterProvider.otherwise('/');
 
-
+if(ENV.env != 'development')  {
   $locationProvider.html5Mode(true);
+}
 
 })
 

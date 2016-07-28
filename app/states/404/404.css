@@ -1,0 +1,48 @@
+#Main404 {
+	direction: rtl;
+	height: 100%;
+}
+
+#questionMark {
+	width: 500px;
+	float: right;
+	display: inline-block;
+	background-color: #dcdcdc;
+	height: 100%;
+	margin-right: 100px;
+	text-align: center;
+}
+
+#questionMark span {
+	position: relative;
+	font-size: 600px;
+	vertical-align: middle;
+
+}
+
+#wrapper404 {
+	position: relative;
+	top: 250px;
+}
+
+#Header404 {
+	margin-right: 35px;
+	display: inline-block;
+	height: 100px;
+	vertical-align: middle;
+}
+
+#Header404 span{
+	font-weight: bold;
+	font-size: 20px;
+}
+#Content404 {
+	position: relative;
+	display: block;
+}
+
+#Content404 span{
+	font-size: 15px;
+	display: inline-block;
+	margin-top: 30px;
+}
