@@ -3,41 +3,10 @@
 		<div id="answersHeader">
 			<p>תשובות</p>
 		</div>
-		<div id="singleAnswer" ng-repeat="a in answers | orderBy: 'id' : true | filter: {'id': answer_id}">
-		{{$stateParams.answer_id}}
-		{{$stateParams.question_id}}
-			<div id="answerUserInfo">
-				<div id="answerUserImage">
-						<div id="userImage" class="clickable" ui-sref="profile({id: a.user.id})">
-							<img id="answerImage" ng-src='{{a.user.avatar}}' >
-						</div>
-				</div>
-				<div id="userInfoWrapper">
-					<div id="userInfo">
-						<span>
-							<span id="answerUserName" class="clickable" ui-sref="profile({id: a.user.id})">
-									{{a.user.full_name}}
-								</span>,
-								<span id="answerUserDetails">
-									{{a.user.description}}
-								</span>
-						</span>
-					</div>
-				</div>
-			</div>
-			<div id="answerBody">
-				<div>{{a.answer_body}}</div>
-			</div>
-			<div id="answerFooter">
-				<div id="answerActions">
-					
-					<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a></div>
-					<div id="answerUpvote"></div>
-				</div>
-			</div>
-			<div id="commentSection" ng-if="commentEnabled">
-				<tq-comment item-id="a.id" close-comment="comment()" comments="a.item_comments" item-type="answer"></tq-comment>
-			</div>
+		<div id="singleAnswer" ng-repeat="a in answers | orderBy: 'id' : true | filter: {'id': answer_id}" ng-cloak>
+		<!-- ****************** -->
+			<answer answer='a'></answer>
+			<!-- **************** -->
 		</div>
 	</div>
 </div>

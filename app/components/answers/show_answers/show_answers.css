@@ -79,3 +79,12 @@
 .clickable {
 	cursor: pointer;
 }
+
+#answerBody img {
+	max-height: 350px;
+	max-width: 600px;
+}
+
+blockquote {
+	font-style: italic;
+}

@@ -11,5 +11,6 @@ angular.module('tequeFrontendApp', [
 	'ui.router',
 	'monospaced.elastic',
 	'infinite-scroll',
-	'ngImgCrop'
+	'ngImgCrop',
+	'ngCkeditor'
 	]);

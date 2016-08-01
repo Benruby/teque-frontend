@@ -12,10 +12,6 @@ angular.module('tequeFrontendApp').directive('tqShowAnswers', function ($statePa
 		controller: function ($scope) {		
 
 			$scope.answer_id = $stateParams.answer_id;
-
-			$scope.comment = function () {
-				$scope.commentEnabled = !$scope.commentEnabled;
-			}
 		}
 	};
 });
