@@ -13,4 +13,9 @@ angular.module('tequeFrontendApp', [
 	'infinite-scroll',
 	'ngImgCrop',
 	'ngCkeditor'
-	]);
+	])
+.config(['$compileProvider', function ($compileProvider) {
+	if (ENV.env == 'production') {
+		$compileProvider.debugInfoEnabled(false);
+	}
+}]);
