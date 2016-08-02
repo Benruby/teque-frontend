@@ -438,7 +438,8 @@ ngtemplates: {
 'features/{,*/*/*/*/}*.html',
 'features/{,*/*/*/*/*/}*.html',
 'images/{,*/}*.{webp}',
-'styles/fonts/{,*/}*.*'
+'styles/fonts/{,*/}*.*',
+'features/ckeditor/**/*'
 ]
 }, {
   expand: true,

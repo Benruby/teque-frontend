@@ -20,5 +20,8 @@
     "angular-mocks": "^1.4.0"
   },
   "appPath": "app",
-  "moduleName": "tequeFrontendApp"
+  "moduleName": "tequeFrontendApp",
+  "resolutions": {
+    "angular": "1.5.8"
+  }
 }
