@@ -14,7 +14,7 @@ angular.module('tequeFrontendApp', [
 	'ngImgCrop',
 	'ngCkeditor'
 	])
-.config(['$compileProvider', function ($compileProvider) {
+.config(['$compileProvider', 'ENV', function ($compileProvider, ENV) {
 	if (ENV.env == 'production') {
 		$compileProvider.debugInfoEnabled(false);
 	}
