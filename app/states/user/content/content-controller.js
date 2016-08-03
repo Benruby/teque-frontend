@@ -4,19 +4,24 @@ angular.module('tequeFrontendApp')
 .controller('ContentCtrl', function ($scope, Questions, Answers, authenticated) {
 
 	$scope.authenticated = authenticated;
-	$scope.state = 'questions_asked';
+	
+	if($scope.authenticated) {
 
-	$scope.userQuestions = Questions.userQuestions
-	.then(
-		function(response){
-			$scope.userQuestions = response.data;
-		});
+		$scope.state = 'questions_asked';
 
-	$scope.userAnswers = Answers.userAnswers
-	.then(
-		function(response){
-			$scope.userAnswers = response.data;
-		})
+		$scope.userQuestions = Questions.userQuestions()
+		.then(
+			function(response){
+				$scope.userQuestions = response.data;
+			});
+
+		$scope.userAnswers = Answers.userAnswers
+		.then(
+			function(response){
+				$scope.userAnswers = response.data;
+			})
+
+	}
 
 	$scope.changeState = function (state) {
 		$scope.state = state;
