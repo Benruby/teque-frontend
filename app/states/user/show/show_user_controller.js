@@ -2,7 +2,9 @@
 
 
 angular.module('tequeFrontendApp')
-.controller('ShowUserCtrl', function ($scope, $stateParams, Follow) {
+.controller('ShowUserCtrl', function ($scope, $stateParams, Follow, authenticated) {
+
+	$scope.authenticated = authenticated;
 
 	Follow.getUser($stateParams.id).then(
 		function(response){

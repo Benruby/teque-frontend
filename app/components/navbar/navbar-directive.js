@@ -4,23 +4,25 @@ angular.module('tequeFrontendApp').directive('tqNavbar', function (Notifications
 		templateUrl: "components/navbar/navbar.html",
 		replace: true,
 		controller: function ($scope) {
-			$scope.user_avatar = localStorage.getItem('u_avatar');
-			$scope.user_name = localStorage.getItem('u_name').split(' ')[0];
+			if ($scope.authenticated) {
+				$scope.user_avatar = localStorage.getItem('u_avatar');
+				$scope.user_name = localStorage.getItem('u_name').split(' ')[0];
 
-			$scope.notifications = {};
-			$scope.showNotifications = false;
+				$scope.notifications = {};
+				$scope.showNotifications = false;
 
-			Notifications.getNotifications().then(
-				function(response){
-					$scope.notifications = response.data;
-					console.log("success getting noifs");
-				},
-				function(response){
-					console.log("error getting noifs");
-				})
+				Notifications.getNotifications().then(
+					function(response){
+						$scope.notifications = response.data;
+						console.log("success getting noifs");
+					},
+					function(response){
+						console.log("error getting noifs");
+					})
 
-			$scope.showNotifs = function() {
-				$scope.showNotifications = !$scope.showNotifications;
+				$scope.showNotifs = function() {
+					$scope.showNotifications = !$scope.showNotifications;
+				}
 			}
 		}
 	}

@@ -6,13 +6,13 @@
 	<div id="questionMain">	
 			<div  id="questionsPage">
 				<div ng-if="question.$resolved">
-					<tq-question-template data="question"></tq-question-template>
+					<tq-question-template data="question" authenticated="authenticated"></tq-question-template>
 				</div>
 			</div>
 
 			<div id="answersSection" flex-gt-xs="55">
 				<div id="answers" flex-gt-xs="55">
-					<tq-show-answers answers="question.answers"></tq-show-answers>
+					<tq-show-answers answers="question.answers" authenticated="authenticated"></tq-show-answers>
 				</div>
 
 			</div>

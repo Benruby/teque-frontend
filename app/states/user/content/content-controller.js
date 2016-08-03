@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('tequeFrontendApp')
-.controller('ContentCtrl', function ($scope, Questions, Answers) {
+.controller('ContentCtrl', function ($scope, Questions, Answers, authenticated) {
 
+	$scope.authenticated = authenticated;
 	$scope.state = 'questions_asked';
 
 	$scope.userQuestions = Questions.userQuestions

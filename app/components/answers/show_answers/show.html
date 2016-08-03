@@ -4,9 +4,7 @@
 			<p>תשובות</p>
 		</div>
 		<div id="singleAnswer" ng-repeat="a in answers | orderBy: 'id' : true | filter: {'id': answer_id}" ng-cloak>
-		<!-- ****************** -->
-			<answer answer='a'></answer>
-			<!-- **************** -->
+			<answer answer='a' authenticated="authenticated"></answer>
 		</div>
 	</div>
 </div>

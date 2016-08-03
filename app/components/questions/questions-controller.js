@@ -4,10 +4,18 @@
 angular.module('tequeFrontendApp')
 .controller('QuestionsCtrl', function ($scope, Questions, Reports) {
 
-	$scope.page = 1; 
-	$scope.busy = false;
-	$scope.questions = [];
 
+	if ($scope.authenticated) {
+		$scope.page = 1; 
+		$scope.busy = false;
+		$scope.questions = [];
+
+		Reports.getReportOptions().then(function(response) {
+			$scope.reportOptions = response.data;
+		},function(response){
+			console.log("ERROR getting options for report mopdal");
+		});
+	}
 
 	$scope.scrollDown = function() {
 		if ($scope.busy){ return }
@@ -19,11 +27,5 @@ angular.module('tequeFrontendApp')
 				$scope.busy = false;
 			});
 	}
-
-	Reports.getReportOptions().then(function(response) {
-		$scope.reportOptions = response.data;
-	},function(response){
-		console.log("ERROR getting options for report mopdal");
-	});
 }); 
 

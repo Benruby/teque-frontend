@@ -9,7 +9,7 @@
 			<div id="userInfo">
 				<span>
 					<span id="answerUserName" class="clickable" ui-sref="profile({id: answer.user.id})">
-					{{answer.user.full_name}}
+						{{answer.user.full_name}}
 					</span>,
 					<span id="answerUserDetails">
 						{{answer.user.description}}
@@ -21,14 +21,16 @@
 	<div id="answerBody">
 		<div ng-bind-html="trustedHtml()"></div>
 	</div>
-	<div id="answerFooter">
-		<div id="answerActions">
+	<div ng-if="authenticated">
+		<div id="answerFooter">
+			<div id="answerActions">
 
-			<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a></div>
-			<div id="answerUpvote"></div>
+				<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a></div>
+				<div id="answerUpvote"></div>
+			</div>
 		</div>
-	</div>
-	<div id="commentSection" ng-if="commentEnabled">
-		<tq-comment item-id="answer.id" close-comment="comment()" comments="answer.item_comments" item-type="answer"></tq-comment>
+		<div id="commentSection" ng-if="commentEnabled">
+			<tq-comment item-id="answer.id" close-comment="comment()" comments="answer.item_comments" item-type="answer"></tq-comment>
+		</div>
 	</div>
 </div>

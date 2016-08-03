@@ -40,6 +40,7 @@
 	box-sizing: border-box;
 	width: 100%;
 	padding-left: 10%;
+	min-height: 45px;
 }
 
 .menuItems {
@@ -144,4 +145,27 @@
 	color: white;
 	font-weight: bold;
 
+}
+
+#signInLink {
+	display: table;
+	white-space: nowrap;
+	margin-left: 50px;
+}
+
+#signInLink div {
+	display: inline-block;
+	background: #fff;
+	box-sizing: border-box;
+	border-radius: 3px;
+	border: 1px solid #cbcbd8;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 6px 5px 6px 5px;
+	margin: 6px 0px 0px 0px;
+}
+
+#signInLink div:hover{
+	border: 1px solid #484141;
 }

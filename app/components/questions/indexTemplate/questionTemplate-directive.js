@@ -8,7 +8,8 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 		scope: {
 			data: '=',
 			show: '=',
-			reportOptions: '='
+			reportOptions: '=',
+			authenticated: '='
 		},
 		controller: function ($scope, $timeout) {
 

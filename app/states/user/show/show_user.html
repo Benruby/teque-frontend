@@ -26,7 +26,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="followButton">
+				<div id="followButton" ng-if="authenticated">
 					<div ng-class="{following: user.followed, notFollowing: !user.followed }" ng-click="follow('user', user.id)">
 						<a id="upvoteButton" href="">
 							<span id="voteCount">{{user.follower_count || 0}}</span>

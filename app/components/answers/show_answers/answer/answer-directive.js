@@ -6,7 +6,8 @@ angular.module('tequeFrontendApp').directive('answer', function ($stateParams) {
 		restrict: 'E',
 		replace: true,
 		scope: {
-			answer: '='
+			answer: '=',
+			authenticated: '='
 
 		},
 		controller: function ($scope, $sce) {		

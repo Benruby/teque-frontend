@@ -1,6 +1,6 @@
 <div class=navbar>
-    <div id="LoggedinUser">
-        <img src='{{user_avatar}}'>
+    <div id="LoggedinUser" ng-if="authenticated">
+        <img ng-src="{{user_avatar}}">
 
         <span>{{user_name}}</span>
         
@@ -12,7 +12,7 @@
             </a>
         </div>
         <div id="bar">
-            <div id="menuItems" ng-class="{noItems: $focused, menuItems: !$focused}">
+            <div id="menuItems" ng-class="{noItems: $focused, menuItems: !$focused}" ng-if="authenticated">
                 <span id="menuItem">
                     <div id="itemWrap">          
                       <a ui-sref="logout">
@@ -23,30 +23,35 @@
             <span id="menuItem">
                 <div id="itemWrap">          
                     <a  ui-sref="settings({sub_state: 'profile'})">
-                    <span>פרופיל</span>
+                        <span>פרופיל</span>
                     </a>
+                </div>
+            </span>
+            <span id="menuItem">             
+                <div id="itemWrap">       
+                    <a ng-click="showNotifs()">
+                        <span>התראות</span>
+                    </a>
+                </div>
+            </span>
+            <span id="notificationCount" ng-if="notifications.length > 0" ng-click="showNotifs()">
+                <div id="notificationIcon">     
+                  <a>
+                    <text>{{notifications.length}}</text>
+                </a>
             </div>
         </span>
-        <span id="menuItem">             
-            <div id="itemWrap">       
-                <a ng-click="showNotifs()">
-                    <span>התראות</span>
-                </a>
-        </div>
-    </span>
-    <span id="notificationCount" ng-if="notifications.length > 0" ng-click="showNotifs()">
-        <div id="notificationIcon">     
-          <a>
-            <text>{{notifications.length}}</text>
-        </a>
-    </div>
-</span>
 
-</div>
-<notifications ng-if="showNotifications" notifications="notifications"></notifications>
-<div class="askBar">
-    <tq-ask></tq-ask>
-</div>
+    </div>
+    <div id="signInLink" ng-if="!authenticated">
+        <div ui-sref="login">
+            התחבר
+        </div>
+    </div>
+    <notifications ng-if="showNotifications" notifications="notifications"></notifications>
+    <div class="askBar">
+        <tq-ask></tq-ask>
+    </div>
 </div>
 </div>
 </div>

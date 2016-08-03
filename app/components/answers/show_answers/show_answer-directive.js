@@ -6,7 +6,8 @@ angular.module('tequeFrontendApp').directive('tqShowAnswers', function ($statePa
 		restrict: 'E',
 		replace: true,
 		scope: {
-			answers: '='
+			answers: '=',
+			authenticated: '='
 
 		},
 		controller: function ($scope) {		

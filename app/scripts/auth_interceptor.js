@@ -9,11 +9,10 @@
  			return config;
  		},
  		responseError: function(response) {
- 			if (response.status === 401) {
- 				$location.path('login');
- 			}
+ 				if (response.status === 401) {
+ 				}
 
- 			return $q.reject(response);
+ 				return $q.reject(response);
  		}
  	}
  })

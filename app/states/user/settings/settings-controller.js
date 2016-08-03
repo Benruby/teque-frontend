@@ -1,8 +1,9 @@
 'use strict';
 
 
-angular.module('tequeFrontendApp').controller('SettingsCtrl', function ($scope, PasswordReset, Settings, $mdMedia, $mdDialog) {
+angular.module('tequeFrontendApp').controller('SettingsCtrl', function ($scope, PasswordReset, Settings, $mdMedia, $mdDialog, authenticated) {
 
+	$scope.authenticated = authenticated;
 	$scope.state = 'profile';
 	$scope.editName = false;
 	$scope.editDescription = false;

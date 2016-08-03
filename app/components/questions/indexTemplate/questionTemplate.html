@@ -9,7 +9,7 @@
 				<span read-more id="read-more" body="question_body" content="{{data.body}}"></span>
 			</div>
 		</div>
-		<div id="votesSection">
+		<div id="votesSection" ng-if="authenticated">
 			<div id="voteButtons">
 				<div ng-class="{upvoteButtonSub: !voted, upvoteButtonSubVoted: voted }" ng-click="upvote(data.id)">
 					<a id="upvoteButton" href="">
@@ -24,7 +24,7 @@
 				תשובות: {{data.answers.length}}
 			</a>
 		</div>
-		<div id="templateFooter">
+		<div id="templateFooter" ng-if="authenticated">
 
 			<div id="answerButton" ng-class="{answerButton: !answerEnabled, answerButtonClicked: answerEnabled}" ng-click='answer()'>
 				<span>

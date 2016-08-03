@@ -15,7 +15,7 @@ angular.module('tequeFrontendApp', [
 	'ngCkeditor'
 	])
 .config(['$compileProvider', 'ENV', function ($compileProvider, ENV) {
-	if (ENV.env == 'production') {
+	if (ENV.env == '!development') {
 		$compileProvider.debugInfoEnabled(false);
 	}
 }]);
