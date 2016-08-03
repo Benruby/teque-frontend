@@ -11,12 +11,13 @@ angular.module('tequeFrontendApp').directive('share', function () {
 		controller: function ($scope, ENV) {
 
 			$scope.shareFb = function (question) {
+				var name = $scope.data.title
 				FB.ui({
 					method: 'feed',
-					name: $scope.data.title,
+					name: name,
+					description: $scope.data.body,
 					link: 'http://www.teque.co.il/question/' + $scope.data.id,
-					caption: 'WWW.TEQUE.CO.IL',
-					description: $scope.data.body
+					caption: 'WWW.TEQUE.CO.IL'
 				}, function(response){
 					console.log(response);
 				});
