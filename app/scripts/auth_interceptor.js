@@ -1,5 +1,5 @@
  angular
- .module('tequeFrontendApp').factory('authInterceptor', function ($q, $location) {
+ .module('tequeFrontendApp').factory('authInterceptor', function ($q, $location, $injector, $stateParams) {
  	return {
  		request: function(config) {
  			config.headers = config.headers || {};
@@ -9,7 +9,7 @@
  			return config;
  		},
  		responseError: function(response) {
- 				if (response.status === 401) {
+ 				if (response.status === 404) {
  				}
 
  				return $q.reject(response);

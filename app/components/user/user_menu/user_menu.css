@@ -1,0 +1,89 @@
+#userMenuMain {
+	direction: rtl;
+	position: absolute;
+	background: #fff;
+	min-height: 120px;
+	top: 70px;
+	width: 155px;
+	box-shadow: 1px 1px 1px 1px gray;
+	border-radius: 5px;
+	z-index: 1500;
+	right: -30px;
+}
+
+#userMenuHeader {
+	position: relative;
+	height: 40px;
+	background-color: #dcdcdc;
+	border: 1px solid #c0c0c0;
+}
+#notifHeader span {
+	padding-right: 5px;
+	top: 12px;
+	display: inline-block;
+	color: gray;
+	position: relative;
+}
+
+#userMenuBody {
+	position: relative;
+	max-height: 350px;
+}
+
+#userMenuBody ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #2b6dad;
+}
+
+#userMenuBody li {
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+#userMenuBody li:hover {
+	background-color: #f4f4f4;
+	cursor: pointer;
+}
+
+#userMenuItem {
+	display: block;
+	vertical-align: middle;
+	text-decoration: none;
+}
+#userMenuLinksWrapper {
+	padding-right: 5px;
+}
+
+#userMenuLink:visited, #userMenuLink:link {
+	text-decoration: none;
+	color: gray;
+}
+
+#userMenuLinks {
+	height: 40px;
+	font-size: 15px;
+	background-color: #E6E4E4;
+	color: gray;
+}
+#userMenuLinks a {
+	cursor: pointer;
+}
+
+#userMenuLinks a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#separator {
+	size: 50px;
+	color: gray;
+}
+
+
+#userMenuItem:visited { 
+	color:#2b6dad;
+}

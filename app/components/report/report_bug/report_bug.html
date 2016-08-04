@@ -1,0 +1,44 @@
+<div>
+	<div class='report-modal' ng-if='show'>
+		<div class='report-modal-overlay' ng-click='hideModal()'></div>
+		<div class='report-modal-dialog' ng-style='dialogStyle'>
+			<div class='report-modal-close' ng-click='hideModal()'>X</div>
+			<div class='report-modal-dialog-content'>
+
+				<form name="bugReportForm" novalidate >		
+					<div>
+						<span id="bugReportHeader">
+							משהו לא עובד כמו שצריך? ספר לנו: 
+						</span>
+					</div>
+
+					<textarea 
+					id="bugReportInput"
+					name="formInput"
+					type="text"
+					ng-model="bugReportForm.body"
+					required 
+					rows="4"
+					></textarea>
+
+					<div ng-show="reportFormError">
+						<span id="errorMessage">נדרש למלא תיאור של הבעיה</span>
+					</div>
+
+					<div id="reportActions">
+						<div id="reportButtons">
+							<div id="sendReportButton">
+
+								<a href="" id="sendReportLink" ng-click="report(bugReportForm)">שלח</a>
+
+							</div>
+							<div id="cancelReportButton">
+								<a href="" ng-click='hideModal()' id="cancelReportLink">בטל</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -20,6 +20,15 @@ angular.module('tequeFrontendApp').factory('Reports', function($resource, $http,
 		getReportOptions: function () {
 			
 			return $http.get(ENV.apiEndpoint + '/api/report_options')
+		},
+
+		reportBug: function (report) {
+			return $http.post(ENV.apiEndpoint + '/api/bug_reports', 
+			{
+				bug_report: {
+					body: report
+				}
+			})
 		}
 	} 
 });

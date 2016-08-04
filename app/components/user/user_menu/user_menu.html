@@ -1,0 +1,29 @@
+<div id="userMenuMain">
+
+	<div id="userMenuBody">
+		<ul>
+			<li>
+				<a id="userMenuItem" ui-sref="settings">
+					פרופיל
+				</a>
+			</li>
+			<li>
+				<a id="userMenuItem" ui-sref="content">
+					התוכן שלי
+				</a>
+			</li>
+		</ul>
+
+	</div>
+	<div id="userMenuLinks">
+		<div id="userMenuLinksWrapper">	
+			<a id="userMenuLink" ng-click="showReportBug()">דווח על באג</a>
+			<span id="separator">&#183</span>
+			<a  id="userMenuLink" ui-sref="contact">צור קשר</a>
+			<span id="separator">&#183</span>
+			<a id="userMenuLink" ui-sref="logout">התנתק</a>
+			<span id="separator">&#183</span>
+			<a>אודות</a>
+		</div>
+		<report-bug show="reportBug"></report-bug>
+	</div>

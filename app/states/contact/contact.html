@@ -1,0 +1,48 @@
+<div id="mainPage" ng-class="{normalBacgkround: $focused, normalBacgkround: !$focused}"  ng-focus="$focused=false" tabindex="1">
+	<div id="navbarSection"  ng-cloak>
+		<tq-navbar></tq-navbar>
+	</div>
+	<div id="content" flex-gt-xs="75">
+		<div  id="contactMain" flex-gt-xs="55">
+			<div>
+				<span id="contactHeader">צור קשר</span>
+			</div>
+			<form id="contactForm" name="contactForm" novalidate>
+				<div id="ContactdropDown">
+					<select ng-model="contactForm.reason" ng-options="option.title for option in options" required>
+						<option value="">-- בחר --</option>
+
+					</select>
+				</div>
+
+
+				<div id="contactDetails">
+					<div>
+					<span>פרטי הפנייה(עד 250 תווים):</span>
+					</div>
+					<div id="contactInput">
+						<textarea
+						id="contactInput"
+						rows="5"
+						ng-model="contactForm.details"
+						name="contactInput"
+						required
+						>
+						
+					</textarea>
+					<div>{{contactForm.details.length}}</div>
+				</div>
+			</div>
+
+		</form>
+
+		<div id="contactActions">
+			<button id="contactButton" ng-disabled="contactForm.$invalid" ng-click="contact(contactForm)">שלח</button>
+		</div>
+
+		<div id="contactError" ng-if="showMessage">
+			<span>תודה שפנית אלינו. עובר לדף הבית</span>
+		</div>
+	</div>
+</div>
+</div>

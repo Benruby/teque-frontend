@@ -66,11 +66,25 @@ angular
       }
     }
   })
+  .state('contact', {
+    url: '/contact',
+    templateUrl: "states/contact/contact.html",
+    controller: 'ContactCtrl',
+    resolve: {
+      authenticated: function(authToken) {
+        return authToken.isAuthenticated();
+      }
+    }
+  })
   .state('404', {
-    url: '*path',
     templateUrl: 'states/404/404.html'
   });
-  $urlRouterProvider.otherwise('/');
+
+  $urlRouterProvider.otherwise(function($injector, $location){
+   var state = $injector.get('$state');
+   state.go('404');
+   return $location.path();
+ });
 
   if(ENV.env != 'development')  {
     $locationProvider.html5Mode(true);
@@ -78,8 +92,8 @@ angular
 
 })
 
-.run(['$rootScope', '$state', 'authToken', function ($rootScope, $state, authToken){
-  $rootScope.$on('$stateChangeStart', function (event, toState) {
+.run(['$rootScope', '$state', 'authToken', function ($rootScope, $state, authToken, $location){
+  $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
 
    if (toState.name === 'show_question') { 
     console.log("showing question")
@@ -89,16 +103,17 @@ angular
     authToken.isAuthenticated()
     .then(function(data){
     if (toState.name === 'login' && !data) { //user is NOT authenticated
+      console.log("sending to main fromm here 1")
       return; 
     } 
-      else if (toState.name !== 'login' &&  toState.name !== 'show_question' &&  toState.name !== 'profile' && !data) { //user is NOT authenticated and want's to view pages.
-        event.preventDefault();
+      else if (toState.name !== 'login' &&  toState.name !== 'show_question' &&  toState.name !== 'profile' && toState.name !== 'contact' && !data) { //user is NOT authenticated and want's to view pages.
+        console.log("sending to main fromm here 2")
+      event.preventDefault();
       return $state.go('login');
     } 
     else if (toState.name === 'login' && data) {
       event.preventDefault();
       return $state.go('main');
-    } else {
     }
   },
   function(){
@@ -111,9 +126,8 @@ angular
 }])
 
 
-
 .run(['$rootScope', '$state', function ($rootScope, $state){
-  $rootScope.$on('$stateNotFound', function() {
+  $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
     $state.go('404');
   });
 }]);
