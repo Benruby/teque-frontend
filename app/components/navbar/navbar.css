@@ -47,6 +47,7 @@
 	position: relative;
 	display: table;
 	float: right;
+	margin-left: 15px;
 }
 
 .noItems {

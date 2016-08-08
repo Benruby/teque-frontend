@@ -11,6 +11,7 @@ angular.module('tequeFrontendApp').directive('tqNavbar', function (Notifications
 				$scope.notifications = {};
 				$scope.showNotifications = false;
 				$scope.showUserMenuState = false;
+				$scope.allowMenus = false;
 
 				Notifications.getNotifications().then(
 					function(response){
@@ -22,12 +23,14 @@ angular.module('tequeFrontendApp').directive('tqNavbar', function (Notifications
 			$scope.showNotifs = function() {
 				$scope.showNotifications = !$scope.showNotifications;
 				if ($scope.showUserMenuState) $scope.showUserMenuState = false;
+
 			}
 
 			$scope.showUserMenu = function () {
 				$scope.showUserMenuState = !$scope.showUserMenuState;
 				if ($scope.showNotifications) $scope.showNotifications = false;
 			}
+
 		}
 	}
 });
