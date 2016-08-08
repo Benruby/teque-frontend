@@ -9,11 +9,7 @@ angular
     controller: 'MainCtrl',
     resolve: {
       authenticated: function(authToken, $state) {
-        return authToken.isAuthenticated().then(
-          function(response){
-            if (!response) { $state.go('login') }
-              return response;
-          })
+        return authToken.isAuthenticated();
       }
     }
   })
@@ -106,7 +102,7 @@ angular
       console.log("sending to main fromm here 1")
       return; 
     } 
-      else if (toState.name !== 'login' &&  toState.name !== 'show_question' &&  toState.name !== 'profile' && toState.name !== 'contact' && !data) { //user is NOT authenticated and want's to view pages.
+      else if (toState.name !== 'login' &&  toState.name !== 'show_question' &&  toState.name !== 'profile' && toState.name !== 'contact' && toState.name !== 'main' && !data) { //user is NOT authenticated and want's to view pages.
         console.log("sending to main fromm here 2")
       event.preventDefault();
       return $state.go('login');

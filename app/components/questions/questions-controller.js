@@ -5,17 +5,15 @@ angular.module('tequeFrontendApp')
 .controller('QuestionsCtrl', function ($scope, Questions, Reports) {
 
 
-	if ($scope.authenticated) {
-		$scope.page = 1; 
-		$scope.busy = false;
-		$scope.questions = [];
 
-		Reports.getReportOptions().then(function(response) {
-			$scope.reportOptions = response.data;
-		},function(response){
-			console.log("ERROR getting options for report mopdal");
-		});
-	}
+	$scope.page = 1; 
+	$scope.busy = false;
+	$scope.questions = [];
+
+	Reports.getReportOptions().then(function(response) {
+		$scope.reportOptions = response.data;
+	},function(response){
+	});
 
 	$scope.scrollDown = function() {
 		if ($scope.busy){ return }
