@@ -9,7 +9,7 @@
 	// config.uiColor = '#AADC6E';
 	config.contentsLanguage = 'en';
 	config.extraAllowedContent = 'a[!href]'
-
+    config.skin = 'minimalist';
 // 	config.replace( 'codeSnippet_area', {
 //     contentsLangDirection: 'rtl'
 // } );

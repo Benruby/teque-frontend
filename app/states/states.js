@@ -92,18 +92,15 @@ angular
   $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
 
    if (toState.name === 'show_question') { 
-    console.log("showing question")
     return;
   } else {
 
     authToken.isAuthenticated()
     .then(function(data){
     if (toState.name === 'login' && !data) { //user is NOT authenticated
-      console.log("sending to main fromm here 1")
       return; 
     } 
       else if (toState.name !== 'login' &&  toState.name !== 'show_question' &&  toState.name !== 'profile' && toState.name !== 'contact' && toState.name !== 'main' && !data) { //user is NOT authenticated and want's to view pages.
-        console.log("sending to main fromm here 2")
       event.preventDefault();
       return $state.go('login');
     } 
@@ -113,7 +110,6 @@ angular
     }
   },
   function(){
-    console.log("NO auth from server")
     $state.go('login');
   }
   );

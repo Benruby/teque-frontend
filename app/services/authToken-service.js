@@ -27,7 +27,6 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q, ENV)
 					deferred.resolve(false);		
 				}			
 			}).error(function(){
-				console.log("cant get token from server");
 				deferred.resolve(false);
 			})
 

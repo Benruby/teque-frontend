@@ -10,11 +10,14 @@ angular.module('tequeFrontendApp')
 	$scope.busy = false;
 	$scope.questions = [];
 
-	Reports.getReportOptions().then(function(response) {
-		$scope.reportOptions = response.data;
-	},function(response){
-	});
+	if ($scope.authenticated) {
 
+		Reports.getReportOptions().then(function(response) {
+			$scope.reportOptions = response.data;
+		},function(response){
+		});
+
+	}
 	$scope.scrollDown = function() {
 		if ($scope.busy){ return }
 			$scope.busy = true;

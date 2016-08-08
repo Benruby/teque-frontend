@@ -9,10 +9,8 @@ angular.module('tequeFrontendApp')
 	Follow.getUser($stateParams.id).then(
 		function(response){
 			$scope.user = response.data; 
-			console.log('Success');
 		},
 		function(response){
-			console.log('Error');
 		})
 
 	$scope.follow = function (type, id) {
@@ -21,10 +19,8 @@ angular.module('tequeFrontendApp')
 				function(response){
 					$scope.user.followed = true;
 					$scope.user.follower_count ++;
-					console.log("success following")
 				},
 				function(response){
-					console.log("error following")
 				})
 		}
 		else {
@@ -32,10 +28,8 @@ angular.module('tequeFrontendApp')
 				function(response){
 					$scope.user.followed = false;
 					$scope.user.follower_count --;
-					console.log("success unfollowing")
 				},
 				function(response){
-					console.log("error unfollowing")
 				})
 		}
 	}

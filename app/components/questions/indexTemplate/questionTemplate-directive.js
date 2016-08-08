@@ -99,7 +99,6 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 					caption: 'WWW.TEQUE.CO.IL',
 					description: question.body
 				}, function(response){
-					console.log(response);
 				});
 			}
 
@@ -109,10 +108,8 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 						function(response){
 							$scope.data.current_user_following = true;
 							$scope.data.follower_count ++;
-							console.log("success following")
 						},
 						function(response){
-							console.log("error following")
 						})
 				}
 				else {
@@ -120,10 +117,8 @@ angular.module('tequeFrontendApp').directive('tqQuestionTemplate', function (Que
 						function(response){
 							$scope.data.current_user_following = false;
 							$scope.data.follower_count --;
-							console.log("success unfollowing")
 						},
 						function(response){
-							console.log("error unfollowing")
 						})
 				}
 			}
