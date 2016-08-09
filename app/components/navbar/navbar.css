@@ -6,7 +6,7 @@
 	right: 0;
 	width:100%;
 	background: white;
-	min-height: 52px;
+	min-height: 51px;
 	z-index: 800;
 	-webkit-perspective: 1000;
 }
@@ -91,8 +91,11 @@
 }
 
 #menuItem:hover {
-	background-color: #D3D3D3;
+	background-color: #dcdcdc;
 	cursor: pointer;
+}
+.selected {
+	background-color: #dcdcdc;
 }
 
 #menuItem span {
@@ -119,8 +122,8 @@
 #notificationCount {
 	height: 20px;
 	width: 20px;
-	right:270px;
-	top:4px;
+	right:165px;
+	top: 2px;
 	position: absolute;
 	text-align: center;
 }
@@ -128,6 +131,7 @@
 #notificationIcon {
 	background-color: #ff6347;
 	border-radius: 50%;
+	height: 100%;
 }
 
 #notificationCount:hover {

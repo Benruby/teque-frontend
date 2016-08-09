@@ -25,11 +25,9 @@ angular.module('tequeFrontendApp').directive('report', function() {
       $scope.report = function (reason, validity) {
         if (validity) {
           Reports.postReport($scope.reportType, $scope.itemId, reason).then(function(){
-            console.log("reported successfully");
             $scope.changeItemText();
             $scope.hideModal();
           }, function(){
-            console.log("ERROR reporting item");
           })
         } else {
           $scope.reportFormError = true;

@@ -47,8 +47,7 @@
 						<div id="templateTitle" ui-sref="show_question({question_id: a.question.id})">
 							{{a.question.title}}
 						</div>
-						<div id="templateDetails">
-							{{a.answer_body}}
+						<div id="templateDetails" ng-bind-html="trustedHtml(a.answer_body)">
 						</div>
 					</div>
 

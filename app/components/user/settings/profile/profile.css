@@ -5,11 +5,14 @@
 	height: 100%;
 }
 
+#profileContent {
+	padding-top: 15px;
+}
+
 #profileHeader {
 	position: relative;
 	padding-right: 30%;
 	box-sizing: border-box;
-	min-height: 13vw;
 }
 
 #pictureWrapper {

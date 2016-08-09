@@ -17,7 +17,7 @@
 	</div>
 	<div id="userMenuLinks">
 		<div id="userMenuLinksWrapper">	
-			<a id="userMenuLink" ng-click="showReportBug()">דווח על באג</a>
+			<a id="userMenuLink" ng-click="showReportBug(); $event.stopPropagation()">דווח על באג</a>
 			<span id="separator">&#183</span>
 			<a  id="userMenuLink" ui-sref="contact">צור קשר</a>
 			<span id="separator">&#183</span>

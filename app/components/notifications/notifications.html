@@ -8,7 +8,7 @@
 			<li ng-repeat="n in notifications">
 				<div id="notif_item">
 					<div id="notifImageWrapper">
-						<img id="notifUserImage" src="{{n.user.avatar}}">
+						<img id="notifUserImage" ng-src="{{n.user.avatar}}">
 					</div>
 					<div id="notifContent">
 						<div ng-if="n.question">

@@ -6,12 +6,12 @@ angular.module('tequeFrontendApp').directive('reportBug', function($document) {
 		},
 		replace: true,
 		link: function(scope, element, attrs) {
-			scope.dialogStyle = {};
+
 			scope.hideModal = function() {
 				scope.show = false;
 			};
 			var body = $document.find('body').eq(0);
-			body.append(element)
+			body.append(element);
 		},
 		templateUrl: 'components/report/report_bug/report_bug.html',
 		controller: function($scope, Reports) {

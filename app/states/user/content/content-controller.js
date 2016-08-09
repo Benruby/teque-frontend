@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('tequeFrontendApp')
-.controller('ContentCtrl', function ($scope, Questions, Answers, authenticated) {
+.controller('ContentCtrl', function ($scope, Questions, Answers, authenticated, $sce) {
 
 	$scope.authenticated = authenticated;
 	
@@ -25,6 +25,10 @@ angular.module('tequeFrontendApp')
 
 	$scope.changeState = function (state) {
 		$scope.state = state;
+	}
+
+	$scope.trustedHtml = function (content) {
+		return $sce.trustAsHtml(content);
 	}
 
 });

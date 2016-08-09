@@ -162,6 +162,7 @@
 #shareLink {
 	display: inline-block;
 	float: left;
+	cursor: pointer;
 }
 
 #reportLink a {
