@@ -1,51 +1,51 @@
-<div class=navbar>
-
- <div id="mainBar" flex-gt-sm="80">
-  <div id="logo">
-    <a ui-sref="main">
-      Teque
-    </a>
-  </div>
-  <div id="bar">
-    <div ng-class="{noItems: $focused, menuItems: !$focused}" ng-if="authenticated">
-      <span id="menuItem" ng-class="{selected: showUserMenuState}">
-        <div id="itemWrap">
-          <a ng-click="showUserMenu(); $event.stopPropagation()">     
-            <div id="LoggedinUser" ng-if="authenticated">
-             <img ng-src="{{user_avatar}}">
-             <span>{{user_name}}</span>
-           </div>
-         </a>
-       </div>
-     </span>
-     <user-menu ng-if="showUserMenuState"></user-menu>
-
-     <span id="menuItem" ng-class="{selected: showNotifications}">             
-      <div id="itemWrap">       
-        <a ng-click="showNotifs(); $event.stopPropagation()">
-          <span>התראות</span>
+<div class=navbarWrapper ng-class="{focused: $focused, navbarWrapper: !$focused}" ng-click="closeNavbar()">
+  <div class="navbar" ng-click="$event.stopPropagation()">
+    <div id="mainBar" flex-gt-sm="70">
+      <div id="logo">
+        <a ui-sref="main">
+          Teque
         </a>
       </div>
-      <span id="notificationCount" ng-show="notifications.length > 0" ng-click="showNotifs(); $event.stopPropagation()">
-        <div id="notificationIcon">     
-          <a>
-            <text>{{notifications.length}}</text>
-          </a>
+      <div id="bar">
+        <div id="signInLink" ng-if="!authenticated">
+          <div ui-sref="login">
+            התחבר
+          </div>
         </div>
-      </span>
-    </span>
+        <notifications ng-if="showNotifications" notifications="notifications"></notifications>
+        <div class="askBar"  ng-show="authenticated">
+          <tq-ask></tq-ask>
+        </div>
+        <div ng-class="{noItems: $focused, menuItems: !$focused}" ng-if="authenticated">
 
+         <span id="menuItem" ng-class="{selected: showNotifications}">             
+          <div id="itemWrap">       
+            <a ng-click="showNotifs(); $event.stopPropagation()">
+              <span>התראות</span>
+            </a>
+          </div>
+          <span id="notificationCount" ng-show="notifications.length > 0" ng-click="showNotifs(); $event.stopPropagation()">
+            <div id="notificationIcon">     
+              <a>
+                <text>{{notifications.length}}</text>
+              </a>
+            </div>
+          </span>
+        </span>
 
-  </div>
-  <div id="signInLink" ng-if="!authenticated">
-    <div ui-sref="login">
-      התחבר
-    </div>
-  </div>
-  <notifications ng-if="showNotifications" notifications="notifications"></notifications>
-  <div class="askBar"  ng-show="authenticated">
-    <tq-ask></tq-ask>
-  </div>
-</div>
+        <span id="menuItem" ng-class="{selected: showUserMenuState}">
+          <div id="itemWrap">
+            <a ng-click="showUserMenu(); $event.stopPropagation()">     
+              <div id="LoggedinUser" ng-if="authenticated">
+               <img ng-src="{{user_avatar}}">
+               <span>{{user_name}}</span>
+             </div>
+           </a>
+         </div>
+       </span>
+       <user-menu ng-if="showUserMenuState"></user-menu>
+     </div>
+   </div>
+ </div>
 </div>
 </div>

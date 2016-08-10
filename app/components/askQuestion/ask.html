@@ -1,6 +1,6 @@
-<div id="askSection"  ng-cloak>
+<div id="askSection">
 	<div id="askFormSection">
-		<form name="askForm" ng-submit="askQuestion()" novalidate id="askForm">
+		<form name="askForm"  novalidate id="askForm">
 			<div id="askInputSection">
 
 				<div id="AskCounter" ng-if="$focused && (150 - question_data.title.length) < 10" ng-class="{colorCounter: (150 - question_data.title.length) < 0 }">
@@ -8,6 +8,8 @@
 				</div>
 				<textarea
 				msd-elastic
+				collapse-menu
+				ng-class="{askOpen: $focused}"
 				id="ask"
 				name="ask"
 				type="text"
@@ -16,13 +18,12 @@
 				tq-input-focus 
 				flex-gt-sm 
 				required 
-				rows="1"
 				>
 			</textarea>
 
 		</div>
 
-		<div id="detailsWrapper">
+		<div id="detailsWrapper" ng-if="$focused">
 			<div id="DetailsCounter" ng-if="$focused && (250 - question_data.body.length) < 10" ng-class="{colorCounter: (250 - question_data.body.length) < 0 }">
 				{{250 - question_data.body.length}}
 			</div>
@@ -38,12 +39,18 @@
 			>
 		</textarea>
 	</div>
-	<div id="askButtonSection" ng-show="$focused">
 
-		<button type="submit" id="askButton" ng-disabled="askForm.$invalid || ((250 - question_data.body.length) < 0) || ((150 - question_data.title.length) < 0)"> 
-			<div id="buttonText">שאל</div>
-		</button>
-	</div>
 </form>
 </div>
+<div id="askButtonSection" ng-show="$focused">
+
+	<button id="askButton" ng-disabled="askForm.$invalid || ((250 - question_data.body.length) < 0) || ((150 - question_data.title.length) < 0)" ng-click="askQuestion()"> 
+		<div id="buttonText">שאל</div>
+	</button>
+</div>
+
+<span id="askLink" ng-if="!$focused" ng-click="openAsk()">
+	<a>שאל שאלה</a>
+</span>
+
 </div>

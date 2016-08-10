@@ -3,6 +3,12 @@ angular.module('tequeFrontendApp').directive('tqNavbar', function (Notifications
 		restrict: 'E',
 		templateUrl: "components/navbar/navbar.html",
 		replace: true,
+		link: function(scope, element, attrs) {
+
+			scope.closeNavbar = function() {
+				scope.$focused = false;
+			};
+		},
 		controller: function ($scope) {
 			if ($scope.authenticated) {
 				$scope.user_avatar = localStorage.getItem('u_avatar');

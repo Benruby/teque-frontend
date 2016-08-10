@@ -156,11 +156,13 @@
 	display: inline-block;
 	position: relative;
 	margin-right: 20px;
+	min-width:40px;
 	float: left;
 }
 
 #shareLink {
 	display: inline-block;
+	position: relative;
 	float: left;
 	cursor: pointer;
 }

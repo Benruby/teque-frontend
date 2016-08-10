@@ -3,6 +3,11 @@
 	box-sizing: border-box;
 	display: table;
 }
+
+#askFormSection {
+	display: table-cell;
+
+}
 #askInputSection {
 	position: relative;
 	width: 100%;
@@ -10,13 +15,13 @@
 }
 #askForm {
 	width: 100%;
-	display: table;
+	
 }
 
 
 #ask {
 	resize: none;
-	border-radius: 4px;
+	border-radius: 0px 4px 4px 0px;
 	background-color: #f4f4f4;
 	width: 100%;
 	display: table-cell;
@@ -26,8 +31,11 @@
 	overflow-y: hidden;
 	word-wrap: break-word;
 	flex-direction: column;
-	min-height: 40px
-	line-height: 1.4;
+	height: 29px !important;
+}
+
+.askOpen {
+	border-radius: 4px !important;
 }
 
 #ask:focus {
@@ -37,18 +45,18 @@
 }
 
 #askButtonSection {
-	display: table-row;
-	position: relative;
-	word-wrap: break-word;
-	width: 15%;
+	display: table-cell;
+	height: 29px;
+	vertical-align: top;
+	padding-right: 20px;
 }
 
 #askButton {
 	display: inline-flex;
-	height: 2.21vw;
+	height: 29px;
 	position: relative;
 	border: 1.5px gray solid;
-	border-radius: 5px;
+	border-radius: 4px;
 	width: 20%;
 	align-items: center;
 	background-color: 
@@ -73,6 +81,7 @@
 
 #detailsSection {
 	margin-top: 4%;
+	display: table-row;
 }
 
 #detailsWrapper {
@@ -80,6 +89,7 @@
 	width: 100%;
 	word-wrap: break-word;
 	position: relative;
+	padding-top: 10px;
 }
 
 #details {
@@ -118,4 +128,18 @@
 
 .colorCounter {
 	color: red;
+}
+
+#askLink {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	max-width: 40px;
+	border: 1px gray solid;
+	border-radius: 4px 0px 0px 4px;
+}
+
+#askLink:hover {
+	cursor: pointer;
+	border: 1px black solid;
 }

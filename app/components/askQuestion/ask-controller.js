@@ -5,6 +5,10 @@ angular.module('tequeFrontendApp')
 
 	$scope.question_data = {}
 
+	$scope.openAsk = function() {
+		$scope.$focused = true;
+	}
+
 	$scope.askQuestion = function () {
 		if ($scope.askForm.$valid) {
 			var promise = Questions.allQuestions.save({question: $scope.question_data}).$promise.then(function (response) {
@@ -13,7 +17,6 @@ angular.module('tequeFrontendApp')
 				$state.reload();
 			},
 			function (response) {
-				console.log(response);
 			});
 		}
 	}
