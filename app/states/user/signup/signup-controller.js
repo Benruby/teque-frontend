@@ -16,6 +16,7 @@ angular.module('tequeFrontendApp')
 		var user = response.data;
 		var token = response.data.authentication_token;
 		authToken.setToken(token);
+		login.setUserId(user)
 		toastMessage.showToast("!ההשרמה בוצעה בהצלחה")
 		$state.go('main');
 	}

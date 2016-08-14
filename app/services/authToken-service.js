@@ -5,6 +5,7 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q, ENV)
 
 	var storage = localStorage;
 	var token = 'auth_token';
+
 	
 	var authToken = {
 
@@ -18,11 +19,19 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q, ENV)
 		},
 
 		isAuthenticated: function() {
+			var id = localStorage.getItem('u_id');
+			var email = localStorage.getItem('u_email');
+			var name = localStorage.getItem('u_name');
+			var avatar = localStorage.getItem('u_avatar');
 			var deferred = $q.defer();
 			var localToken = authToken.getToken();
 			var serverToken = this.checkServerToken().success(function(response){			
 				if (localToken && serverToken && (localToken === response.token)) {
-					deferred.resolve(true);
+					if(!name || !avatar || !id || !email) {
+						deferred.resolve(false);		
+					} else {
+						deferred.resolve(true);
+					}
 				} else {
 					deferred.resolve(false);		
 				}			

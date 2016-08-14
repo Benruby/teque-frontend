@@ -28,13 +28,13 @@ angular.module('tequeFrontendApp').directive('tqNavbar', function (Notifications
 			}
 			$scope.showNotifs = function() {
 				$scope.showNotifications = !$scope.showNotifications;
-				if ($scope.showUserMenuState) $scope.showUserMenuState = false;
+				if ($scope.showUserMenuState) { $scope.showUserMenuState = false; }
 
 			}
 
 			$scope.showUserMenu = function () {
 				$scope.showUserMenuState = !$scope.showUserMenuState;
-				if ($scope.showNotifications) $scope.showNotifications = false;
+				if ($scope.showNotifications) { $scope.showNotifications = false; }
 			}
 
 			$scope.goToMain = function() {

@@ -5,7 +5,7 @@ angular.module('tequeFrontendApp').factory('Answers', function($resource, $http,
 	
 	return {
 
-		allAnswers: $resource(ENV.apiEndpoint + '/api/answers/:answer_id?question_id', {answer_id: '@answer_id', question_id: '@question_id'}, 
+		allAnswers: $resource(ENV.apiEndpoint + '/api/answers', {}, 
 
 		{
 			'update': {method: 'PUT'}

@@ -44,7 +44,7 @@
 					</div>
 					<!-- answers -->
 					<div id="userQuestion" ng-repeat="a in userAnswers" ng-show="state == 'answers'">
-						<div id="templateTitle" ui-sref="show_question({question_id: a.question.id})">
+						<div id="templateTitle" ui-sref="show_question({question_id: a.question.id, answer_id: a.id})">
 							{{a.question.title}}
 						</div>
 						<div id="templateDetails" ng-bind-html="trustedHtml(a.answer_body)">

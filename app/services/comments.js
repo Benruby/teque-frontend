@@ -6,7 +6,7 @@ angular.module('tequeFrontendApp').factory('Comments', function($resource, $http
 	return  {
 
 		comment: function (commentable_type, itemId, body) {
-			var comment = $http.post('/api/item_comments', {
+			var comment = $http.post(ENV.apiEndpoint + '/api/item_comments', {
 				item_comment: {
 					commentable_type: commentable_type,
 					item_id: itemId,
