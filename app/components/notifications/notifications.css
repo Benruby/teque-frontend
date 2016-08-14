@@ -79,6 +79,7 @@
 }
 #notifUserName:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 #notifText {

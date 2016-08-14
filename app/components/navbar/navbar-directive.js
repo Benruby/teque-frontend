@@ -9,7 +9,7 @@ angular.module('tequeFrontendApp').directive('tqNavbar', function (Notifications
 				scope.$focused = false;
 			};
 		},
-		controller: function ($scope) {
+		controller: function ($scope, $state) {
 			if ($scope.authenticated) {
 				$scope.user_avatar = localStorage.getItem('u_avatar');
 				$scope.user_name = localStorage.getItem('u_name').split(' ')[0];
@@ -35,6 +35,10 @@ angular.module('tequeFrontendApp').directive('tqNavbar', function (Notifications
 			$scope.showUserMenu = function () {
 				$scope.showUserMenuState = !$scope.showUserMenuState;
 				if ($scope.showNotifications) $scope.showNotifications = false;
+			}
+
+			$scope.goToMain = function() {
+				$state.go('main', {}, {reload: true});
 			}
 
 		}

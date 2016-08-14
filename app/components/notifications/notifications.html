@@ -13,7 +13,7 @@
 					<div id="notifContent">
 						<div ng-if="n.question">
 							<span>
-								<span id="notifUserName">{{n.question.user.full_name}}
+								<span id="notifUserName" ui-sref="profile({id: n.notifiable.user_id})" ng-click="seen(n.id)">{{n.question.user.full_name}}
 								</span>
 								<span id="notifText">
 									ענה לשאלה:
@@ -25,7 +25,7 @@
 						</div>
 						<div ng-if="!n.question">
 							<span>
-								<span id="notifUserName">{{n.user.full_name}}
+								<span id="notifUserName" ui-sref="profile({id: n.notifiable.user_id})" ng-click="seen(n.id)">{{n.user.full_name}}
 								</span>
 								<span id="notifText">
 									שאל: 

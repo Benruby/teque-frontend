@@ -28,6 +28,15 @@ angular.module('tequeFrontendApp').directive('tqComment', function ($state, Comm
 			$scope.showReportDialog = function () {
 				$scope.reportShown = true;
 			}
+
+			$scope.goToProfile = function (id) {
+				current_user_id = localStorage.getItem('u_id');
+				if (id == current_user_id) {
+					$state.go('settings');
+				} else {
+					$state.go('profile', {id: id});
+				}
+			}
 		}
 	}
 });

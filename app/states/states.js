@@ -57,8 +57,16 @@ angular
     templateUrl: "states/user/show/show_user.html",
     controller: 'ShowUserCtrl',
     resolve: {
-      authenticated: function(authToken) {
+      authenticated: function(authToken, logout) {
         return authToken.isAuthenticated();
+      },
+      notCurrentUser: function(authToken, $stateParams, logout) {
+        var status = authToken.check_if_current_user($stateParams.id).then(
+          function(response){
+            //nothing to do
+          },function(response){
+            logout.logoutUser();
+          });
       }
     }
   })

@@ -2,7 +2,8 @@
 	position: relative;
 	display: table;
 	width:100%;
-	margin-top: 4%;
+	margin-top: 15px;
+	padding: 15px 5px 0px 5px;
 	border-radius: 3px;
 	background-color: #f4f4f4;
 }
@@ -75,7 +76,7 @@
 #userName {
 	margin-top: 5px;
 	display: inline-block;
-	padding-right: 20px;
+	padding-right: 10px;
 }
 
 #userName a {

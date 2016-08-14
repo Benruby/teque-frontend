@@ -1,29 +1,41 @@
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:0.8; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:0.8; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:0.8; } }
+
 .report-modal-overlay {
-  /* A dark translucent div that covers the whole screen */
   position:fixed;
-  z-index:9999;
+  z-index:19999;
   top:0;
   left:0;
   width:100%;
   height:100%;
   background-color:#000000;
-  opacity: 0.8;
-}
-.report-modal-dialog {
-  /* A centered div above the overlay with a box shadow. */
-  z-index:10000;
-  position: fixed;
-  width: 50%; /* Default */
+  opacity:0;
+  -webkit-animation:fadeIn 180ms ease-out 0s 1 normal; 
+  -moz-animation:fadeIn 180ms ease-out 0s 1 normal;
+  animation:fadeIn  180ms ease-out 0s 1 normal;
 
-  /* Center the dialog */
+
+
+  -webkit-animation-fill-mode:both;
+  -moz-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+
+
+.report-modal-dialog {
+  z-index:20000;
+  position: fixed;
+  width: 50%; 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-
   background-color: #fff;
   box-shadow: 4px 4px 80px #000;
+  opacity: 1;
 }
 .report-modal-dialog-content {
   padding:10px;

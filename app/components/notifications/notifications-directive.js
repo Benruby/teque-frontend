@@ -5,7 +5,7 @@ angular.module('tequeFrontendApp').directive('notifications', function(Questions
 		scope: {
 			notifications: "="
 		},
-		controller: function ($scope) {
+		controller: function ($scope, $state) {
 
 			for (var i = 0; i < $scope.notifications.length; i++) {
 				var obj = $scope.notifications[i];

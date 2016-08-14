@@ -19,26 +19,21 @@
 	<div id="comment" ng-repeat="c in comments | orderBy:'id':true">
 		<div id="imageSection">
 			<div id="userImage">
-				<img ng-src='{{c.user.avatar}}' class="clickable" ui-sref="profile({id: c.user.id})">
+				<img ng-src='{{c.user.avatar}}' class="clickable" ng-click="goToProfile(c.user.id)">
 			</div>
-			<div id="userName" class="clickable" ui-sref="profile({id: c.user.id})">
-				<a>{{c.user.full_name}}</a>
-			</div>
-		</div>
-		<div id="commentBody">
-			<text read-more content="'{{c.body}}'"></text>
-		</div>
-<!-- 		<div>
-			<div id="CommentReportLink"><a href="" ng-click="showReportDialog()" ng-class="{disabled: reported}" ng-attr-id="{{'title'+ data.id}}">דווח</a>
-			</div>
-		</div> -->
-		<div ng-if="c.item_comments">
-
-			<tq-child-comment comment="c"></tq-child-comment>
+			<div id="userName" class="clickable"
+			ng-click="goToProfile(c.user.id)">
+			<a>{{c.user.full_name}}</a>
 		</div>
 	</div>
-</div>
+	<div id="commentBody">
+		<text read-more content="'{{c.body}}'"></text>
+	</div>
+	<div ng-if="c.item_comments">
 
-<!-- <report show='reportShown' item-id="c.id" reported="reported" report-text="reportText" method="reportMessage()" report-options='reportOptions'  report-type='comment'></report> -->
+		<tq-child-comment comment="c"></tq-child-comment>
+	</div>
+</div>
+</div>
 
 </div>

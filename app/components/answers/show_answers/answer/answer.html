@@ -1,14 +1,15 @@
 <div>
 	<div id="answerUserInfo">
 		<div id="answerUserImage">
-			<div id="userImage" class="clickable" ui-sref="profile({id: answer.user.id})">
+			<div id="userImage" class="clickable" ng-click="goToProfile(answer.user.id)">
 				<img id="answerImage" ng-src='{{answer.user.avatar}}' >
 			</div>
 		</div>
 		<div id="userInfoWrapper">
 			<div id="userInfo">
 				<span>
-					<span id="answerUserName" class="clickable" ui-sref="profile({id: answer.user.id})">
+					<span id="answerUserName" class="clickable" 
+					ng-click="goToProfile(answer.user.id)">
 						{{answer.user.full_name}}
 					</span>,
 					<span id="answerUserDetails">

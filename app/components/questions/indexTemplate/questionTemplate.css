@@ -193,3 +193,13 @@
 
 }
 
+#commentsCount {
+	display: inline-block;
+	background-color: #808080;
+	width: 12px;
+	border-radius: 3px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+}

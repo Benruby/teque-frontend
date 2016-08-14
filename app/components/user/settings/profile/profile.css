@@ -13,6 +13,7 @@
 	position: relative;
 	padding-right: 30%;
 	box-sizing: border-box;
+	min-height: 180px;
 }
 
 #pictureWrapper {
@@ -85,4 +86,18 @@
 #image {
 	border-radius: 50%;
 	height: 170px;
+}
+
+#followerCountMain {
+	display: inline-block;
+	color: gray;
+	padding-top: 15px;
+}
+
+#followerCount {
+	border-right: 1px solid gray;
+	padding-right: 4px;
+}
+#followerText {
+	padding-left: 2px;
 }

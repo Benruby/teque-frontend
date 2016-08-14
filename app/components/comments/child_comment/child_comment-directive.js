@@ -17,6 +17,16 @@ angular.module('tequeFrontendApp').directive('tqChildComment', function ($state,
 				})
 				$scope.child_comment = {};
 			}
+
+			$scope.goToProfile = function (id) {
+				current_user_id = localStorage.getItem('u_id');
+				if (id == current_user_id) {
+					$state.go('settings');
+				} else {
+					$state.go('profile', {id: id});
+				}
+			}
+
 		}
 	}
 });

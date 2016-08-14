@@ -34,6 +34,9 @@
 				</span>
 			</div>
 			<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a>
+			<span id="commentsCount">
+				<div ng-if="data.item_comments.length > 0">{{data.item_comments.length}}</div>
+			</span>
 			</div>
 
 			<div id="followLink" >

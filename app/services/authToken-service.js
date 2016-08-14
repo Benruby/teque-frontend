@@ -48,6 +48,16 @@ angular.module('tequeFrontendApp').factory('authToken', function($http, $q, ENV)
 					password: password
 				}
 			});
+		},
+
+		check_if_current_user: function (id) {
+			return $http.get(ENV.apiEndpoint + '/api/check_id', { 
+				params: {
+					user: {
+						id: id
+					}
+				}
+			})
 		}
 
 

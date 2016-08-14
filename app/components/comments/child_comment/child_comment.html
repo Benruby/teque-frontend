@@ -19,11 +19,13 @@
 	<div id="childCommentBody" ng-repeat="c in comment.item_comments">
 	<div id="childCommentUser">
 			<div id="userImage">
-				<img ng-src='{{c.user.avatar}}'>
+				<img ng-src='{{c.user.avatar}}' class="clickable" 
+					ng-click="goToProfile(c.user.id)">
 			</div>
 	
 			<div id="userName">
-				<a>{{c.user.full_name}}</a>
+				<a class="clickable" 
+					ng-click="goToProfile(c.user.id)">{{c.user.full_name}}</a>
 			</div>
 		</div>
 		<div id="commentBody">
