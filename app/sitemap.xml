@@ -1,28 +1,11 @@
-<?xml version=”1.0″ encoding=”UTF-8″?>
-<urlset xmlns=”http://www.sitemaps.org/schemas/sitemap/0.9″>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>http://www.teque.co.il/question/37</loc>
+	</url>
+	<url>
+		<loc>http://www.teque.co.il/question/38</loc>
+	</url>
 	<url>
 		<loc>http://www.teque.co.il</loc>
 	</url>
-
-	<url>
-		<loc>http://http://www.teque.co.il/settings</loc>
-	</url>
-
-	<url>
-		<loc>http://www.teque.co.il/content</loc>
-	</url>
-	<url>
-		<loc>http://www.teque.co.il/question/28</loc>
-	</url>
-
-	<url>
-		<loc>http://www.teque.co.il/question/30</loc>
-	</url>
-
-	<url>
-		<loc>http://www.teque.co.il/profile/1</loc>
-	</url>
-
-
 </urlset>

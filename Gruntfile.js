@@ -422,6 +422,7 @@ ngtemplates: {
           src: [
           '*.{ico,png,txt}',
           '*.html',
+          '*.xml',
         'states/{,*/}*.html',
       'states/{,*/*/}*.html',
     'states/{,*/*/*/}*.html',
