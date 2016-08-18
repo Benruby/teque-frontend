@@ -92,6 +92,7 @@ angular
 
   if(ENV.env != 'development')  {
     $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('!');
   }
 
 })
