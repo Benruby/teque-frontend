@@ -21,6 +21,11 @@
 	width: 620px;
 }
 
+#templateTitle a {
+	text-decoration: none;
+	color: black;
+}
+
 
 #templateDetails {
 	word-wrap: break-word;

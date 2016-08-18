@@ -1,8 +1,10 @@
 <div>
 	<div id="templateWrapper" layout="column">
 		<div id="questionContent">
-			<div id="templateTitle" ui-sref="show_question({question_id: data.id})">
-				<span>{{data.title}}</span>
+			<div id="templateTitle">
+				<a ui-sref="show_question({question_id: data.id})">
+					<span>{{data.title}}</span>
+				</a>
 			</div>
 
 			<div id="templateDetails">
@@ -34,15 +36,15 @@
 				</span>
 			</div>
 			<div id="addCommentLink" ><a href="" ng-click="comment()">הוסף תגובה</a>
-			<span id="commentsCount">
-				<div ng-if="data.item_comments.length > 0">{{data.item_comments.length}}</div>
-			</span>
+				<span id="commentsCount">
+					<div ng-if="data.item_comments.length > 0">{{data.item_comments.length}}</div>
+				</span>
 			</div>
 
 			<div id="followLink" >
-			<a href="" ng-click="follow('question', data.id)" ng-if="!data.current_user_following">עקוב</a>
-			<a href="" ng-click="follow('question', data.id)" ng-if="data.current_user_following">עוקב</a>
-			<span id="voteCount" ng-if="data.follower_count > 0">({{data.follower_count}})</span>
+				<a href="" ng-click="follow('question', data.id)" ng-if="!data.current_user_following">עקוב</a>
+				<a href="" ng-click="follow('question', data.id)" ng-if="data.current_user_following">עוקב</a>
+				<span id="voteCount" ng-if="data.follower_count > 0">({{data.follower_count}})</span>
 			</div>
 
 			<div id="reportLink" ><a href="" ng-click="showReportDialog()" ng-class="{disabled: reported}" ng-attr-id="{{'title'+ data.id}}">{{reportText}}</a></div>

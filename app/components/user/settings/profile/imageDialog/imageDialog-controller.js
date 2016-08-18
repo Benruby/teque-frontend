@@ -20,13 +20,12 @@ angular.module('tequeFrontendApp').controller('ImageDialogCtrl', function ($stat
 
 	$scope.sendImage = function () {
 		console.log("sending image");
-		Images.PostUserImage($scope.myCroppedImage).then(function(){
-			console.log("successful image send");
+		Images.PostUserImage($scope.myCroppedImage).then(function(response){
 			$scope.hideModal();
+			localStorage.setItem('u_avatar', response.data.avatar)
 			$state.reload();
 			toastMessage.showToast('התמונה עודכנה בהצלחה');
 		},function(){
-			console.log("ERROR image send!");
 		})
 	}
 

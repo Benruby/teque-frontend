@@ -97,8 +97,7 @@
 	position: relative;
 	border-radius: 4px;
 	width: 100%;
-	z-index: 1;
-	padding-bottom: 2%;
+	padding-bottom: 14px;
 	box-sizing: border-box;
 	display: table-row;
 }
