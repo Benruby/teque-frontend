@@ -1,4 +1,4 @@
-<div id="askSection">
+<div id="askSection" flex>
 	<div id="askFormSection">
 		<form name="askForm"  novalidate id="askForm">
 			<div id="askInputSection">
@@ -16,14 +16,14 @@
 				ng-model="question_data.title" 
 				placeholder="שאל שאלה" 
 				tq-input-focus 
-				flex-gt-sm 
+				ng-trim="false"
 				required 
 				>
 			</textarea>
 
 		</div>
 
-		<div id="detailsWrapper" ng-if="$focused">
+		<div id="detailsWrapper" ng-if="$focused" hide-xs>
 			<div id="DetailsCounter" ng-if="$focused && (250 - question_data.body.length) < 10" ng-class="{colorCounter: (250 - question_data.body.length) < 0 }">
 				{{250 - question_data.body.length}}
 			</div>
@@ -31,7 +31,7 @@
 			msd-elastic
 			name="details"
 			ng-if="$focused"
-			placeholder="פרטים" 
+			placeholder="פרטים (לא חובה)" 
 			rows="3"
 			id="details"
 			ng-model="question_data.body"

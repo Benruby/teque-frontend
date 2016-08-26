@@ -3,7 +3,9 @@
 		<div id="questionContent">
 			<div id="templateTitle">
 				<a ui-sref="show_question({question_id: data.id})">
+					<div>
 					<span>{{data.title}}</span>
+					</div>
 				</a>
 			</div>
 
@@ -26,6 +28,7 @@
 				תשובות: {{data.answers.length}}
 			</a>
 		</div>
+		<mobile-footer></mobile-footer>
 		<div id="templateFooter" ng-if="authenticated">
 
 			<div id="answerButton" ng-class="{answerButton: !answerEnabled, answerButtonClicked: answerEnabled}" ng-click='answer()'>

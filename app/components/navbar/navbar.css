@@ -30,7 +30,7 @@
 }
 
 #mainBar {
-	margin: auto;
+	margin: 0 auto;
 	position: relative;
 }
 
@@ -45,7 +45,7 @@
 	top: 2px;
 	height: 100%;
 	position: relative;
-	font-size: 2.2vw;
+	font-size: 35px;
 	display: inline-block;
 	text-decoration: none;
 	color: blue;
@@ -55,7 +55,6 @@
 
 #bar {
 	display: table;
-	box-sizing: border-box;
 	width: 100%;
 	padding-right: 110px;
 	min-height: 45px;
@@ -77,7 +76,7 @@
 	width: 60%;
 	vertical-align: middle;
 	box-sizing: border-box;
-	padding: 8px 0 8px 0px;
+	padding: 0px 0 0px 0px;
 	position: relative;
 }
 
@@ -192,4 +191,52 @@
 #answerButtonText {
 	color: red;
 	font-weight: bold;
+}
+
+#mobileBarWrapper {
+	min-height: 51px;
+	width: 100%;
+	padding-bottom: 5px;
+	background-color: #9DBFF5;
+}
+
+#mobileAskBar {
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+#mobileLogo {
+}
+
+#mobileLogo a {
+	color: blue;
+	position: absolute;
+	margin-top: 6px;
+	vertical-align: middle;
+	padding-right: 10px;
+	font-weight: bold;
+	font-size: 35px;
+}
+
+#mobileTabs {
+	direction: rtl;
+	height: 40px;
+	width: 100%;
+	position: fixed;
+	margin-top: 50px;
+	background-color: #EEECEC;
+	z-index: 10000;
+}
+
+#mobileTabItem {
+	text-align: center;
+	padding: 0 5px 0 5px;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+#mobileTabItem span {
+	position: relative;
+	color: gray;
+	top: 10px;
 }
