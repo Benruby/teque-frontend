@@ -1,19 +1,24 @@
-<!-- <div id="mobileFooter">
-<div id="answerButton" ng-class="{answerButton: !answerEnabled, answerButtonClicked: answerEnabled}" ng-click='answer()'>
-		<span>
-			<a ng-disabled="answerEnabled">
-				ענה
-			</a>
-		</span>
-	</div>
-	<div id="voteButtons">
-		<div ng-class="{upvoteButtonSub: !voted, upvoteButtonSubVoted: voted }" ng-click="upvote(data.id)">
-			<a id="upvoteButton" href="">
-				<span id="voteCount">{{data.upvotes}}</span>
-				<span id="voteLink">{{voteText}}</span>
-			</a>
+<div>
+	<div class='report-modal-mobile' ng-if='show'>
+		<div class='report-modal-overlay-mobile' ng-click='hideModal()'></div>
+		<div class='report-modal-dialog-mobile' ng-style='dialogStyle'>
+			<div class='report-modal-dialog-content-mobile'>
+				<div id="mobileFooterWrapper">
+					<div id=moreOptionsItem>
+						<div>
+							<share data="data"></share>
+						</div>
+					</div>
+					<div id=moreOptionsItem>
+						<span>דווח</span>
+					</div>
+					<div id=moreOptionsItem ng-click='hideModal()'>
+						<span>בטל</span>
+					</div>
+
+				</div>
+			</div>
 		</div>
 	</div>
-</div> -->
+</div>
 
-<string name="vertical_ellipsis">&#8942;</string>

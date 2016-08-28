@@ -209,3 +209,9 @@
 	font-weight: bold;
 	font-size: 14px;
 }
+
+#moreOptionsButton {
+	float: left;
+	color: gray;
+	font-size: 23px;
+}

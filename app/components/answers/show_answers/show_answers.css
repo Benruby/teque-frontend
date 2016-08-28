@@ -1,7 +1,6 @@
 #showAnswerMain {
 	padding-top: 3%;
 	direction: rtl;
-	width: 620px;
 }
 
 #answersHeader {
@@ -50,7 +49,7 @@
 }
 
 #answerUserName{
-	font-size: 1.2vw;
+	font-size: 18px;
 	font-weight: bold;
 }
 

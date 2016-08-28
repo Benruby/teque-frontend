@@ -1,8 +1,11 @@
 #profileWrapper {
 	direction: rtl;
 	position: relative;
-	width: 60%;
 	margin: auto;
+}
+
+#profilePicture img {
+
 }
 
 #ShowprofileExtras {
@@ -46,4 +49,19 @@
 .notFollowing a{
 	color: #4169e1;	
 	font-size: 1vw;
+}
+
+#voteLink {
+	font-size: 15px;
+}
+
+#voteCount {
+	font-size: 15px;	
+}
+
+@media (max-width:600px) {
+
+	#profileWrapper {
+		padding-top: 25px;
+	}
 }

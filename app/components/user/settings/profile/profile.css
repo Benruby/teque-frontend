@@ -11,7 +11,7 @@
 
 #profileHeader {
 	position: relative;
-	padding-right: 30%;
+	padding-right: 220px;
 	box-sizing: border-box;
 	min-height: 180px;
 }
@@ -20,11 +20,12 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+
 }
 
 #profilePicture {
-	position: relative;
-	overflow: hidden;
+position: relative;
+
 }
 
 .editImage {
@@ -33,8 +34,8 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	width: 100%;
-	height: 13%;
+	width: 40%;
+	height: 20px;
 	text-align: center;
 }
 
@@ -51,26 +52,31 @@
 }
 
 #profileName {
-	min-height: 3vw;
+	min-height: 20px;
 	vertical-align: middle;
 	position: relative;
 }
 
 #profileName span {
-	font-size: 2vw;
+	font-size: 30px;
 	position: relative;
 }
 
 #editLink {
 	text-decoration: none;
 	color: gray;
-	font-size: 1vw;
+	font-size: 15px;
+	padding-right: 30px;
 }
 
 #editName {
 	height: 2vw;
 	vertical-align: middle;
 	position: relative;
+}
+
+#profileDescription {
+	margin-top: 25px;
 }
 
 #profileDetails {
@@ -80,12 +86,11 @@
 
 #userDescription {
 	color: gray;
-	font-size: 1.5vw;
+	font-size: 25px;
 }
 
 #image {
 	border-radius: 50%;
-	height: 170px;
 }
 
 #followerCountMain {
@@ -101,3 +106,36 @@
 #followerText {
 	padding-left: 2px;
 }
+
+
+@media (max-width:600px) {
+	#profileName span {
+		font-size: 20px;
+
+	}
+
+
+	#userDescription {
+		font-size: 17px;
+	}
+
+	#profileHeader {
+		padding-right: 120px;
+	}
+
+}
+
+@media (min-width: 600px) and (max-width: 960px) { 
+
+	#profileHeader {
+		padding-right: 150px;
+	}
+
+}
+
+#editActions {
+	margin-top: 15px;
+}
+
+
+

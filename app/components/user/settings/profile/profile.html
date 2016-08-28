@@ -1,4 +1,4 @@
-<div id="profileTitle">
+<div id="profileTitle" ng-cloak>
 	<p>פרופיל</p>
 </div>
 <div id="profileContent">
@@ -6,12 +6,18 @@
 		<div id="pictureWrapper">
 			<div id="profilePicture" 
 			ng-mouseenter="hovering=true"
-			ng-mouseleave="hovering=false">
-			<img id="image" ng-src="{{user.avatar}}"/>
-			<div 
-			ng-class="{editImage: hovering, hidden: !hovering}">
-			<a ng-click="showImageDialog()">ערוך תמונה</a>
-		</div>
+			ng-mouseleave="hovering=false"
+			layout layout-align="center center"
+			>
+			<md-white-frame>
+				<img id="image" ng-src="{{user.avatar}}"
+				flex-xs="30" flex-sm="30" flex-gt-sm="40" flex-gt-md="50"
+				/>
+				<div hide-xs
+				ng-class="{editImage: hovering, hidden: !hovering}">
+				<a ng-click="showImageDialog()">ערוך תמונה</a>
+			</div>
+		</md-white-frame>
 	</div>
 </div>
 
@@ -34,17 +40,19 @@
 		</div>
 		<div ng-if="editDescription">
 			<input type="text" name="description" ng-model="user.new_description" maxlength="50">
+			<div id="editActions">
 			<button ng-click="sendUserDescription()">שלח</button>
 			<a ng-click="editUserDescription()" >בטל</a>
+			</div>
 		</div>
 
 	</div>
 </div>
 <div id="moreInfo">
-<span>
-	<span id="followerCountMain"><span id="followerText">עוקבים</span>
-	<span id="followerCount">{{user.follower_count}}</span></span>
-</span>
+	<span>
+		<span id="followerCountMain"><span id="followerText">עוקבים</span>
+		<span id="followerCount">{{user.follower_count}}</span></span>
+	</span>
 </div>
 </div>
 

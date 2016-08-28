@@ -4,7 +4,7 @@
 			<div id="templateTitle">
 				<a ui-sref="show_question({question_id: data.id})">
 					<div>
-					<span>{{data.title}}</span>
+						<span>{{data.title}}</span>
 					</div>
 				</a>
 			</div>
@@ -28,7 +28,6 @@
 				תשובות: {{data.answers.length}}
 			</a>
 		</div>
-		<mobile-footer></mobile-footer>
 		<div id="templateFooter" ng-if="authenticated">
 
 			<div id="answerButton" ng-class="{answerButton: !answerEnabled, answerButtonClicked: answerEnabled}" ng-click='answer()'>
@@ -50,16 +49,20 @@
 				<span id="voteCount" ng-if="data.follower_count > 0">({{data.follower_count}})</span>
 			</div>
 
-			<div id="reportLink" ><a href="" ng-click="showReportDialog()" ng-class="{disabled: reported}" ng-attr-id="{{'title'+ data.id}}">{{reportText}}</a></div>
+			<div id="reportLink" hide-xs>
+				<a href="" ng-click="showReportDialog()" ng-class="{disabled: reported}" ng-attr-id="{{'title'+ data.id}}">{{reportText}}
+				</a>
+			</div>
 
-			<div id="shareLink"><share data="data"></share>
+			<div id="shareLink" hide-xs>
+				<share data="data"></share>
 			</div>
 
 			<div id="customToast" ng-if="showReportMessage">
 				<b>הדווח נשלח</b>
 			</div>
-
-
+			<string id="moreOptionsButton" name="vertical_ellipsis" ng-click="show = !show" hide-gt-xs>&#8942;</string>
+			<mobile-footer></mobile-footer>
 		</div>
 		<div id="commentSection" ng-if="commentEnabled">
 			<tq-comment item-id="data.id" close-comment="comment()" comments="data.item_comments" item-type="question"></tq-comment>
@@ -69,7 +72,7 @@
 			<tq-add-answer ng-if="answerEnabled" question-id="data.id" close-answer="answer()"></tq-add-answer>
 		</div>
 
-		<report show='reportShown' item-id="data.id" reported="reported" report-text="reportText" method="reportMessage()" report-options='reportOptions' report-type='question'></report>
-
+		<report show='reportShown' item-id="data.id" reported="reported" report-text="reportText" method="reportMessage()" report-options='reportOptions' report-type='question'>
+		</report>
 	</div>
 </div>

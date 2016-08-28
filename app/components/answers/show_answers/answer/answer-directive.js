@@ -20,7 +20,7 @@ angular.module('tequeFrontendApp').directive('answer', function ($stateParams) {
 			}
 
 			$scope.goToProfile = function (id) {
-				current_user_id = localStorage.getItem('u_id');
+				var current_user_id = localStorage.getItem('u_id');
 				if (id == current_user_id) {
 					$state.go('settings');
 				} else {

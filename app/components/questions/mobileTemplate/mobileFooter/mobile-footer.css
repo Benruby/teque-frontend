@@ -1,3 +1,75 @@
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:0.8; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:0.8; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:0.8; } }
+
+.report-modal-overlay-mobile {
+  position:fixed;
+  z-index:19999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity:0;
+  -webkit-animation:fadeIn 180ms ease-out 0s 1 normal; 
+  -moz-animation:fadeIn 180ms ease-out 0s 1 normal;
+  animation:fadeIn  180ms ease-out 0s 1 normal;
+
+
+
+  -webkit-animation-fill-mode:both;
+  -moz-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+
+
+.report-modal-dialog-mobile {
+  z-index:20000;
+  position: fixed;
+  width: 70%; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+  opacity: 1;
+}
+.report-modal-dialog-content-mobile {
+  text-align: right;
+}
+.report-modal-close-mobile {
+  position: fixed;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+
+.report-modal-close-mobile p {
+  float: right;
+}
+
+
+
 #mobileFooter {
 	width: 100%;
+}
+
+#mobileFooterWrapper {
+
+}
+
+#moreOptionsItem {
+	padding: 15px;
+}
+
+#moreOptionsItem:active {
+	background-color: #E4E5E6;
 }

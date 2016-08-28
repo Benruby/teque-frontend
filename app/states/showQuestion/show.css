@@ -1,5 +1,4 @@
 #questionMain {
-	width: 620px;
 	margin: auto;
 }
 
@@ -9,6 +8,5 @@
 
 #answersSection {
 	word-wrap: break-word;
-	display: table;
 	margin: auto;
 }

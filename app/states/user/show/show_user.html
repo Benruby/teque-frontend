@@ -2,16 +2,20 @@
 	<div id="navbarSection">
 		<tq-navbar></tq-navbar>
 	</div>
-	<div id="content" flex-gt-xs="75">
-		<div id="profileWrapper">	
+	<div id="content" flex-gt-xs="75" flex-xs="90">
+		<div id="profileWrapper" flex-gt-xs="55">	
 			<div id="ShowprofileContent">
 				<div id="profileHeader">
 					<div id="pictureWrapper">
 						<div id="profilePicture" 
 						ng-mouseenter="hovering=true"
 						ng-mouseleave="hovering=false">
-						<img id="image" ng-src="{{user.avatar}}"/>
+						<md-white-frame>
+							<img id="image" ng-src="{{user.avatar}}"
+							flex-xs="30" flex-sm="30" flex-gt-sm="40" flex-gt-md="50"/>
+						</md-white-frame>
 					</div>
+					
 				</div>
 
 				<div id="profileDetails">

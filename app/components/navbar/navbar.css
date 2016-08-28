@@ -141,7 +141,6 @@
 #notificationCount {
 	height: 20px;
 	width: 20px;
-	right:55px;
 	top: 2px;
 	position: absolute;
 	text-align: center;
@@ -229,6 +228,7 @@
 }
 
 #mobileTabItem {
+	position: relative;
 	text-align: center;
 	padding: 0 5px 0 5px;
 	border-left: 1px solid gray;
@@ -239,4 +239,28 @@
 	position: relative;
 	color: gray;
 	top: 10px;
+	font-size: 15px;
 }
+
+#mobileCount {
+	background-color: #ff6347;
+	border-radius: 50%;
+	height: 25px;
+	width:25px;
+	position: absolute;
+	top:0px;
+	right:0px;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+}
+
+#mobileCount a {
+	position: absolute;
+	top:50%;
+	margin-top: -8px;
+	left: 30%;
+
+}
+
+

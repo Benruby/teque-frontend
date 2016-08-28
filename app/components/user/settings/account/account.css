@@ -1,11 +1,15 @@
 #contentTitle {
 	border-bottom: 1px solid gray;
-	height: 3vw;
+	height: 30px;
+}
+
+@media (max-width:600px) {
+
 }
 
 #accountEmailSection {
 	border-bottom: 1px solid gray;
-	height: 4vw;
+	height: 50px;
 }
 
 #accountEmailTitle {
@@ -20,7 +24,7 @@
 
 #accountPasswordSection {
 	border-bottom: 1px solid gray;
-	min-height: 4vw;
+	min-height: 50px;
 }
 
 #accountPasswordTitle {
@@ -39,12 +43,12 @@
 
 
 #editPasswordSection {
-	font-size: 1vw
+	font-size: 15px;
 }
 
 #logoutSection {
 	border-bottom: 1px solid gray;
-	height: 4vw;
+	height: 50px;
 }
 
 #logoutTitle {
@@ -56,3 +60,4 @@
 	width: 40%;
 	display: inline-block;
 }
+

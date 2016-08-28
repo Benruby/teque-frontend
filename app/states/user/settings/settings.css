@@ -2,12 +2,11 @@
 	direction: rtl;
 	width: 100%
 	height: 100%;
+	margin: auto;
 }
 
 #optionsList {
-
 	position: fixed;
-	display: block;
 	float: right;
 	width: 10%;
 	margin: auto;
@@ -15,7 +14,6 @@
 
 #settingsView {
 	position: relative;
-	width: 60%;
 	margin: auto;
 }
 #listTitle span {
@@ -48,4 +46,23 @@
 .currentState {
 	background-color: #ececec;
 	border-radius: 3px;
+}
+
+#settingsTabs {
+	background-color: #F1F2F2;
+	height: 40px;
+}
+
+#mobileSettingsTabItem {
+	text-align: center;
+}
+
+#mobileSettingsTabItem span {
+	color: gray;
+	position: relative;
+	top:10px;
+}
+
+#mobileSettingsTabItem:active {
+	background-color: #F9F9FA;
 }

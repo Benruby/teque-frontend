@@ -1,9 +1,25 @@
 <modal-dialog show='modalShown' ng-cloak></modal-dialog>
 <div id="mainPage" ng-class="{normalBacgkround: $focused, normalBacgkround: !$focused}"  ng-focus="$focused=false" tabindex="1" ng-cloak>
-		<tq-navbar></tq-navbar>
+	<tq-navbar></tq-navbar>
+
 	<div id="content" flex-gt-xs="75">
-		<div id="mainSettings">
-			<div id="optionsList">
+
+		<div id="settingsTabs" layout="row" hide-gt-xs flex>
+			<div id="mobileSettingsTabItem" ng-click="changeState('profile')" flex="33">
+				<span>פרופיל</span>
+			</div>
+			<div id="mobileSettingsTabItem" ng-click="changeState('account')" flex="33">
+				<span>חשבון</span>
+			</div>
+			<div id="mobileSettingsTabItem" ui-sref="content" flex="33">
+				<span>התוכן שלי</span>
+			</div>
+
+		</div>
+
+
+		<div id="mainSettings" flex-gt-xs="90" flex-xs="90" flex-md="90">
+			<div id="optionsList" hide-xs>
 				<div id="listTitle">
 					<span>הגדרות</span>
 				</div>
@@ -21,10 +37,10 @@
 					</ul>
 				</div>
 			</div>
-			<div id="settingsView">
+			<div id="settingsView" flex-sm="60" flex-gt-sm="60">
 				<div id="settingsContent" ng-cloak>
-				<tq-user-profile ng-show="state === 'profile'"></tq-user-profile>
-				<tq-user-account ng-show="state === 'account'"></tq-user-account>
+					<tq-user-profile ng-show="state === 'profile'"></tq-user-profile>
+					<tq-user-account ng-show="state === 'account'"></tq-user-account>
 				</div>
 			</div>
 

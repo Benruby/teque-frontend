@@ -64,15 +64,23 @@
     </div>
   </div>
 </div>
-<div id="mobileTabs" layout="row" flex="100">
+<div id="mobileTabs" layout="row" flex="100" hide-gt-xs>
   <div id="mobileTabItem" flex="33" ui-sref="settings">
-  <span>פרופיל</span>
+    <span>פרופיל</span>
   </div>
   <div id="mobileTabItem" ng-click="goToMain(); $event.stopPropagation()" flex="33">
-  <span>ענה על שאלות</span>
+    <span>ענה על שאלות</span>
   </div>
   <div id="mobileTabItem" flex="33">
-  <span>התראות</span>
+    <span ng-click="showNotifs(); $event.stopPropagation()">התראות</span>
+    <span  ng-show="notifications.length > 0" ng-click="showNotifs(); $event.stopPropagation()">
+      <div id="mobileCount">     
+        <a>
+          <text>{{notifications.length}}</text>
+        </a>
+      </div>
+    </span>
   </div>
 </div>
+<notifications ng-if="showNotifications" notifications="notifications" hide-gt-xs></notifications>
 </div>
